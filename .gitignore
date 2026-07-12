@@ -31,8 +31,6 @@ config/secrets.*
 
 # БЕЗОПАСНОСТЬ: Документация (содержит информацию о проекте)
 *.md
-!README.md
-!SECURITY.md
 !docs/CMS-SETUP.md
 !docs/STAFF-CMS-GUIDE.md
 !studio/README.md
