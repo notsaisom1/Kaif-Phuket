@@ -109,7 +109,7 @@ src/
 
 ### GitHub Pages
 
-Автоматический деплой через GitHub Actions (`.github/workflows/deploy.yml`).
+ไม่ใช้แล้ว — deploy ด้วย Netlify เป็นหลัก (ลบ workflow ออกแล้ว)
 
 ### Staff CMS (Sanity)
 
