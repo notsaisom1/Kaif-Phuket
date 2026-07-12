@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src *; img-src * data: blob:; media-src * data: blob:; frame-src *; style-src * 'unsafe-inline';">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2024" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2024" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="KAIF Club & Spa — эксклюзивный комплекс с авторской кухней, роскошным спа-центром, традиционной русской баней и современным фитнес-клубом." />
+    <title>KAIF SAUNA & SPA</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+
+    <!-- Critical inline CSS for instant render -->
+    <style>
+      html{scroll-behavior:auto!important}
+      *{margin:0;padding:0;box-sizing:border-box}
+      body{font-family:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#000;color:#2C3E2D}
+      #root{min-height:100vh}
+      .app-loading{position:fixed;top:0;left:0;right:0;bottom:0;background:#000;z-index:99999;transition:opacity .3s ease-out}
+      .app-loading.hidden{opacity:0;pointer-events:none}
+
+      /* Critical hero styles - only for hero section, not all sections */
+      .hero-section{position:relative;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#000;overflow:hidden}
+      img{max-width:100%;height:auto;display:block}
+      picture{display:block}
+    </style>
+
+    <!-- Google Fonts - Jost (body) + Plus Jakarta Sans (headings) + Cormorant Garamond (accent) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Cormorant+Garamond:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+
+    <!-- Preload critical images: hero video poster (LCP) + logo -->
+    <link rel="preload" as="image" href="https://res.cloudinary.com/dgkymvotb/video/upload/q_auto,w_1920,c_fill,so_0,f_auto/a5af7faa-2bd7-4340-9cab-02441b892030_iafcm6.jpg" fetchpriority="high" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="https://res.cloudinary.com/dgkymvotb/video/upload/q_auto,w_768,c_fill,so_0,f_auto/a5af7faa-2bd7-4340-9cab-02441b892030_iafcm6.jpg" fetchpriority="high" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="/images/logos/logo-header.png" fetchpriority="high">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WP6GKBQ');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WP6GKBQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script>if(history.scrollRestoration)history.scrollRestoration='manual';window.scrollTo(0,0);</script>
+    <div class="app-loading" id="loader"></div>
+
+    <div id="root"></div>
+
+    <!-- Hide loader when React app is ready -->
+    <script>
+      window.hideInitialLoader = function() {
+        var l=document.getElementById('loader');
+        if(l)l.classList.add('hidden');
+      };
+      // Fallback: гарантированно скрыть лоадер через 3 секунды
+      setTimeout(function() {
+        window.hideInitialLoader();
+      }, 3000);
+    </script>
+
+    <script type="module" src="/src/main.jsx"></script>
+
+<!-- Bitrix24 Chat Widget — deferred to not block mobile scroll -->
+    <script>
+      (function(w,d,u){
+        function loadBitrix(){
+          var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+          var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        }
+        if('ontouchstart' in w || navigator.maxTouchPoints>0){
+          w.addEventListener('load',function(){setTimeout(loadBitrix,5000);});
+        }else{
+          loadBitrix();
+        }
+      })(window,document,'https://cdn-ru.bitrix24.ru/b34562104/crm/site_button/loader_4_q4macf.js');
+    </script>
+  </body>
+</html>

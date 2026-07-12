@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- DISABLE CSP completely to fix Google Analytics -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src *; img-src * data: blob:; frame-src *; style-src * 'unsafe-inline';">
+    <!-- Favicon для разных устройств и браузеров -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2024" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2024" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2024" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2024" />
+    <link rel="shortcut icon" href="/favicon.ico?v=2024" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KAIF Club & Spa — эксклюзивный комплекс с авторской кухней, роскошным спа-центром, традиционной русской баней и современным фитнес-клубом." />
+    <meta name="keywords" content="спа центр, русская баня, ресторан, фитнес клуб, массаж, отдых, релакс" />
+
+    <title>KAIF SAUNA & SPA</title>
+
+    <!-- CRITICAL: Preconnect to CDN -->
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CRITICAL CSS - Inline for instant rendering -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+        background: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Critical hero styles */
+      .hero-container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        overflow: hidden;
+      }
+
+      .hero-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+      }
+
+      .hero-slide.active {
+        opacity: 1;
+      }
+
+      .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .hero-logo {
+        max-width: 520px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 3rem;
+      }
+
+      .hero-button {
+        display: inline-block;
+        padding: 1.2rem 3rem;
+        background: rgba(255, 255, 255, 0.95);
+        color: #000;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: transform 0.3s;
+      }
+
+      .hero-button:hover {
+        transform: translateY(-2px);
+        background: #fff;
+      }
+
+      /* Loading screen */
+      .app-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s;
+      }
+
+      .app-loading.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .loader {
+        width: 48px;
+        height: 48px;
+        border: 2px solid rgba(255,255,255,0.1);
+        border-top: 2px solid #fff;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-logo { max-width: 400px; }
+        .hero-button { padding: 1rem 2rem; font-size: 0.9rem; }
+      }
+    </style>
+
+    <!-- Fonts - load async -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&family=Bebas+Neue&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&family=Bebas+Neue&display=swap" media="print" onload="this.media='all'">
+
+    <!-- CRITICAL: Load React from CDN (saves 220KB) -->
+    <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/images-optimized/spa.jpg">
+  </head>
+  <body>
+    <!-- Loading screen -->
+    <div class="app-loading">
+      <div class="loader"></div>
+    </div>
+
+    <!-- App root -->
+    <div id="root"></div>
+
+    <!-- Quick hide loader -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          document.querySelector('.app-loading').classList.add('hidden');
+        }, 100);
+      });
+    </script>
+
+    <!-- Main app bundle - deferred -->
+    <script type="module" src="/src/main.jsx" defer></script>
+
+    <!-- Google Tag Manager - async -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-5WP6GKBQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GTM-5WP6GKBQ');
+    </script>
+  </body>
+</html>

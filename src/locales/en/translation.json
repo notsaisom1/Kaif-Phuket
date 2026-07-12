@@ -1,0 +1,3246 @@
+{
+  "page_titles": {
+    "home": "KAIF | Sauna & Spa",
+    "restaurant": "KAIF Restaurant | Gourmet Cuisine and Exquisite Dishes",
+    "spa": "KAIF SPA | Luxury Spa Treatments and Relaxation",
+    "sports": "KAIF Sports | Modern Fitness and Martial Arts",
+    "banya": "KAIF Banya | Traditional Russian Sauna Experience",
+    "contacts": "KAIF Contacts | Get in Touch with Us",
+    "services": "KAIF Services & Prices | Full Price List",
+    "sbp_pay": "SBP Payment | KAIF"
+  },
+  "sbp_pay": {
+    "title": "SBP Payment",
+    "description": "Pay with Russian Fast Payment System",
+    "select_package": "Select amount to pay",
+    "pay_now": "Pay Now",
+    "creating": "Creating payment...",
+    "scan_qr": "Scan QR Code",
+    "pay_with_sbp": "Pay with SBP",
+    "time_left": "Time left",
+    "loading_qr": "Loading QR code...",
+    "amount_thb": "Amount (THB)",
+    "amount_rub": "To pay (RUB)",
+    "status_created": "Created",
+    "status_initialized": "Awaiting payment",
+    "status_success": "Paid",
+    "status_failed": "Failed",
+    "instruction_1": "Open your banking app",
+    "instruction_2": "Choose \"Pay by QR\" or scan",
+    "instruction_3": "Scan the QR code above",
+    "instruction_4": "Confirm the payment",
+    "success": "Payment Successful!",
+    "success_message": "Thank you for your payment",
+    "failed": "Payment Failed",
+    "failed_message": "The payment was not completed. Please try again.",
+    "payment_id": "Payment ID",
+    "done": "Done",
+    "try_again": "Try Again",
+    "mock_mode": "Test mode - no real payment will be made"
+  },
+  "common": {
+    "book": "Book Now",
+    "book_now": "Book Now",
+    "learn_more": "Learn More",
+    "view_all": "View All",
+    "read_more": "Read More",
+    "submit": "Submit",
+    "scroll_down": "Scroll",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "date": "Date",
+    "time": "Time",
+    "people": "People",
+    "special_requests": "Special Requests",
+    "address": "73, Baan Chalekiri Village, 6 Pra Phuket Keaw Road, Kathu",
+    "phone_number": "+66 62 480 5877",
+    "select_language": "Select Language",
+    "photo_placeholder": "Photo will be added",
+    "contact_us": "Contact Us",
+    "exploreMore": "Learn More",
+    "from": "from",
+    "categories": "Categories",
+    "activity": "ACTIVITY",
+    "relaxation": "RELAXATION"
+  },
+  "navigation": {
+    "home": "Home",
+    "restaurant": "Restaurant",
+    "spa": "SPA",
+    "sports": "Sports",
+    "banya": "Russian Banya",
+    "about": "About Us",
+    "promotions": "Promotions",
+    "contacts": "Contacts",
+    "services": "Services & Prices"
+  },
+  "services_page": {
+    "overline": "Price List",
+    "title": "All Services & Prices",
+    "subtitle": "Choose a category to see the full list of services and prices.",
+    "meta_description": "Full KAIF price list — memberships, banya, spa, massage, beauty, laser hair removal.",
+    "duration": "Duration",
+    "price": "Price",
+    "min": "min",
+    "per_visit": "per visit",
+    "duration_label": "duration",
+    "from_label": "From",
+    "features": {
+      "multi_duration": "Multiple durations available"
+    },
+    "banya_groups": {
+      "classic": "Classic",
+      "intense": "Intense",
+      "signature": "Signature"
+    },
+    "massage_groups": {
+      "relax": "Relaxing",
+      "therapeutic": "Therapeutic",
+      "express": "Express"
+    },
+    "hair_groups": {
+      "cuts": "Cuts",
+      "coloring": "Colouring",
+      "care": "Care"
+    },
+    "laser_groups": {
+      "complex3": "Pack • 3",
+      "complex5": "Pack • 5"
+    },
+    "nav": {
+      "memberships": "Memberships",
+      "banya": "Banya",
+      "massage": "Massage",
+      "hair": "Hair",
+      "nails": "Nails",
+      "brows": "Brows & Lashes",
+      "laser": "Laser & Endosphere"
+    },
+    "overlines": {
+      "memberships": "Memberships",
+      "banya": "Banya",
+      "massage": "Massage",
+      "hair": "Hair Care",
+      "nails": "Manicure & Pedicure",
+      "brows": "Brows & Lashes",
+      "laser": "Laser & Endosphere"
+    },
+    "titles": {
+      "memberships": "Club Cards & Memberships",
+      "banya": "Banya Rituals",
+      "massage": "Massage & Body Care",
+      "hair": "Hair Care",
+      "nails": "Manicure, Pedicure & PRO Care",
+      "brows": "Extensions, Lamination, Tinting",
+      "laser": "Laser Hair Removal & Endosphere"
+    },
+    "subtitles": {
+      "memberships": "Flexible cards for gym, pool, banya and group training.",
+      "banya": "Individual steam sessions designed by master parilshchiks.",
+      "massage": "Relaxing, therapeutic and sports programs.",
+      "hair": "Cuts, colouring and restoration by top masters.",
+      "nails": "From classic treatments to medical pedicure.",
+      "brows": "Expressive eyes and perfectly shaped brows.",
+      "laser": "Advanced equipment procedures and bundled packages."
+    },
+    "cta": {
+      "title": "Can't find the right service?",
+      "subtitle": "Message us — we'll help you pick the treatment or membership that fits your goals.",
+      "button": "Get in Touch",
+      "source": "Services consultation"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "KAIF - Sauna & Spa",
+      "subtitle": "Sauna & Spa",
+      "cta": "Our Services",
+      "overline": "Premium Complex in Phuket",
+      "mainTitle": "KAIF",
+      "services": "Our Services",
+      "word1": "FEEL",
+      "word2": "THE",
+      "word3": "KAIF",
+      "location": "PHUKET · THAILAND",
+      "bookNow": "Book Now",
+      "virtualTour": "Virtual Tour",
+      "slideAlt": "KAIF - Sauna & Spa",
+      "stats": {
+        "zones": "RELAXATION ZONES",
+        "sauna": "SAUNA",
+        "equipment": "EQUIPMENT"
+      },
+      "heroServices": {
+        "gym": {
+          "title": "Gym",
+          "description": "70+ modern equipment in spacious hall"
+        },
+        "martialArts": {
+          "title": "Martial Arts",
+          "description": "Jiu-Jitsu, boxing, muay thai with professional trainers"
+        },
+        "pool": {
+          "title": "25m Pool",
+          "description": "Olympic standard with heated water"
+        },
+        "spa": {
+          "title": "SPA Center",
+          "description": "Thai massage, aromatherapy, relaxation"
+        },
+        "restaurant": {
+          "title": "Restaurant",
+          "description": "5 world cuisines with panoramic terrace"
+        },
+        "beauty": {
+          "title": "Beauty Salon",
+          "description": "Cosmetology, treatments, hairdressing services"
+        }
+      }
+    },
+    "philosophy": {
+      "overline": "OUR PHILOSOPHY",
+      "title": "A Space for Harmony and Self-Development",
+      "paragraph1": "We create a space where life becomes brighter. Our mission is to make rest and self-care not an obligation, but a pleasure. KAIF is a place where you restore your strength, recharge your batteries and enjoy every moment.",
+      "paragraph2": "Everything here is designed so that you want to come back: workouts that inspire, relaxation that fills you up, and an atmosphere that gives you a real buzz. We believe that harmony is not a luxury, but a necessity, and we make it available to you.",
+      "quote": "Health is not just the absence of disease, but a state of complete physical, mental and social well-being",
+      "imageAlt": "KAIF - a space for harmony and self-development",
+      "principle1": {
+        "title": "Comfort and Inspiration",
+        "text": "Creating an atmosphere where every workout brings pleasure"
+      },
+      "principle2": {
+        "title": "Balance and Harmony",
+        "text": "Premium service for body and spirit balance"
+      },
+      "principle3": {
+        "title": "Holistic Approach",
+        "text": "All KAIF zones work together for your well-being"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Choose your path: dynamic activity or relaxing relaxation",
+      "zones": {
+        "activity": "Activity",
+        "relax": "Relaxation"
+      },
+      "fitness": {
+        "title": "Fitness Center",
+        "description": "Modern gym with professional equipment for all types of workouts.",
+        "features": [
+          "70+ modern equipment",
+          "Cardio zone",
+          "Functional training",
+          "Personal training"
+        ]
+      },
+      "combat": {
+        "title": "Martial Arts",
+        "description": "Professional Jiu-Jitsu, boxing and muay thai training under experienced trainers.",
+        "features": [
+          "Jiu-Jitsu and boxing",
+          "Muay Thai",
+          "Professional ring",
+          "Group and individual classes"
+        ]
+      },
+      "pool": {
+        "title": "Swimming Pool",
+        "description": "25-meter Olympic standard pool for swimming and water workouts.",
+        "features": [
+          "25m Olympic standard",
+          "Heated water",
+          "Aqua fitness",
+          "Kids zone"
+        ]
+      },
+      "spa": {
+        "title": "SPA Center",
+        "description": "Oasis of tranquility with a wide range of relaxing and restorative treatments.",
+        "features": [
+          "Thai massage",
+          "Aromatherapy",
+          "Hot stones",
+          "Relaxation zones"
+        ]
+      },
+      "banya": {
+        "title": "Russian Banya",
+        "description": "The largest Russian banya in Phuket with traditional procedures.",
+        "features": [
+          "50m2 Russian banya",
+          "Birch brooms and aromas",
+          "Steam procedures",
+          "Tea ceremony"
+        ]
+      },
+      "restaurant": {
+        "title": "Restaurant",
+        "description": "Exquisite signature cuisine with 50+ unique dishes from the chef.",
+        "features": [
+          "50+ signature dishes",
+          "Signature recipes",
+          "Wine list",
+          "Panoramic terrace"
+        ]
+      },
+      "learn_more": "Learn More"
+    },
+    "promotions": {
+      "title": "Special Offers",
+      "day_pass": {
+        "title": "Day in Complex",
+        "price": "390 THB",
+        "description": "Access to gym, pool, ice bath and sauna"
+      },
+      "charity": {
+        "title": "Charity Workout",
+        "price": "200 THB",
+        "description": "Saturday training with professional athletes, proceeds go to Child Watch Phuket Foundation"
+      }
+    },
+    "about": {
+      "badge": "About Complex",
+      "title": "Multifunctional<br />KAIF Complex",
+      "description1": "KAIF PHUKET is a premium complex where you restore your strength, recharge your energy and enjoy every moment. Everything here is created so that you want to return: workouts that inspire, relaxation that fills, and an atmosphere that gives real pleasure.",
+      "description2": "We have created a unique space in Phuket where premium service meets Thai hospitality. KAIF is not just a spa complex, it's a philosophy of healthy lifestyle and harmony.",
+      "stats": {
+        "banya": "Russian Banya",
+        "equipment": "Equipment",
+        "dishes": "Signature Dishes",
+        "pool": "Olympic Pool"
+      },
+      "features": {
+        "spa": {
+          "title": "SPA Complex",
+          "description": "Thailand's largest sauna, hammam and massage rooms"
+        },
+        "gym": {
+          "title": "Gym",
+          "description": "70+ modern equipment and professional trainers"
+        },
+        "martial": {
+          "title": "Martial Arts",
+          "description": "Jiu-Jitsu, boxing, muay thai with professional trainers"
+        },
+        "pool": {
+          "title": "Olympic Pool",
+          "description": "25-meter heated pool with aqua fitness"
+        },
+        "restaurant": {
+          "title": "Restaurant",
+          "description": "50+ signature dishes from chef and panoramic terrace"
+        },
+        "beauty": {
+          "title": "Beauty Salon",
+          "description": "Cosmetology, treatments, hairdressing services"
+        }
+      }
+    },
+    "about_preview": {
+      "title": "About KAIF",
+      "description": "KAIF is Phuket's premier wellness complex offering world-class facilities for mind, body and soul",
+      "features": {
+        "largest_sauna": "Thailand's largest sauna (50m²)",
+        "hammams": "Thai and Turkish hammams",
+        "restaurant": "Restaurant with 5 cuisines",
+        "gym": "70+ equipment gym",
+        "pool": "25m swimming pool",
+        "fight_club": "Professional fight club"
+      }
+    },
+    "location": {
+      "title": "Find Us",
+      "description": "Conveniently located in Kathu, just minutes away from Patong"
+    },
+    "parallax": {
+      "title": "Where Time Stands Still"
+    },
+    "terrace": {
+      "overline": "2nd Floor",
+      "title": "Rooftop Terrace",
+      "description": "A cozy lounge on the second floor right next to the Russian banya. Order food and drinks from our restaurant, unwind between steam sessions, and take in the breathtaking sunset views over Phuket"
+    }
+  },
+  "facilities": {
+    "overline": "OUR FACILITIES",
+    "title": "Space for harmony and self-development",
+    "subtitle": "We create a space where life becomes brighter. Our mission is to make rest and self-care not a duty, but a pleasure",
+    "gym": {
+      "name": "Equipment",
+      "description": "Modern equipment for effective workouts"
+    },
+    "banya": {
+      "name": "Russian Banya",
+      "description": "The largest panoramic Russian steam room in Phuket"
+    },
+    "restaurant": {
+      "name": "Restaurant Seats",
+      "description": "Outdoor restaurant"
+    },
+    "pool": {
+      "name": "Swimming Pool",
+      "description": "Olympic standard for swimming",
+      "unit": "m"
+    }
+  },
+  "zones": {
+    "overline": "KAIF Spaces",
+    "title": "Everything you need for active recreation and relaxation",
+    "all": "All zones",
+    "activity_label": "Activity",
+    "relax_label": "Relax",
+    "activity": {
+      "fitness": {
+        "name": "Gym",
+        "description": "Modern space with premium equipment"
+      },
+      "combat": {
+        "name": "Martial Arts",
+        "description": "Jiu-Jitsu, boxing and muay thai with professional trainers"
+      },
+      "pool": {
+        "name": "Swimming Pool",
+        "description": "Swimming in 25-meter pool"
+      }
+    },
+    "relax": {
+      "spa": {
+        "name": "SPA Complex",
+        "description": "Relaxing treatments and premium massages"
+      },
+      "banya": {
+        "name": "Russian Banya",
+        "description": "Traditional banya procedures and wellness"
+      },
+      "restaurant": {
+        "name": "Restaurant",
+        "description": "Exquisite cuisine and signature menu"
+      }
+    }
+  },
+  "events": {
+    "overline": "What's On",
+    "title": "Upcoming Events",
+    "featured": "Featured",
+    "empty": {
+      "title": "No upcoming events",
+      "text": "Check back soon for new events"
+    }
+  },
+  "popular_services": {
+    "title": "Popular Services",
+    "subtitle": "Most requested SPA and Beauty treatments in our center",
+    "hit": "Hit",
+    "view_all": "View All Services"
+  },
+  "faq": {
+    "badge": "Questions & Answers",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our multifunctional complex",
+    "questions": {
+      "what_includes": {
+        "question": "What does the KAIF complex include?",
+        "answer": "KAIF is a unique complex in Phuket where you can combine activity, relaxation and self-care in one place. The territory includes: modern gym, Olympic pool with relaxation zones, dance and functional training studio, martial arts hall, beauty studio, SPA with Russian sauna, Thai hammam and massage services, restaurant with Eastern cuisine, Russian classics and barbecue dishes."
+      },
+      "working_hours": {
+        "question": "What are the complex's operating hours?",
+        "answer": "The whole complex is open daily from 07:00 to 21:00. Some zones (SPA, restaurant) may have separate schedules. We recommend checking the operating hours of specific services when booking."
+      },
+      "how_to_book": {
+        "question": "How to book services?",
+        "answer": "Booking is available through our website, mobile app, by phone +66 76 123 456 or WhatsApp. We recommend booking in advance, especially for SPA treatments and restaurant tables."
+      },
+      "memberships": {
+        "question": "Can I purchase memberships?",
+        "answer": "Yes! We have various memberships: daily, weekly, monthly and annual. Combined packages including multiple services with up to 30% discount are also available."
+      },
+      "experience_needed": {
+        "question": "Is experience required for classes?",
+        "answer": "No! We have programs for all fitness levels. Beginners get introductory briefings, personal consultations and \"first steps\" programs for safe workout start."
+      },
+      "payment_methods": {
+        "question": "What payment methods are accepted?",
+        "answer": "We accept Thai Baht payments: cash, card, or QR code."
+      }
+    },
+    "support": {
+      "title": "Support Service",
+      "description": "Our team is ready to help you during business hours. Contact us in any convenient way.",
+      "location": "Phuket, Thailand",
+      "hours": "Support during business hours"
+    },
+    "whatsapp": {
+      "title": "WhatsApp Chat",
+      "description": "Quick responses in messenger. Booking, questions, support - all in one chat.",
+      "instant_replies": "Instant replies",
+      "personal_manager": "Personal manager"
+    },
+    "consultation": {
+      "title": "Personal Consultations",
+      "description": "Individual approach to each guest. We'll help create a program for your goals.",
+      "free": "Free consultation"
+    }
+  },
+  "restaurant": {
+    "title": "Restaurant",
+    "description": "Immerse yourself in exceptional flavors from five different cuisines in our restaurant",
+    "hero": {
+      "label": "Our Restaurant",
+      "badge": "Our Restaurant",
+      "title": "Exquisite Cuisine",
+      "title_pasture": "OUR MENUS",
+      "highlight": "with Modern Twist",
+      "subtitle": "Signature cuisine and exquisite dishes",
+      "subtitle_pasture": "Discover a variety of flavors crafted by our talented chefs using the finest ingredients",
+      "button": "Our Menu",
+      "menu_button": "Our Menu",
+      "reviews": "Excellent Reviews",
+      "title_line1": "Restaurant",
+      "location": "Phuket"
+    },
+    "categories": {
+      "breakfast": "Breakfast",
+      "breakfast_desc": "Start your morning with signature dishes from our chef",
+      "soup": "Soups",
+      "soup_desc": "Comforting broths and creamy classics",
+      "salad": "Salads & Appetizers",
+      "salad_desc": "Fresh greens and refined starters",
+      "grill": "Grill",
+      "grill_desc": "Charcoal-grilled kebabs and roasted meats",
+      "main": "Main Courses",
+      "main_desc": "Signature hot dishes crafted with care",
+      "side": "Side Dishes",
+      "side_desc": "Perfect complements to every main course",
+      "dessert": "Desserts",
+      "dessert_desc": "Sweet endings to a perfect meal"
+    },
+    "menu": {
+      "title": "Our Menu",
+      "description": "Discover a variety of flavors in our menu created by talented chefs",
+      "drinks_info": "Beverages are presented with beautiful icons instead of photos",
+      "tag": "Exquisite Dishes",
+      "sort_by": "Sort by:",
+      "popular": "Popular",
+      "add": "Add",
+      "add_to_order": "Add to Order",
+      "show_more": "Show More",
+      "view_all": "View Full Menu",
+      "categories": {
+        "all": "All Dishes",
+        "breakfast": "Breakfast",
+        "soup": "Soups",
+        "salad": "Salads & Appetizers",
+        "grill": "Grilled Dishes",
+        "side": "Side Dishes",
+        "sauce": "Sauces",
+        "bread": "Bread",
+        "burger": "Burgers",
+        "shawarma": "Shawarma",
+        "dessert": "Desserts",
+        "tea": "Tea",
+        "coffee": "Coffee",
+        "coffee_signature": "Signature Coffee",
+        "smoothie": "Smoothies",
+        "mocktail": "Mocktails",
+        "juice": "Fresh Juices",
+        "cocktail": "Cocktails",
+        "wine": "Wine",
+        "beer": "Beer",
+        "strong": "Hard Drinks",
+        "liqueur": "Liqueurs",
+        "fitness": "Fitness Drinks",
+        "water": "Water",
+        "milk": "Milk Products",
+        "soft_drink": "Soft Drinks"
+      },
+      "tags": {
+        "breakfast": "Breakfast",
+        "soup": "Soup",
+        "salad": "Salad",
+        "appetizer": "Appetizer",
+        "grill": "Grilled",
+        "main": "Main Course",
+        "dessert": "Dessert",
+        "drinks": "Beverages",
+        "popular": "Popular",
+        "vegetarian": "Vegetarian",
+        "vegan": "Vegan",
+        "healthy": "Healthy",
+        "spicy": "Spicy",
+        "seafood": "Seafood",
+        "meat": "Meat",
+        "sweet": "Sweet",
+        "cold": "Cold",
+        "hot": "Hot",
+        "fitness": "Fitness",
+        "pre-workout": "Pre-Workout",
+        "mass-gainer": "Mass Gainer",
+        "bcaa": "BCAA",
+        "recovery": "Recovery",
+        "electrolyte": "Electrolyte",
+        "fat-burner": "Fat Burner"
+      },
+      "sort": {
+        "default": "Default",
+        "popular": "Popular First",
+        "price_low": "Price: Low to High",
+        "price_high": "Price: High to Low",
+        "name": "Alphabetical"
+      },
+      "items": {
+        "kaif_breakfast": {
+          "name": "KAIF Breakfast",
+          "description": "Our restaurant's signature breakfast"
+        },
+        "shakshuka_spinach_salmon": {
+          "name": "Shakshuka with Spinach and Salmon",
+          "description": "Egg dish with spinach and tender salmon"
+        },
+        "shakshuka_tomato_feta": {
+          "name": "Shakshuka with Tomatoes and Feta",
+          "description": "Traditional shakshuka with juicy tomatoes and feta cheese"
+        },
+        "syrniki_passion_fruit": {
+          "name": "Syrniki with Sour Cream and Passion Fruit Sauce",
+          "description": "Tender homemade cottage cheese pancakes with original passion fruit sauce"
+        },
+        "toast_cream_cheese_ham": {
+          "name": "Toast with Cream Cheese and Ham",
+          "description": "Crispy toast with tender cream cheese and quality ham"
+        },
+        "toast_salmon_avocado": {
+          "name": "Toast with Salted Salmon and Avocado",
+          "description": "Exquisite combination of crispy toast, tender salmon and ripe avocado"
+        },
+        "toast_avocado_tomato": {
+          "name": "Toast with Avocado and Tomatoes",
+          "description": "Light and healthy breakfast of crispy toast with avocado and juicy tomatoes"
+        },
+        "matsoni_apricot": {
+          "name": "Matsoni with Apricot Jam",
+          "description": "Traditional Caucasian yogurt with natural apricot jam"
+        },
+        "buckwheat_chicken_mushrooms": {
+          "name": "Buckwheat Porridge with Chicken, Mushrooms and Parmesan Sauce",
+          "description": "Nutritious buckwheat porridge with tender chicken, aromatic mushrooms and creamy sauce"
+        },
+        "okroshka_ayran": {
+          "name": "Okroshka with Ayran",
+          "description": "Refreshing cold soup with fermented milk base, vegetables and herbs"
+        },
+        "okroshka_kvass": {
+          "name": "Okroshka with Kvass",
+          "description": "Classic okroshka with kvass, selected vegetables, egg and fresh herbs"
+        },
+        "chikhirtma_corn": {
+          "name": "Chikhirtma with Corn",
+          "description": "Traditional Georgian soup with rich flavor, complemented by sweet corn"
+        },
+        "borsch_classic": {
+          "name": "Classic Borsch",
+          "description": "Traditional Slavic soup of rich ruby color with beef and vegetables"
+        },
+        "salad_potato_salmon": {
+          "name": "Lettuce with Young Potato and Salted Salmon",
+          "description": "Fresh salad mix with young potato and tender salted salmon"
+        },
+        "vegetable_salad_cheese": {
+          "name": "Fresh Vegetable Salad with Brynza",
+          "description": "Traditional fresh vegetable salad with tender brynza cheese"
+        },
+        "tomato_cucumber_greens": {
+          "name": "Tomatoes, Cucumbers, Herbs",
+          "description": "Fresh juicy tomatoes and crispy cucumbers with aromatic herbs, dressed with sour cream or olive oil"
+        },
+        "hummus_chickpeas": {
+          "name": "Hummus with Roasted Chickpeas",
+          "description": "Tender hummus with additional roasted chickpeas for texture"
+        },
+        "hummus_avocado_tomato": {
+          "name": "Hummus with Avocado and Tomatoes",
+          "description": "Original hummus with ripe avocado and fresh tomatoes"
+        },
+        "hummus_grilled_shrimp": {
+          "name": "Hummus with Grilled Shrimp",
+          "description": "Classic hummus complemented by juicy grilled shrimp"
+        },
+        "hummus_chicken_kebab": {
+          "name": "Hummus with Chicken Kebab",
+          "description": "Hummus served with aromatic pieces of chicken kebab"
+        },
+        "tzatziki_olives_pepper": {
+          "name": "Tzatziki with Olives and Pickled Pepper",
+          "description": "Refreshing yogurt sauce with cucumbers, garlic and herbs, complemented by olives and pickled pepper"
+        },
+        "chicken_kebab_yogurt": {
+          "name": "Chicken Kebab (in Yogurt)",
+          "description": "Juicy kebab of chicken fillet marinated in yogurt with Eastern spices"
+        },
+        "beef_kebab": {
+          "name": "Beef Kebab",
+          "description": "Juicy kebab of select beef, cooked over open fire"
+        },
+        "pork_neck_kebab": {
+          "name": "Pork Neck Kebab",
+          "description": "Kebab of marinated pork neck with aromatic spices"
+        },
+        "caesar_grilled_shrimp": {
+          "name": "Caesar with Grilled Shrimp",
+          "description": "Classic Caesar salad with juicy grilled shrimp"
+        },
+        "caesar_chicken_kebab": {
+          "name": "Caesar with Chicken Kebab",
+          "description": "Traditional Caesar salad with tender chicken kebab"
+        },
+        "chicken_adjika_potato": {
+          "name": "Chicken in Adjika with Potato",
+          "description": "Juicy chicken marinated in spicy adjika sauce with young potato garnish"
+        },
+        "lyulya_kebab_chicken": {
+          "name": "Lyulya Kebab (Chicken)",
+          "description": "Minced kebab of chicken fillet with aromatic spices"
+        },
+        "lyulya_kebab_lamb": {
+          "name": "Lyulya Kebab (Lamb)",
+          "description": "Traditional lyulya kebab of minced lamb with Eastern spices"
+        },
+        "lyulya_kebab_beef_pork": {
+          "name": "Lyulya Kebab (Beef and Pork)",
+          "description": "Juicy lyulya kebab of mixed minced beef and pork"
+        },
+        "grilled_salmon": {
+          "name": "Grilled Salmon",
+          "description": "Tender salmon fillet cooked over open fire"
+        },
+        "white_perch_fillet": {
+          "name": "White Perch Fillet",
+          "description": "Tender white perch fillet grilled to perfection"
+        },
+        "grilled_shrimp": {
+          "name": "Grilled Shrimp",
+          "description": "Juicy tiger shrimp grilled with herbs and garlic oil"
+        },
+        "italian_ice_cream": {
+          "name": "Italian Ice Cream",
+          "description": "Authentic Italian gelato with various flavors"
+        },
+        "green_tea": {
+          "name": "Green Tea",
+          "description": "Premium green tea with delicate aroma"
+        },
+        "black_tea": {
+          "name": "Black Tea",
+          "description": "Classic black tea with rich flavor"
+        },
+        "ginger_honey_tea": {
+          "name": "Ginger and Honey Tea",
+          "description": "Warming tea with fresh ginger and natural honey"
+        },
+        "mint_tea": {
+          "name": "Mint Tea",
+          "description": "Refreshing herbal tea with fresh mint"
+        },
+        "jasmine_tea": {
+          "name": "Jasmine Tea",
+          "description": "Aromatic tea with jasmine flowers"
+        },
+        "fruit_tea": {
+          "name": "Fruit Tea",
+          "description": "Herbal tea blend with dried fruits and berries"
+        },
+        "thai_iced_tea": {
+          "name": "Thai Iced Tea with Milk",
+          "description": "Traditional Thai tea served cold with condensed milk"
+        },
+        "espresso": {
+          "name": "Espresso",
+          "description": "Classic Italian espresso with rich crema"
+        },
+        "americano": {
+          "name": "Americano",
+          "description": "Espresso diluted with hot water"
+        },
+        "cappuccino": {
+          "name": "Cappuccino",
+          "description": "Espresso with steamed milk and foam"
+        },
+        "latte": {
+          "name": "Latte",
+          "description": "Smooth coffee with steamed milk"
+        },
+        "mocha": {
+          "name": "Mocha",
+          "description": "Coffee drink with chocolate and steamed milk"
+        },
+        "iced_latte": {
+          "name": "Iced Latte",
+          "description": "Cold latte with ice and milk foam"
+        },
+        "frappe": {
+          "name": "Frappe",
+          "description": "Iced coffee drink blended with ice"
+        },
+        "smoothie_lime": {
+          "name": "Lime-Lime",
+          "description": "Refreshing smoothie with double lime portion"
+        },
+        "smoothie_mango_passion": {
+          "name": "Mango-Passion Fruit",
+          "description": "Fresh smoothie from ripe mango and passion fruit"
+        },
+        "banana_shake": {
+          "name": "Banana Shake",
+          "description": "Tender banana shake with milk and vanilla"
+        },
+        "matcha_latte": {
+          "name": "Matcha Latte",
+          "description": "Aromatic drink with Japanese green tea matcha"
+        },
+        "butterfly_tea": {
+          "name": "Butterfly Pea Flower Tea",
+          "description": "Exotic blue tea that changes color"
+        },
+        "passion_fruit_mocktail": {
+          "name": "Passion Fruit",
+          "description": "Refreshing drink from fresh passion fruit"
+        },
+        "pink_lemonade": {
+          "name": "Pink Lemonade",
+          "description": "Gentle pink lemonade with berries"
+        },
+        "honey_lemon": {
+          "name": "Honey and Lemon",
+          "description": "Healthy drink with natural honey and lemon"
+        },
+        "electrolyte": {
+          "name": "Electrolyte",
+          "description": "Isotonic drink for restoring electrolyte balance"
+        },
+        "hibiscus_iced_tea": {
+          "name": "Iced Hibiscus Tea",
+          "description": "Refreshing tea from hibiscus flowers"
+        },
+        "lemonade_classic": {
+          "name": "Lemonade",
+          "description": "Classic lemonade from fresh lemons"
+        },
+        "mojito_virgin": {
+          "name": "Mojito",
+          "description": "Non-alcoholic mojito with mint, lime and soda"
+        },
+        "orange_juice": {
+          "name": "Orange Juice",
+          "description": "Fresh-squeezed orange juice"
+        },
+        "pineapple_juice": {
+          "name": "Pineapple Juice",
+          "description": "Fresh-squeezed juice from ripe pineapple"
+        },
+        "apple_juice": {
+          "name": "Apple Juice",
+          "description": "Fresh-squeezed apple juice"
+        },
+        "carrot_juice": {
+          "name": "Carrot Juice",
+          "description": "Fresh-squeezed carrot juice"
+        },
+        "mango_juice": {
+          "name": "Mango Juice",
+          "description": "Fresh-squeezed juice from ripe mango"
+        },
+        "prosecco": {
+          "name": "Prosecco Sparkling Wine",
+          "description": "Italian sparkling wine"
+        },
+        "sauvignon_blanc": {
+          "name": "Sauvignon Blanc White Wine",
+          "description": "French dry white wine"
+        },
+        "oatmeal_apple_almonds": {
+          "name": "Oatmeal with Baked Apple and Caramelized Almonds",
+          "description": "Tender oatmeal with aromatic baked apple and crispy caramelized almonds"
+        },
+        "grilled_vegetables": {
+          "name": "Grilled Vegetables",
+          "description": "Assortment of seasonal vegetables grilled to perfection"
+        },
+        "potatoes_herbs": {
+          "name": "Potatoes with Fresh Herbs",
+          "description": "Boiled potatoes with aromatic fresh herbs and butter"
+        },
+        "buckwheat_mushrooms": {
+          "name": "Buckwheat with Mushrooms",
+          "description": "Aromatic buckwheat porridge with sautéed mushrooms"
+        },
+        "rice_quail_eggs": {
+          "name": "Rice with Quail Eggs and Spices",
+          "description": "Aromatic rice with tender quail eggs and eastern spices"
+        },
+        "sauce_tzatziki_mint": {
+          "name": "Tzatziki with Mint",
+          "description": "Refreshing yogurt sauce with cucumbers, garlic, herbs and fresh mint"
+        },
+        "sauce_satsebeli": {
+          "name": "Satsebeli",
+          "description": "Spicy Georgian sauce made from tomatoes, garlic, peppers and herbs"
+        },
+        "sauce_mustard": {
+          "name": "Mustard Sauce",
+          "description": "Piquant sauce based on Dijon mustard with honey and spices"
+        },
+        "sauce_pesto": {
+          "name": "Pesto",
+          "description": "Aromatic sauce made from basil and cilantro with nuts and spices"
+        },
+        "bread_butter_adjika": {
+          "name": "Bread with Butter and Adjika",
+          "description": "Fresh bread with homemade butter and spicy adjika"
+        },
+        "shawarma_kaif": {
+          "name": "KAIF Shawarma",
+          "description": "Signature KAIF shawarma with special spice blend and fresh vegetables"
+        },
+        "classic_cheeseburger": {
+          "name": "Classic Cheeseburger",
+          "description": "Juicy beef patty with melted cheese, lettuce and special sauce"
+        },
+        "kaif_burger_lamb": {
+          "name": "KAIF Burger with Lamb Patty and Bacon",
+          "description": "Premium burger with lamb patty, crispy bacon and signature sauce"
+        },
+        "burger_lamb_soy": {
+          "name": "Burger with Lamb and Soy Sauce",
+          "description": "Tender lamb patty with Asian soy sauce and fresh vegetables"
+        },
+        "french_fries_burger": {
+          "name": "French Fries for Burger",
+          "description": "Crispy french fries, perfect complement to any burger"
+        },
+        "french_fries_parmesan": {
+          "name": "French Fries with Parmesan",
+          "description": "French fries with grated parmesan and aromatic herbs"
+        },
+        "homemade_yogurt": {
+          "name": "Homemade Yogurt with Apricot Jam",
+          "description": "Tender homemade yogurt with natural apricot jam"
+        },
+        "napoleon": {
+          "name": "Napoleon",
+          "description": "Classic layered Napoleon cake with tender cream"
+        },
+        "lava_cake_cherry": {
+          "name": "Lava Cake with Cherry Jam",
+          "description": "Warm chocolate cake with liquid center and cherry jam"
+        },
+        "matcha_bomba": {
+          "name": "Matcha Bomb",
+          "description": "Signature coffee drink with matcha"
+        },
+        "espresso_chocolate": {
+          "name": "Espresso Chocolate",
+          "description": "Espresso with chocolate"
+        },
+        "espresso_negroni": {
+          "name": "Espresso Negroni",
+          "description": "Coffee interpretation of the classic cocktail"
+        },
+        "pineapple_express": {
+          "name": "Pineapple Express",
+          "description": "Coffee with pineapple notes"
+        },
+        "matcha_coco": {
+          "name": "Matcha Coco",
+          "description": "Matcha with coconut milk"
+        },
+        "honey_lemon_espresso": {
+          "name": "Honey Lemon Espresso",
+          "description": "Espresso with honey and lemon"
+        },
+        "kvass": {
+          "name": "Kvass",
+          "description": "Traditional Russian kvass 0.5L"
+        },
+        "cranberry_juice": {
+          "name": "Cranberry Juice",
+          "description": "Cranberry juice 0.3L"
+        },
+        "pina_colada": {
+          "name": "Pina Colada",
+          "description": "Exotic cocktail with rum and coconut"
+        },
+        "aperol_spritz": {
+          "name": "Aperol Spritz",
+          "description": "Italian aperitif with Aperol"
+        },
+        "bloody_mary": {
+          "name": "Bloody Mary",
+          "description": "Classic cocktail with vodka and tomato juice"
+        },
+        "negroni": {
+          "name": "Negroni",
+          "description": "Classic Italian cocktail"
+        },
+        "mojito_alcohol": {
+          "name": "Alcoholic Mojito",
+          "description": "Classic Cuban cocktail with rum"
+        },
+        "pure_vodka": {
+          "name": "Pure Vodka",
+          "description": "Vodka (50 ml)"
+        },
+        "whiskey_jack": {
+          "name": "Jack Daniel's Whiskey",
+          "description": "Tennessee whiskey (50 ml)"
+        },
+        "rum_bacardi": {
+          "name": "Bacardi Rum",
+          "description": "White rum (50 ml)"
+        },
+        "tequila_jose": {
+          "name": "Jose Cuervo Tequila",
+          "description": "Mexican tequila (50 ml)"
+        },
+        "gin_bombay": {
+          "name": "Bombay Gin",
+          "description": "London dry gin (50 ml)"
+        },
+        "cognac_hennessy": {
+          "name": "Hennessy Cognac",
+          "description": "French cognac (50 ml)"
+        },
+        "martini_extra_dry": {
+          "name": "Martini Extra Dry",
+          "description": "Dry vermouth (50 ml)"
+        },
+        "vermouth_chinzano": {
+          "name": "Vermouth Chinzano",
+          "description": "Italian vermouth (50 ml)"
+        },
+        "martini_rose": {
+          "name": "Martini Vermouth Rose",
+          "description": "Rose vermouth (50 ml)"
+        },
+        "singha_beer": {
+          "name": "Singha Beer",
+          "description": "Thai light beer 0.33L"
+        },
+        "chang_beer": {
+          "name": "Chang Beer",
+          "description": "Thai light beer 0.33L"
+        },
+        "leo_beer": {
+          "name": "Leo Beer",
+          "description": "Thai light beer 0.33L"
+        },
+        "heineken_beer": {
+          "name": "Heineken Beer",
+          "description": "Imported light beer 0.33L"
+        },
+        "alt_milk": {
+          "name": "Alternative Milk",
+          "description": "Plant-based milk (oat, almond)"
+        },
+        "coconut_water": {
+          "name": "Coconut Water",
+          "description": "Natural coconut water"
+        },
+        "c4_original_shot": {
+          "name": "PRE-WORKOUT",
+          "description": "C4 Original Shot - energy boost before training"
+        },
+        "serious_mass_shake": {
+          "name": "MASS GAINER",
+          "description": "Serious Mass Shake - high-calorie shake for muscle growth"
+        },
+        "xtend_eaa_recovery": {
+          "name": "BCAA / EAA",
+          "description": "Xtend EAA Recovery - anti-catabolic post-workout support"
+        },
+        "electrolyte_boost": {
+          "name": "ELECTROLYTE BOOST",
+          "description": "Replenish Minerals After Sweat Loss - hydration shot"
+        },
+        "l_carnitine_shot": {
+          "name": "FAT BURNING",
+          "description": "L-Carnitine Shot - fat metabolism support"
+        },
+        "rejuvenation_program": {
+          "name": "Rejuvenation Program",
+          "description": "Comprehensive anti-aging program"
+        },
+        "vacuum_oil": {
+          "name": "Oil Vacuum Facial Cleansing",
+          "description": "Cleansing with nourishing oils"
+        },
+        "hydration_program": {
+          "name": "Hydration and Radiance Program",
+          "description": "Intensive hydration for skin radiance"
+        },
+        "vacuum_men": {
+          "name": "Men's Vacuum Facial Cleansing",
+          "description": "Specialized care for men's skin"
+        },
+        "express_care": {
+          "name": "Express Care",
+          "description": "Quick procedure for fresh skin"
+        },
+        "facial_massage_care": {
+          "name": "Facial Massage with Care",
+          "description": "Relaxing massage with care products"
+        },
+        "facial_massage": {
+          "name": "Facial Massage",
+          "description": "Classic facial massage for relaxation"
+        },
+        "vacuum_subscription_5": {
+          "name": "Vacuum Cleansing Subscription (5 standard procedures)",
+          "description": "Advantageous package of 5 standard procedures"
+        },
+        "vacuum_subscription_5_special": {
+          "name": "Vacuum Cleansing Subscription (5 specialized procedures)",
+          "description": "Premium package of 5 specialized procedures"
+        },
+        "deep_bikini": {
+          "name": "Deep Bikini",
+          "description": "Laser hair removal of intimate area"
+        },
+        "lower_back": {
+          "name": "Lower back/Shoulder blades/Abdomen",
+          "description": "Hair removal of medium body areas"
+        },
+        "areola_line": {
+          "name": "Areola/Abdominal line",
+          "description": "Hair removal of delicate areas"
+        },
+        "back_completely": {
+          "name": "Full Back",
+          "description": "Complete back hair removal"
+        },
+        "buttocks_calves": {
+          "name": "Buttocks/Calves/Thighs",
+          "description": "Hair removal of leg areas"
+        },
+        "legs_completely": {
+          "name": "Full Legs",
+          "description": "Complete leg hair removal"
+        },
+        "arms_completely": {
+          "name": "Full Arms",
+          "description": "Complete arm hair removal"
+        },
+        "face_lower": {
+          "name": "Lower Third of Face",
+          "description": "Hair removal of chin area"
+        },
+        "armpits": {
+          "name": "Armpits",
+          "description": "Armpit hair removal"
+        },
+        "men_2_zones": {
+          "name": "Any 2 zones",
+          "description": "Hair removal of any two zones of choice"
+        },
+        "men_3_zones": {
+          "name": "Any 3 zones",
+          "description": "Hair removal of any three zones of choice"
+        },
+        "men_4_zones": {
+          "name": "Any 4 zones",
+          "description": "Hair removal of any four zones of choice"
+        },
+        "men_full_body": {
+          "name": "Full Body",
+          "description": "Complete full body hair removal"
+        },
+        "men_face": {
+          "name": "Upper lip/Chin/Cheeks/Neck",
+          "description": "Facial area hair removal"
+        },
+        "men_full_face": {
+          "name": "Full Face",
+          "description": "Complete facial hair removal"
+        },
+        "men_armpits": {
+          "name": "Armpits",
+          "description": "Armpit hair removal"
+        },
+        "men_chest_abdomen": {
+          "name": "Chest/Abdomen completely",
+          "description": "Torso hair removal"
+        },
+        "men_subscription": {
+          "name": "Full Body Subscription (5 sessions)",
+          "description": "Advantageous full hair removal package"
+        },
+        "complex_1": {
+          "name": "Calves + Armpits + Deep Bikini",
+          "description": "Popular package for women"
+        },
+        "complex_2": {
+          "name": "Armpits + Deep Bikini/Calves",
+          "description": "Basic hair removal package"
+        },
+        "complex_3": {
+          "name": "Full Legs + Armpits + Deep Bikini",
+          "description": "Extended leg package"
+        },
+        "complex_4": {
+          "name": "Full Arms + Full Legs + Armpits + Deep Bikini",
+          "description": "Maximum hair removal package"
+        },
+        "endosphere_full_body": {
+          "name": "Full Body",
+          "description": "Endosphere therapy for full body figure correction"
+        },
+        "endosphere_face": {
+          "name": "Hardware Facial Massage (Endosphere, RF lifting)",
+          "description": "Rejuvenating hardware facial massage"
+        },
+        "endosphere_subscription_6": {
+          "name": "Endosphere Subscription (6 sessions)",
+          "description": "Advantageous package of 6 procedures"
+        },
+        "endosphere_subscription_12": {
+          "name": "Endosphere Subscription (12 sessions)",
+          "description": "Maximum package of 12 procedures"
+        },
+        "manicure_no_coating": {
+          "name": "Manicure without coating",
+          "description": "Classic manicure with nail plate treatment"
+        },
+        "manicure_base": {
+          "name": "Manicure with base coating",
+          "description": "Manicure with protective base coating"
+        },
+        "manicure_gel": {
+          "name": "Manicure with gel polish coating",
+          "description": "Manicure with long-lasting gel polish coating"
+        },
+        "gel_strengthening": {
+          "name": "Gel strengthening without gel polish",
+          "description": "Natural nail strengthening with gel"
+        },
+        "gel_strengthening_polish": {
+          "name": "Gel strengthening with gel polish",
+          "description": "Nail strengthening with colored coating"
+        },
+        "gel_french": {
+          "name": "Gel polish French correction",
+          "description": "Classic French manicure with gel polish"
+        },
+        "nail_extension_short": {
+          "name": "Classic nail extension short (up to 2mm)",
+          "description": "Short nail extension"
+        },
+        "nail_extension_long": {
+          "name": "Nail extension (over 2mm)",
+          "description": "Long nail extension"
+        },
+        "nail_repair": {
+          "name": "Nail repair",
+          "description": "Damaged nail restoration"
+        },
+        "pedicure_full_no_coating": {
+          "name": "Full pedicure without coating",
+          "description": "Complete foot and nail treatment"
+        },
+        "pedicure_full_coating": {
+          "name": "Full pedicure with coating",
+          "description": "Full pedicure with gel polish coating"
+        },
+        "pedicure_toes_no_coating": {
+          "name": "Toe pedicure without coating",
+          "description": "Treatment of toe nails only"
+        },
+        "pedicure_toes_coating": {
+          "name": "Toe pedicure with gel polish coating",
+          "description": "Nail treatment with colored coating"
+        },
+        "callus_removal": {
+          "name": "Callus removal",
+          "description": "Professional callus removal"
+        },
+        "onycholysis_cleaning": {
+          "name": "Onycholysis cleaning (top master)",
+          "description": "Treatment of nail plate detachment"
+        },
+        "womens_haircut": {
+          "name": "Women's haircut",
+          "description": "Professional women's haircut"
+        },
+        "hair_wash_brushing": {
+          "name": "Hair wash with brushing",
+          "description": "Hair washing with brush styling"
+        },
+        "bangs_haircut": {
+          "name": "Bangs haircut",
+          "description": "Bangs correction and cutting"
+        },
+        "mens_haircut": {
+          "name": "Men's haircut",
+          "description": "Stylish men's haircut"
+        },
+        "hair_styling": {
+          "name": "Styling with brushing and styling products",
+          "description": "Professional hair styling"
+        },
+        "evening_styling": {
+          "name": "Evening styling",
+          "description": "Festive styling for special occasions"
+        },
+        "coloring_roots": {
+          "name": "Single-tone root coloring",
+          "description": "Regrowth root coloring"
+        },
+        "coloring_stretching": {
+          "name": "Root coloring + color stretching along full length",
+          "description": "Complex coloring with color stretching"
+        },
+        "coloring_short": {
+          "name": "Single-tone coloring short",
+          "description": "Full coloring of short hair"
+        },
+        "coloring_medium": {
+          "name": "Single-tone coloring medium",
+          "description": "Full coloring of medium-length hair"
+        },
+        "coloring_long": {
+          "name": "Single-tone coloring long",
+          "description": "Full coloring of long hair"
+        },
+        "total_blond_short": {
+          "name": "Total blond short",
+          "description": "Short hair lightening to blond"
+        },
+        "total_blond_medium": {
+          "name": "Total blond medium",
+          "description": "Medium-length hair lightening to blond"
+        },
+        "total_blond_long": {
+          "name": "Total blond long",
+          "description": "Long hair lightening to blond"
+        },
+        "happiness_short": {
+          "name": "Hair happiness treatment short",
+          "description": "Restorative procedure for short hair"
+        },
+        "happiness_medium": {
+          "name": "Hair happiness treatment medium",
+          "description": "Restorative procedure for medium-length hair"
+        },
+        "happiness_long": {
+          "name": "Hair happiness treatment long",
+          "description": "Restorative procedure for long hair"
+        },
+        "indian_head_massage": {
+          "name": "Indian head massage",
+          "description": "Traditional Indian massage for hair growth"
+        },
+        "hair_express_care": {
+          "name": "Express care",
+          "description": "Quick restorative procedure"
+        },
+        "homemade_granola": {
+          "name": "Homemade Granola",
+          "description": "Granola / labneh / berries"
+        },
+        "potato_pancakes": {
+          "name": "Potato Pancakes",
+          "description": "Potato pancakes / mushroom sauce"
+        },
+        "eggs_benedict": {
+          "name": "Eggs Benedict",
+          "description": "Classic Eggs Benedict"
+        },
+        "waffles": {
+          "name": "Waffles",
+          "description": "Waffles / salted caramel / ice cream"
+        },
+        "pumpkin_soup": {
+          "name": "Pumpkin Cream Soup",
+          "description": "Pumpkin / feta / seeds"
+        },
+        "minestrone": {
+          "name": "Minestrone",
+          "description": "Italian vegetable soup"
+        },
+        "creamy_salmon": {
+          "name": "Creamy Salmon Soup",
+          "description": "Salmon / cream"
+        },
+        "gazpacho_shrimp": {
+          "name": "Gazpacho with Shrimp",
+          "description": "Gazpacho / shrimp tartare"
+        },
+        "green_salad": {
+          "name": "Green Salad",
+          "description": "Broccoli / cucumber / spinach / edamame"
+        },
+        "crispy_eggplant": {
+          "name": "Crispy Eggplant",
+          "description": "Eggplant / yogurt / nuts / chili"
+        },
+        "caesar_chicken": {
+          "name": "Caesar with Chicken",
+          "description": "Chicken / quail eggs"
+        },
+        "vegetable_salad": {
+          "name": "Vegetable Salad",
+          "description": "Cucumber / tomato / radish / olive oil"
+        },
+        "roast_beef_salad": {
+          "name": "Roast Beef Salad",
+          "description": "Roast beef / pepper / cucumber / Asian dressing"
+        },
+        "crispy_shrimp": {
+          "name": "Crispy Shrimp",
+          "description": "Shrimp / vegetable mousse"
+        },
+        "chili_con_carne": {
+          "name": "Chili con Carne",
+          "description": "Chili / smoked sour cream"
+        },
+        "big_snack_set": {
+          "name": "Large Snack Set",
+          "description": "Smoked fish mix"
+        },
+        "small_snack_set": {
+          "name": "Small Snack Set",
+          "description": "Smoked fish mix"
+        },
+        "chicken_kebab": {
+          "name": "Chicken Kebab",
+          "description": "Grilled chicken fillet"
+        },
+        "pork_kebab": {
+          "name": "Pork Kebab",
+          "description": "Grilled pork"
+        },
+        "lyulya_chicken": {
+          "name": "Chicken Lula Kebab",
+          "description": "Minced chicken kebab"
+        },
+        "lyulya_lamb": {
+          "name": "Lamb Lula Kebab",
+          "description": "Minced lamb kebab"
+        },
+        "lyulya_beef_pork": {
+          "name": "Beef & Pork Lula",
+          "description": "Beef and pork"
+        },
+        "assorted_kebabs": {
+          "name": "Kebab Platter",
+          "description": "Mixed kebabs"
+        },
+        "vegetables_kebab": {
+          "name": "Vegetable Kebab",
+          "description": "Grilled vegetables"
+        },
+        "chicken_thigh_grill": {
+          "name": "Grilled Chicken Thigh",
+          "description": "Chicken / baby potatoes"
+        },
+        "pork_ribs_bbq": {
+          "name": "BBQ Pork Ribs",
+          "description": "Ribs / grilled corn"
+        },
+        "salmon_steak": {
+          "name": "Salmon Steak",
+          "description": "Salmon / asparagus / spinach"
+        },
+        "sea_bass_zucchini": {
+          "name": "Sea Bass with Zucchini",
+          "description": "Sea bass / zucchini / white wine"
+        },
+        "grilled_lobster": {
+          "name": "Grilled Lobster",
+          "description": "Whole grilled lobster"
+        },
+        "wagyu_ribeye": {
+          "name": "Wagyu Ribeye",
+          "description": "Wagyu ribeye steak"
+        },
+        "mignon_steak": {
+          "name": "Filet Mignon",
+          "description": "Mignon / mash / demi-glace"
+        },
+        "fried_rice_shrimp": {
+          "name": "Fried Rice with Shrimp",
+          "description": "Fried rice / vegetables / shrimp"
+        },
+        "chicken_schnitzel": {
+          "name": "Chicken Schnitzel",
+          "description": "Schnitzel / potato / salsa"
+        },
+        "duck_breast": {
+          "name": "Duck Breast",
+          "description": "Duck / lingonberry / sweet potato"
+        },
+        "mashed_potatoes_truffle": {
+          "name": "Truffle Mashed Potatoes",
+          "description": "Potato / truffle oil"
+        },
+        "broccoli_grill": {
+          "name": "Grilled Broccoli",
+          "description": "Broccoli / yogurt / avocado"
+        },
+        "steamed_rice": {
+          "name": "Steamed Rice",
+          "description": "White rice"
+        },
+        "baked_potatoes_herbs": {
+          "name": "Baked Potatoes",
+          "description": "Potato / herbs"
+        },
+        "cheesecake_pistachio": {
+          "name": "Cheesecake",
+          "description": "Cheesecake / pistachio sauce"
+        },
+        "chocolate_fondant": {
+          "name": "Chocolate Fondant",
+          "description": "Fondant / ice cream / cherry"
+        },
+        "tiramisu": {
+          "name": "Tiramisu",
+          "description": "Classic tiramisu"
+        },
+        "coconut_pudding_chia": {
+          "name": "Coconut Chia Pudding",
+          "description": "Coconut / chia / mango"
+        },
+        "italian_gelato": {
+          "name": "Italian Gelato",
+          "description": "Vanilla / chocolate / caramel"
+        },
+        "bonafi_pie": {
+          "name": "Banoffee Pie",
+          "description": "Banana / caramel / cream"
+        }
+      }
+    },
+    "bar": {
+      "label": "Bar",
+      "title": "Our Bar",
+      "description": "We have everything to quench your thirst — from sports protein shakes to relaxing cocktails.",
+      "menu_button": "View Drinks Menu",
+      "feature1": {
+        "title": "Signature Drinks",
+        "description": "Unique cocktails created by our mixologists"
+      },
+      "feature2": {
+        "title": "Refreshing Mixes",
+        "description": "Freshly squeezed juices and fruit combinations"
+      },
+      "feature3": {
+        "title": "Post-Workout Recovery Drinks",
+        "description": "Protein shakes and sports nutrition"
+      }
+    },
+    "booking": {
+      "label": "Booking",
+      "title": "Book a Table",
+      "description": "Reserve your table to guarantee your spot",
+      "coming_soon": "Online booking will be available soon. For now, please call us for reservations.",
+      "open_hours": "Open Hours",
+      "reservation": "Reservations",
+      "call_now": "Call Now"
+    },
+    "cuisines": {
+      "title": "Our Cuisines",
+      "description": "Experience culinary delights from around the world"
+    },
+    "chef": "Chef's Recommendations",
+    "slider": {
+      "slide1": {
+        "title": "Exquisite Cuisine",
+        "description": "Discover unique flavors from five different world cuisines in our restaurant"
+      },
+      "slide2": {
+        "title": "Comfortable Atmosphere",
+        "description": "Enjoy your meal in a cozy atmosphere with a view of the tropical garden"
+      },
+      "slide3": {
+        "title": "Fresh Ingredients",
+        "description": "We use only fresh and quality ingredients to prepare our dishes"
+      }
+    },
+    "bookTable": "Book a Table",
+    "dish_details": {
+      "ingredients": "Ingredients",
+      "nutritional_info": "Nutritional Information"
+    }
+  },
+  "spa": {
+    "title": "SPA",
+    "description": "Rejuvenate your mind and body in Thailand's largest sauna",
+    "hero": {
+      "badge": "Premium SPA",
+      "title": "Immerse yourself in the world of relaxation and beauty",
+      "subtitle": "Professional SPA treatments in the luxurious atmosphere of KAIF",
+      "book_online": "Book Online",
+      "book_whatsapp": "WhatsApp",
+      "book_now": "Book a Treatment",
+      "learn_more": "Learn More",
+      "title_part1": "SPA",
+      "title_part2": "& Beauty",
+      "location": "Phuket"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Complete range of SPA and Beauty services for your comfort and beauty",
+      "categories": {
+        "massage": "Massage",
+        "cosmetology": "Cosmetology",
+        "laser-hair-removal": "Laser Hair Removal",
+        "laser-men": "Laser Hair Removal for Men",
+        "laser-complex": "Laser Complexes",
+        "endosphere": "Endosphere Therapy",
+        "laser": "Laser Hair Removal",
+        "laser-complex-3": "Laser Complexes (3 procedures)",
+        "laser-complex-5": "Laser Complexes (5 procedures)",
+        "hair-care": "Hair Care",
+        "manicure": "Manicure",
+        "pedicure": "Pedicure",
+        "pro-pedicure": "PRO Master Pedicure",
+        "eyelashes": "Eyelashes",
+        "brows": "Brows and Eyelashes",
+        "sauna": "Sauna",
+        "hammam": "Hammam",
+        "treatments": "SPA Treatments"
+      },
+      "popular": "Popular",
+      "learn_more": "Learn More",
+      "show_more": "Show {{count}} more services",
+      "show_less": "Show Less",
+      "price_from": "from {{price}} ฿",
+      "duration_price": "{{duration}} min - {{price}} ฿",
+      "items": {
+        "oil_massage": {
+          "name": "Oil Massage",
+          "description": "Relaxing massage with natural oils for deep recovery"
+        },
+        "foot_massage": {
+          "name": "Foot Massage",
+          "description": "Traditional Thai foot massage for fatigue relief"
+        },
+        "sport_massage": {
+          "name": "Sports Massage",
+          "description": "Intensive massage for post-workout recovery"
+        },
+        "anti_cellulite_massage": {
+          "name": "Anti-Cellulite Massage",
+          "description": "Specialized massage for body contouring"
+        },
+        "stone_massage": {
+          "name": "Stone Massage",
+          "description": "Hot stone massage for deep relaxation"
+        },
+        "thai_massage": {
+          "name": "Traditional Thai Massage",
+          "description": "Classic Thai massage on mat"
+        },
+        "head_shoulders": {
+          "name": "Head and Shoulders Massage",
+          "description": "Relaxing massage for tension relief"
+        },
+        "oil_scrub": {
+          "name": "Oil Massage + Scrub",
+          "description": "Complex procedure with peeling and massage"
+        },
+        "body_scrub": {
+          "name": "Full Body Scrub",
+          "description": "Exfoliating treatment for entire body"
+        },
+        "wrap_anti_cell": {
+          "name": "Body Wrap + Anti-Cellulite Massage",
+          "description": "Complex procedure for body contouring"
+        },
+        "vacuum_peeling": {
+          "name": "Vacuum Facial with Peeling",
+          "description": "Deep pore cleansing with mechanical peeling"
+        },
+        "vacuum_standard": {
+          "name": "Standard Vacuum Facial",
+          "description": "Classic facial cleansing procedure"
+        },
+        "hollywood_vacuum": {
+          "name": "Hollywood Vacuum Facial",
+          "description": "Premium treatment for perfect skin condition"
+        },
+        "whitening_program": {
+          "name": "Whitening Program (Pigmentation)",
+          "description": "Special program against pigmentation spots"
+        },
+        "rejuvenation_program": {
+          "name": "Rejuvenation Program",
+          "description": "Comprehensive anti-aging program"
+        },
+        "vacuum_oil": {
+          "name": "Oil Vacuum Facial Cleansing",
+          "description": "Cleansing with nourishing oils"
+        },
+        "hydration_program": {
+          "name": "Hydration and Radiance Program",
+          "description": "Intensive hydration for skin radiance"
+        },
+        "vacuum_men": {
+          "name": "Men's Vacuum Facial Cleansing",
+          "description": "Specialized care for men's skin"
+        },
+        "express_care": {
+          "name": "Express Care",
+          "description": "Quick procedure for fresh skin"
+        },
+        "facial_massage_care": {
+          "name": "Facial Massage with Care",
+          "description": "Relaxing massage with care products"
+        },
+        "facial_massage": {
+          "name": "Facial Massage",
+          "description": "Classic facial massage for relaxation"
+        },
+        "vacuum_subscription_5": {
+          "name": "Vacuum Cleansing Subscription (5 standard procedures)",
+          "description": "Advantageous package of 5 standard procedures"
+        },
+        "vacuum_subscription_5_special": {
+          "name": "Vacuum Cleansing Subscription (5 specialized procedures)",
+          "description": "Premium package of 5 specialized procedures"
+        },
+        "deep_bikini": {
+          "name": "Deep Bikini",
+          "description": "Laser hair removal of intimate area"
+        },
+        "lower_back": {
+          "name": "Lower back/Shoulder blades/Abdomen",
+          "description": "Hair removal of medium body areas"
+        },
+        "areola_line": {
+          "name": "Areola/Abdominal line",
+          "description": "Hair removal of delicate areas"
+        },
+        "back_completely": {
+          "name": "Full Back",
+          "description": "Complete back hair removal"
+        },
+        "buttocks_calves": {
+          "name": "Buttocks/Calves/Thighs",
+          "description": "Hair removal of leg areas"
+        },
+        "legs_completely": {
+          "name": "Full Legs",
+          "description": "Complete leg hair removal"
+        },
+        "arms_completely": {
+          "name": "Full Arms",
+          "description": "Complete arm hair removal"
+        },
+        "face_lower": {
+          "name": "Lower Third of Face",
+          "description": "Hair removal of chin area"
+        },
+        "armpits": {
+          "name": "Armpits",
+          "description": "Armpit hair removal"
+        },
+        "men_2_zones": {
+          "name": "Any 2 zones",
+          "description": "Hair removal of any two zones of choice"
+        },
+        "men_3_zones": {
+          "name": "Any 3 zones",
+          "description": "Hair removal of any three zones of choice"
+        },
+        "men_4_zones": {
+          "name": "Any 4 zones",
+          "description": "Hair removal of any four zones of choice"
+        },
+        "men_full_body": {
+          "name": "Full Body",
+          "description": "Complete full body hair removal"
+        },
+        "men_face": {
+          "name": "Upper lip/Chin/Cheeks/Neck",
+          "description": "Facial area hair removal"
+        },
+        "men_full_face": {
+          "name": "Full Face",
+          "description": "Complete facial hair removal"
+        },
+        "men_armpits": {
+          "name": "Armpits",
+          "description": "Armpit hair removal"
+        },
+        "men_chest_abdomen": {
+          "name": "Chest/Abdomen completely",
+          "description": "Torso hair removal"
+        },
+        "men_subscription": {
+          "name": "Full Body Subscription (5 sessions)",
+          "description": "Advantageous full hair removal package"
+        },
+        "complex_1": {
+          "name": "Calves + Armpits + Deep Bikini",
+          "description": "Popular women's complex"
+        },
+        "complex_2": {
+          "name": "Armpits + Deep Bikini/Calves",
+          "description": "Basic hair removal complex"
+        },
+        "complex_3": {
+          "name": "Full Legs + Armpits + Deep Bikini",
+          "description": "Extended leg complex"
+        },
+        "complex_4": {
+          "name": "Full Arms + Full Legs + Armpits + Deep Bikini",
+          "description": "Maximum hair removal complex"
+        },
+        "endosphere_full_body": {
+          "name": "Full Body",
+          "description": "Full body endosphere therapy for figure correction"
+        },
+        "endosphere_face": {
+          "name": "Face apparatus massage (Endosphere, RF lifting)",
+          "description": "Rejuvenating apparatus face massage"
+        },
+        "endosphere_subscription_6": {
+          "name": "Endosphere subscription (6 sessions)",
+          "description": "Advantageous package of 6 treatments"
+        },
+        "endosphere_subscription_12": {
+          "name": "Endosphere subscription (12 sessions)",
+          "description": "Maximum package of 12 treatments"
+        },
+        "manicure_no_coating": {
+          "name": "Manicure without coating",
+          "description": "Classic manicure with nail plate treatment"
+        },
+        "manicure_base": {
+          "name": "Manicure with base coating",
+          "description": "Manicure with protective base coating"
+        },
+        "manicure_gel": {
+          "name": "Manicure with gel polish coating",
+          "description": "Manicure with long-lasting gel polish coating"
+        },
+        "gel_strengthening": {
+          "name": "Gel strengthening without gel polish",
+          "description": "Strengthening natural nails with gel"
+        },
+        "gel_strengthening_polish": {
+          "name": "Gel strengthening with gel polish",
+          "description": "Nail strengthening with colored coating"
+        },
+        "gel_french": {
+          "name": "Gel polish French correction",
+          "description": "Classic French manicure with gel polish"
+        },
+        "nail_extension_short": {
+          "name": "Classic nail extension short (up to 2mm)",
+          "description": "Short nail extension"
+        },
+        "nail_extension_long": {
+          "name": "Nail extension (over 2mm)",
+          "description": "Long nail extension"
+        },
+        "nail_repair": {
+          "name": "Nail repair",
+          "description": "Damaged nail restoration"
+        },
+        "pedicure_full_no_coating": {
+          "name": "Full pedicure without coating",
+          "description": "Complete foot and nail treatment"
+        },
+        "pedicure_full_coating": {
+          "name": "Full pedicure with coating",
+          "description": "Full pedicure with gel polish coating"
+        },
+        "pedicure_toes_no_coating": {
+          "name": "Toe pedicure without coating",
+          "description": "Treatment of toenails only"
+        },
+        "pedicure_toes_coating": {
+          "name": "Toe pedicure with gel polish coating",
+          "description": "Nail treatment with colored coating"
+        },
+        "callus_removal": {
+          "name": "Callus removal",
+          "description": "Professional callus removal"
+        },
+        "onycholysis_cleaning": {
+          "name": "Onycholysis cleaning (top master)",
+          "description": "Treatment of nail plate detachment"
+        },
+        "womens_haircut": {
+          "name": "Women's haircut",
+          "description": "Professional women's haircut"
+        },
+        "hair_wash_brushing": {
+          "name": "Hair wash with brushing",
+          "description": "Hair washing with brush styling"
+        },
+        "bangs_haircut": {
+          "name": "Bangs haircut",
+          "description": "Bangs correction and cutting"
+        },
+        "mens_haircut": {
+          "name": "Men's haircut",
+          "description": "Stylish men's haircut"
+        },
+        "hair_styling": {
+          "name": "Brushing with styling products",
+          "description": "Professional hair styling"
+        },
+        "evening_styling": {
+          "name": "Evening styling",
+          "description": "Festive styling for special occasions"
+        },
+        "coloring_roots": {
+          "name": "Single tone root coloring",
+          "description": "Coloring regrown roots"
+        },
+        "coloring_stretching": {
+          "name": "Root coloring + color stretching along length",
+          "description": "Complex coloring with color stretching"
+        },
+        "coloring_short": {
+          "name": "Single tone coloring short",
+          "description": "Full coloring of short hair"
+        },
+        "coloring_medium": {
+          "name": "Single tone coloring medium",
+          "description": "Full coloring of medium length hair"
+        },
+        "coloring_long": {
+          "name": "Single tone coloring long",
+          "description": "Full coloring of long hair"
+        },
+        "total_blond_short": {
+          "name": "Total blond short",
+          "description": "Lightening short hair to blond"
+        },
+        "total_blond_medium": {
+          "name": "Total blond medium",
+          "description": "Lightening medium length hair to blond"
+        },
+        "total_blond_long": {
+          "name": "Total blond long",
+          "description": "Lightening long hair to blond"
+        },
+        "happiness_short": {
+          "name": "Hair happiness treatment short",
+          "description": "Restorative treatment for short hair"
+        },
+        "happiness_medium": {
+          "name": "Hair happiness treatment medium",
+          "description": "Restorative treatment for medium length hair"
+        },
+        "happiness_long": {
+          "name": "Hair happiness treatment long",
+          "description": "Restorative treatment for long hair"
+        },
+        "indian_head_massage": {
+          "name": "Indian head massage",
+          "description": "Traditional Indian massage for hair growth"
+        },
+        "hair_express_care": {
+          "name": "Express care",
+          "description": "Quick restorative treatment"
+        },
+        "endosphere_spa_program": {
+          "name": "Endosphere therapy SPA program",
+          "description": "Comprehensive SPA program with endosphere"
+        },
+        "shoulders_legs": {
+          "name": "Shoulders and legs massage",
+          "description": "Specialized massage for tension relief"
+        },
+        "face_massage": {
+          "name": "Face massage",
+          "description": "Relaxing facial massage for improved circulation"
+        },
+        "deep_thai": {
+          "name": "Deep Thai massage",
+          "description": "Intensive Thai massage with deep muscle work"
+        },
+        "endosphere_6_procedures": {
+          "name": "Endosphere therapy (6 procedures)",
+          "description": "Advantageous package of 6 procedures"
+        },
+        "endosphere_12_procedures": {
+          "name": "Endosphere therapy (12 procedures)",
+          "description": "Maximum package of 12 procedures"
+        },
+        "endosphere_rf_lifting": {
+          "name": "Endosphere RF lifting",
+          "description": "Rejuvenating apparatus facial massage"
+        },
+        "laser_armpits": {
+          "name": "Laser armpit hair removal",
+          "description": "Armpit hair removal"
+        },
+        "laser_bikini": {
+          "name": "Laser bikini hair removal",
+          "description": "Bikini area hair removal"
+        },
+        "laser_deep_bikini": {
+          "name": "Laser deep bikini hair removal",
+          "description": "Intimate area hair removal"
+        },
+        "laser_shins": {
+          "name": "Laser shin hair removal",
+          "description": "Shin hair removal"
+        },
+        "laser_legs_full": {
+          "name": "Full leg laser hair removal",
+          "description": "Complete leg hair removal"
+        },
+        "laser_small_area": {
+          "name": "Small area laser hair removal",
+          "description": "Small area hair removal (abdomen line, areola, fingers)"
+        },
+        "laser_arms_full": {
+          "name": "Full arm laser hair removal",
+          "description": "Complete arm hair removal"
+        },
+        "classic_extension": {
+          "name": "Classic extension",
+          "description": "Individual lash extension for natural effect"
+        },
+        "volume_1_5d": {
+          "name": "1.5D volume",
+          "description": "Light volume for natural effect"
+        },
+        "volume_2d": {
+          "name": "2D volume",
+          "description": "Medium volume for expressive look"
+        },
+        "volume_3d": {
+          "name": "3D volume",
+          "description": "Rich volume for bright appearance"
+        },
+        "hollywood_volume": {
+          "name": "Hollywood volume",
+          "description": "Maximum volume for dramatic effect"
+        },
+        "eyelash_removal": {
+          "name": "Eyelash removal",
+          "description": "Safe removal of extended eyelashes"
+        },
+        "brow_correction": {
+          "name": "Brow correction",
+          "description": "Professional brow shape correction"
+        },
+        "brow_tinting": {
+          "name": "Brow tinting",
+          "description": "Brow tinting with permanent color"
+        },
+        "brow_correction_tinting": {
+          "name": "Brow correction and tinting",
+          "description": "Comprehensive brow care"
+        },
+        "brow_lamination_complex": {
+          "name": "Lamination + correction + brow tinting",
+          "description": "Complete complex for perfect brows"
+        },
+        "eyelash_lamination_tinting": {
+          "name": "Lamination + eyelash tinting",
+          "description": "Eyelash lamination and tinting"
+        },
+        "full_lamination_complex": {
+          "name": "Full lamination complex",
+          "description": "Correction + brow tinting + lamination + eyelash tinting"
+        },
+        "manicure_base_coating": {
+          "name": "Manicure with base coating",
+          "description": "Manicure with protective base coating"
+        },
+        "nail_removal": {
+          "name": "Coating removal",
+          "description": "Safe gel coating removal"
+        },
+        "nail_design": {
+          "name": "Nail design",
+          "description": "Artistic nail design"
+        },
+        "french_manicure": {
+          "name": "French manicure",
+          "description": "Classic French manicure (additional charge)"
+        },
+        "pedicure_no_coating": {
+          "name": "Pedicure without coating",
+          "description": "Classic pedicure without coating"
+        },
+        "pedicure_base_coating": {
+          "name": "Pedicure with base coating",
+          "description": "Pedicure with protective coating"
+        },
+        "pedicure_coating_removal": {
+          "name": "Coating removal",
+          "description": "Old coating removal"
+        },
+        "pro_pedicure_no_coating": {
+          "name": "PRO master pedicure without coating",
+          "description": "Professional pedicure by high-class master"
+        },
+        "pro_pedicure_base_coating": {
+          "name": "PRO master pedicure with base coating",
+          "description": "Professional pedicure with coating"
+        },
+        "pro_pedicure_gel_strengthening": {
+          "name": "PRO master pedicure with gel strengthening",
+          "description": "Professional pedicure with strengthening"
+        },
+        "pro_full_pedicure_no_coating": {
+          "name": "PRO master full pedicure without coating",
+          "description": "Comprehensive professional care"
+        },
+        "pro_full_pedicure_coating": {
+          "name": "PRO master full pedicure with coating",
+          "description": "Maximum care from professional"
+        },
+        "pro_callus_removal": {
+          "name": "PRO master callus removal",
+          "description": "Professional callus removal"
+        },
+        "pro_coating_removal": {
+          "name": "PRO master coating removal",
+          "description": "Professional coating removal"
+        },
+        "pro_medical_pedicure": {
+          "name": "PRO master medical pedicure",
+          "description": "Medical pedicure for problem feet"
+        }
+      }
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "subtitle": "We strive to provide you with an exceptional relaxation and care experience",
+      "premium_quality": {
+        "title": "Premium Quality",
+        "description": "We use only the best products and equipment for all treatments"
+      },
+      "full_relaxation": {
+        "title": "Complete Relaxation",
+        "description": "We create a comfortable atmosphere for your relaxation and rest"
+      },
+      "experienced_masters": {
+        "title": "Experienced Masters",
+        "description": "Specialists with years of experience and continuous skill development"
+      },
+      "individual_approach": {
+        "title": "Individual Approach",
+        "description": "We consider your wishes and features for maximum results"
+      }
+    },
+    "faq": {
+      "badge": "SPA Questions",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our SPA services and treatments",
+      "questions": {
+        "services": {
+          "question": "What SPA services do you offer?",
+          "answer": "We offer a full range of SPA services: massage (Thai, oil, sports), cosmetology treatments, laser hair removal, manicure, pedicure, hair care, as well as sauna and hammam."
+        },
+        "booking": {
+          "question": "How to book a SPA treatment?",
+          "answer": "You can book by phone +66 62 480 5877, via WhatsApp or in person at our center. We recommend booking in advance, especially for popular treatments."
+        },
+        "policy": {
+          "question": "What are the cancellation rules?",
+          "answer": "Please notify us of cancellation at least 24 hours before the scheduled time. Cancellation less than 24 hours in advance may incur a 50% cancellation fee."
+        },
+        "payment": {
+          "question": "What payment methods are accepted?",
+          "answer": "We accept cash (THB, USD, EUR), bank cards of all systems, as well as mobile payments. Payment is made after the treatment."
+        },
+        "preparation": {
+          "question": "Do I need to bring anything with me?",
+          "answer": "We provide everything you need: towels, robes, slippers and cosmetic products. You just need to come and relax."
+        },
+        "gifts": {
+          "question": "Are there gift certificates?",
+          "answer": "Yes! We offer gift certificates of various denominations for any SPA services. They can be purchased at our center or ordered by phone."
+        }
+      }
+    },
+    "booking": {
+      "badge": "Booking",
+      "title": "Book a Treatment",
+      "description": "Book a SPA treatment or beauty service for complete relaxation",
+      "online": {
+        "title": "Online Booking",
+        "description": "Convenient online booking for any treatment. Choose your specialist, time and service in just a few clicks. Instant booking confirmation.",
+        "hours": "24/7 online booking",
+        "feature": "Choose specialist and time",
+        "button": "Book Online"
+      },
+      "phone": {
+        "title": "Call to Book",
+        "description": "Contact us by phone for quick booking. Our consultants will help you choose the right treatment and time.",
+        "hours": "Call reception: 9:00 - 21:00",
+        "location": "Phuket, Thailand"
+      },
+      "whatsapp": {
+        "title": "WhatsApp Chat",
+        "description": "Message us on WhatsApp for convenient booking. We will respond quickly and help you choose the best time.",
+        "hours": "Online support: quick response",
+        "feature": "Quick responses",
+        "button": "Message on WhatsApp"
+      }
+    },
+    "testimonials": {
+      "title": "Guest Reviews",
+      "subtitle": "Discover what our satisfied clients say about us",
+      "reviews": {
+        "1": {
+          "text": "Amazing experience! The Thai massage was incredibly relaxing, and the atmosphere was simply magical. I will definitely come back again.",
+          "author": "Anna Petrova",
+          "title": "Regular Client"
+        },
+        "2": {
+          "text": "Professional masters, quality treatments and attention to detail. This is the best SPA center I've visited in Phuket.",
+          "author": "Ekaterina Sidorova",
+          "title": "Guest from Moscow"
+        },
+        "3": {
+          "text": "Wonderful place for rest and recovery. I especially loved the Finnish sauna and jacuzzi. Highly recommend to everyone!",
+          "author": "Mikhail Volkov",
+          "title": "KAIF Resident"
+        }
+      }
+    },
+    "facility": {
+      "title": "Our Facilities",
+      "largest_sauna": "Largest sauna in Thailand (50m²)",
+      "hammams": "Thai and Turkish hammams"
+    }
+  },
+  "sports": {
+    "title": "Sports Facilities",
+    "description": "State-of-the-art exercise facilities for everyone",
+    "hero": {
+      "tag": "YOUR ELITE FITNESS",
+      "title": "Sports",
+      "location": "Phuket",
+      "subtitle": "Modern equipment, professional trainers and atmosphere to achieve your sports goals",
+      "cta": "Explore Facilities",
+      "primary_cta": "BOOK A TRAINING",
+      "secondary_cta": "LEARN MORE",
+      "main_title_1": "YOUR",
+      "main_title_2": "ELITE",
+      "main_title_3": "FITNESS",
+      "main_title_4": "EXPERIENCE",
+      "equipment_count": "Equipment",
+      "trainers_count": "Pro Trainers",
+      "members_badge": "MEMBERS",
+      "stats": {
+        "facilities": "Sports Facilities",
+        "trainers": "Professional Trainers",
+        "access": "Modern Equipment"
+      }
+    },
+    "benefits": {
+      "tag": "Why Choose Us",
+      "title": "Advantages of <span>KAIF sports complex</span>",
+      "title_plain": "Advantages",
+      "subtitle": "Everything you need for effective training",
+      "premium": {
+        "title": "Premium Equipment",
+        "description": "Equipment from world-leading manufacturers Technogym and Life Fitness"
+      },
+      "trainers": {
+        "title": "Professional Trainers",
+        "description": "Certified specialists with international experience"
+      },
+      "schedule": {
+        "title": "Flexible Schedule",
+        "description": "Open from 07:00 to 21:00 every day of the week"
+      },
+      "technology": {
+        "title": "Modern Technology",
+        "description": "Progress monitoring and personalized training programs"
+      },
+      "atmosphere": {
+        "title": "Comfortable Atmosphere",
+        "description": "Spacious rooms with air conditioning and panoramic windows"
+      },
+      "safety": {
+        "title": "Safety First",
+        "description": "Insurance, medical supervision and compliance with all standards"
+      }
+    },
+    "cta": {
+      "badge": "Get Started",
+      "title": "Ready to Start?",
+      "subtitle": "Sign up for a training session and start your journey to your sports goals today",
+      "primary_button": "Book a Training",
+      "secondary_button": "Call Us"
+    },
+    "booking": {
+      "service": "Fitness Training"
+    },
+    "gym": {
+      "tag": "Our Services",
+      "facility_tag": "Fitness",
+      "section_title": "Premium Sports Facilities",
+      "section_subtitle": "Discover the world of fitness and sports at KAIF Sauna. Our modern services are designed to give you the opportunity to train with pleasure and reach new heights.",
+      "title": "Gym",
+      "description1": "Spacious modern gym with cardio and strength equipment of high class. The gym is equipped with everything necessary for full-fledged training and maintaining physical fitness.",
+      "description2": "Guests have access to personal lockers, showers, as well as personal trainer services by appointment."
+    },
+    "dance": {
+      "facility_tag": "Dancing",
+      "title": "Dance Studio",
+      "description1": "Spacious dance studio with professional parquet flooring, mirrored walls and modern audio system.",
+      "description2": "The studio offers group and individual lessons in various directions: modern dance, ballroom dancing, yoga, stretching, pilates and other directions.",
+      "schedule_button": "Schedule"
+    },
+    "gallery": {
+      "tag": "Our Moments",
+      "title": "Gallery",
+      "subtitle": "Captured moments of sports life at KAIF Sauna & SPA. Join our community and share your own achievements",
+      "yoga": "Sunset Yoga",
+      "subtitle_yoga": "Daily classes",
+      "training": "Training with a personal trainer",
+      "subtitle_training": "Individual approach",
+      "swimming": "Swimming Pool",
+      "subtitle_swimming": "Relaxation and recovery"
+    },
+    "schedule": {
+      "tag": "Planning",
+      "title": "SCHEDULE",
+      "title_plain": "Class Schedule",
+      "subtitle": "SELECT DAY OF WEEK",
+      "minutes": "min",
+      "spots": "spots",
+      "book": "Book",
+      "description": "Weekly class schedule with professional instructors",
+      "coming_soon": "Training schedule will be available soon. For current information, please contact us.",
+      "contact_button": "Contact Us",
+      "days": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "mon_short": "MON",
+        "tue_short": "TUE",
+        "wed_short": "WED",
+        "thu_short": "THU",
+        "fri_short": "FRI",
+        "sat_short": "SAT",
+        "sun_short": "SUN"
+      },
+      "categories": {
+        "swim": "Swim",
+        "dance_studio": "Dance Studio",
+        "fight_club": "Fight Club"
+      },
+      "no_classes": "No classes on this day",
+      "classes": {
+        "kids_5_8": "Kids 5-8 years",
+        "kids_7_12": "Kids 7-12 years",
+        "adults_group": "Adults Group",
+        "aqua_aerobics": "Aqua Aerobics",
+        "yoga": "Yoga",
+        "yoga_pro": "Yoga PRO",
+        "zumba_step": "Zumba Step",
+        "tabata": "Tabata",
+        "stretching": "Stretching",
+        "barre": "Barre",
+        "high_heels": "High Heels",
+        "fitness": "Fitness",
+        "kids_dance": "Kids Dance",
+        "circl_mobility": "CIRCL Mobility",
+        "zumba_toning": "Zumba Toning",
+        "zumba": "Zumba",
+        "girli_hiphop": "Girli Hip-Hop",
+        "hiphop": "Hip-Hop",
+        "kickboxing": "Kickboxing",
+        "jiujitsu_nogi": "Jiu-Jitsu No-Gi",
+        "jiujitsu_gi": "Jiu-Jitsu Gi",
+        "jiujitsu_kids": "Jiu-Jitsu (Kids)",
+        "muay_thai": "Muay Thai",
+        "muay_thai_kids": "Muay Thai (Kids)",
+        "muay_thai_family": "Muay Thai (Family)",
+        "boxing": "Boxing",
+        "boxing_women": "Boxing (Women)",
+        "kids_workout": "Kids Workout",
+        "cardio": "Cardio",
+        "jiujitsu": "Jiu-Jitsu"
+      }
+    },
+    "facilities": {
+      "tag": "Our facilities",
+      "title": "Modern <span>sports</span> spaces",
+      "title_plain": "Sports Zones",
+      "subtitle": "KAIF offers a wide selection of premium sports spaces with cutting-edge equipment and professional trainers to help you achieve your fitness goals.",
+      "gym": {
+        "tag": "GYM",
+        "title": "Modern Gym",
+        "short_description": "Premium equipment from Technogym and Life Fitness for effective workouts",
+        "description": "Over 70 pieces of professional equipment",
+        "hours": "07:00 - 21:00",
+        "capacity": "Up to 40 people",
+        "description1": "Our gym is equipped with modern premium equipment from leading manufacturers. Here you will find everything you need for effective workouts - from free weights to the latest generation of cardio machines.",
+        "description2": "The spacious room with panoramic windows creates the perfect atmosphere for training, and professional trainers are always ready to help create an individual program.",
+        "feature1": "Cardio equipment zone",
+        "feature2": "Free weights zone",
+        "feature3": "Functional training"
+      },
+      "book_button": "Book a training session",
+      "fight": {
+        "tag": "MARTIAL ARTS",
+        "title": "Fight Club",
+        "short_description": "Professional ring and equipment for boxing, Muay Thai and Jiu-Jitsu",
+        "description": "Professional boxing and Jiu-Jitsu facility",
+        "hours": "07:00 - 21:00",
+        "capacity": "Up to 25 people",
+        "description1": "KAIF Fighting Club is a modern space for training in various martial arts. Professional ring, punching bags, heavy bags, and special flooring create ideal conditions for both beginners and experienced fighters.",
+        "description2": "Our trainers are experienced fighters and champions who will help you master techniques and achieve high results in your chosen martial art.",
+        "feature1": "Professional boxing ring",
+        "feature2": "Punching bags and heavy bags",
+        "feature3": "Champion trainers"
+      },
+      "fight_club": {
+        "tag": "MARTIAL ARTS",
+        "title": "Fight Club",
+        "short_description": "Professional ring and equipment for boxing, Muay Thai and Jiu-Jitsu",
+        "description": "Professional boxing and Jiu-Jitsu facility",
+        "hours": "07:00 - 21:00",
+        "capacity": "Up to 25 people",
+        "description1": "KAIF Fighting Club is a modern space for training in various martial arts. Professional ring, punching bags, heavy bags, and special flooring create ideal conditions for both beginners and experienced fighters.",
+        "description2": "Our trainers are experienced fighters and champions who will help you master techniques and achieve high results in your chosen martial art.",
+        "feature1": "Professional boxing ring",
+        "feature2": "Punching bags and heavy bags",
+        "feature3": "Champion trainers"
+      },
+      "dance": {
+        "tag": "DANCE & FITNESS",
+        "title": "Dance Studio",
+        "short_description": "Spacious studio for dance, yoga and group fitness programs",
+        "description": "For yoga and dance classes",
+        "hours": "07:00 - 21:00",
+        "capacity": "Up to 30 people",
+        "description1": "Spacious dance studio with professional flooring, mirrored walls and advanced audio system creates ideal conditions for various dance styles and group classes.",
+        "description2": "Classes in modern and classical dance styles are held here, as well as group fitness training under the guidance of experienced instructors.",
+        "feature1": "Mirrored walls",
+        "feature2": "Professional flooring",
+        "feature3": "Sound system",
+        "feature4": "Flexible schedule for group and individual classes",
+        "schedule_title": "Classes and Schedule",
+        "schedule_subtitle": "Find the right class",
+        "filter_label": "Filter:",
+        "filter_all": "All",
+        "filter_group": "Group",
+        "filter_personal": "Personal",
+        "filter_events": "Events"
+      },
+      "swim": {
+        "tag": "SWIMMING",
+        "title": "Swimming Pool",
+        "short_description": "25-meter pool for swimming, aqua aerobics and kids lessons",
+        "description": "25-meter swimming pool",
+        "hours": "07:00 - 21:00",
+        "capacity": "Up to 20 people",
+        "feature1": "25-meter pool",
+        "feature2": "Aqua aerobics classes",
+        "feature3": "Kids swimming lessons"
+      }
+    },
+    "pricing": {
+      "badge": "All-Inclusive",
+      "cta_button": "Get Started",
+      "all_plans": "All Plans",
+      "club_access_sport": {
+        "name": "Club Access Sport",
+        "description": "Full access to all sports facilities plus unlimited group training",
+        "period": "per month",
+        "f1": "Gym & Cardio",
+        "f2": "Swimming Pool",
+        "f3": "Russian Sauna & Steam",
+        "f4": "Unlimited Group Training",
+        "f5": "Fight Club Classes",
+        "f6": "KAIF Motion Classes"
+      }
+    },
+    "membership": {
+      "title": "Membership Options",
+      "description": "Choose the plan that works for you"
+    },
+    "charity": {
+      "title": "Charity Workouts",
+      "description": "Saturday workouts with professional athletes, all proceeds go to Child Watch Phuket Foundation"
+    },
+    "scrolling": {
+      "text1": "BE STRONG",
+      "text2": "BE CONFIDENT",
+      "text3": "BE UNSTOPPABLE",
+      "text4": "BE MORE HUMAN"
+    }
+  },
+  "banya": {
+    "title": "Russian Banya",
+    "description": "Panoramic Russian bathhouse overlooking the jungle",
+    "steam_schedule": {
+      "overline": "Weekly Schedule",
+      "title": "Steam Sessions",
+      "note": "<strong>Mon – Thu</strong> — sessions from 15:00 · <strong>Fri – Sun</strong> — sessions from 12:00",
+      "early_slot_badge": "Fri – Sun only",
+      "groups": [
+        {
+          "days": "Mon – Thu",
+          "sessions": [
+            { "time": "15:00", "name": "Relax time" },
+            { "time": "16:00", "name": "First light steam" },
+            { "time": "17:00", "name": "Herbs aroma session" },
+            { "time": "18:00", "name": "Eucalyptus waves" },
+            { "time": "19:00", "name": "Garlic power" },
+            { "time": "20:00", "name": "Hard steam" }
+          ]
+        },
+        {
+          "days": "Fri – Sun",
+          "sessions": [
+            { "time": "12:00", "name": "Eucalyptus waves" },
+            { "time": "13:00", "name": "Garlic power" },
+            { "time": "14:00", "name": "Hard steam" },
+            { "time": "15:00", "name": "Relax time" },
+            { "time": "16:00", "name": "First light steam" },
+            { "time": "17:00", "name": "Herbs aroma session" },
+            { "time": "18:00", "name": "Eucalyptus waves" },
+            { "time": "19:00", "name": "Garlic power" },
+            { "time": "20:00", "name": "Hard steam" }
+          ]
+        }
+      ]
+    },
+    "hero": {
+      "badge": "Best Banya in Phuket",
+      "title": "Panoramic <span className=\"highlight\">Russian Banya</span>",
+      "title_part1": "Russian",
+      "title_part2": "Banya",
+      "location": "Phuket",
+      "area_unit": "m²",
+      "feature": "Largest banya on the island",
+      "area": "150 square meters",
+      "subtitle": "Banya made from Siberian cedar and Altai linden",
+      "book_button": "Book Now",
+      "contacts_button": "Contacts",
+      "scroll": "Scroll",
+      "images": {
+        "panoramic": "Panoramic sauna 150 m²",
+        "private": "Private sauna",
+        "public": "Public sauna"
+      }
+    },
+    "features": {
+      "badge": "Best Banya in Phuket",
+      "title": "Why Choose <span className=\"highlight\">Us</span>",
+      "subtitle": "The only panoramic Russian banya in Phuket made from natural Siberian cedar and Altai linden materials",
+      "materials": {
+        "title": "Natural Materials",
+        "description": "100% natural finish from Siberian wood species",
+        "items": {
+          "cedar": "Siberian Cedar",
+          "linden": "Altai Linden",
+          "birch": "Karelian Birch",
+          "coating": "Eco-friendly finishes",
+          "aromatherapy": "Natural aromatherapy"
+        }
+      },
+      "panoramic": {
+        "title": "Panoramic Design",
+        "description": "Unique architecture with tropical jungle views",
+        "items": {
+          "area": "150 square meters",
+          "windows": "Panoramic windows",
+          "view": "Jungle views",
+          "lighting": "Natural lighting",
+          "harmony": "Harmony with nature"
+        }
+      },
+      "safety": {
+        "title": "Safety",
+        "description": "Compliance with all international safety standards",
+        "items": {
+          "fire": "Fire safety",
+          "ventilation": "Ventilation system",
+          "emergency": "Emergency lighting",
+          "medical": "Medical assistance",
+          "security": "24/7 security"
+        }
+      },
+      "wellness": {
+        "title": "Wellness Programs",
+        "description": "Signature wellness programs by master attendants",
+        "items": {
+          "russian": "Russian banya ritual",
+          "finnish": "Finnish sauna",
+          "aromatherapy": "Aromatherapy",
+          "massage": "Steam room massage",
+          "herbs": "Herbal infusions"
+        }
+      },
+      "service": {
+        "title": "Professionalism",
+        "description": "Team of experienced banya masters and steam specialists",
+        "items": {
+          "certified": "Certified attendants",
+          "traditions": "Russian traditions",
+          "individual": "Individual approach",
+          "consultation": "Health consultations",
+          "quality": "Quality service"
+        }
+      }
+    },
+    "services": {
+      "badge": "Banya Programs",
+      "title": "Choose Your Banya Ritual",
+      "description": "From panoramic banya with jungle views to private VIP rituals with master attendants",
+      "rituals": {
+        "intro": {
+          "title": "Children's Introductory Steaming",
+          "subtitle": "Light steam",
+          "duration": "7-10 min",
+          "price": "1,000 THB",
+          "description": "A short and sensitive ritual. The parmaster gently warms the back and legs with brooms. Only pleasant light steam and comfortable warmth"
+        },
+        "lady": {
+          "title": "Lady's Steaming",
+          "subtitle": "Low-temperature",
+          "duration": "10-15 min",
+          "price": "1,500 THB",
+          "description": "Special low-temperature technique with deep local warming. Ideal for first visits and deep relaxation"
+        },
+        "classic": {
+          "title": "Classic Steaming",
+          "subtitle": "Medium steam",
+          "duration": "10-15 min",
+          "price": "1,800 THB",
+          "description": "Steaming with oak brooms in one session. Thorough whole body steaming with aromatic steam"
+        },
+        "artesian": {
+          "title": "Artesian",
+          "subtitle": "Contrast steaming",
+          "duration": "15-20 min",
+          "price": "2,250 THB",
+          "description": "Intense warming with oak brooms enhanced by the contrast of cool mineral water. Bright bubbling sensation"
+        },
+        "gravity": {
+          "title": "Gravity",
+          "subtitle": "Weightless steaming",
+          "duration": "15-20 min",
+          "price": "2,250 THB",
+          "description": "Intense warming with transition to warm pool. Gentle floating creates a feeling of weightlessness"
+        },
+        "salt_fire": {
+          "title": "The Fire Starter",
+          "subtitle": "Salt steaming",
+          "duration": "15-20 min",
+          "price": "2,250 THB",
+          "description": "Intense warming with sea salt application and warming through a sheet. Salt cave effect"
+        },
+        "four_hands": {
+          "title": "Four-Hand Steaming",
+          "subtitle": "Synchronized steaming",
+          "duration": "15-20 min",
+          "price": "2,500 THB",
+          "description": "Two experienced steam masters work in perfect synchronization. Waves of heat, massage with brooms in unison and double attention"
+        },
+        "sports": {
+          "title": "Sports Steaming",
+          "subtitle": "With massage elements",
+          "duration": "20-25 min",
+          "price": "2,500 THB",
+          "description": "Intense warming to the depth of muscles, activating blood circulation. Then massage with brooms right on the shelf"
+        },
+        "warrior_path": {
+          "title": "Warrior's Path",
+          "subtitle": "Contrast steaming",
+          "duration": "20-25 min",
+          "price": "3,500 THB",
+          "description": "Steaming in two sessions with cold water dousing between them. Back warming with birch brooms"
+        },
+        "stalwar": {
+          "title": "Thor's Power",
+          "subtitle": "Intense steam",
+          "duration": "15-20 min",
+          "price": "3,000 THB",
+          "description": "Intense steam and contrast. The steam master works with high steam creating a dynamic wave of warmth. Post-workout feeling"
+        },
+        "honey": {
+          "title": "Honey Steaming",
+          "subtitle": "With natural honey",
+          "duration": "15-20 min",
+          "price": "3,500 THB",
+          "description": "Original steaming with Canadian brooms with honey application. Vitamins through open pores and summer meadow aroma"
+        },
+        "royal": {
+          "title": "Royal Steaming",
+          "subtitle": "Honey-salt scrub",
+          "duration": "25-30 min",
+          "price": "4,000 THB",
+          "description": "Royal ritual of deep warming and cleansing. Canadian brooms, natural honey and sea salt"
+        },
+        "valhalla": {
+          "title": "Valhalla",
+          "subtitle": "Group steaming",
+          "duration": "10-20 min",
+          "price": "3,500 THB",
+          "description": "A soft ritual for a group of 2-4 people. Steaming with fan and brooms, foot bath with herbal decoction"
+        }
+      },
+      "coming_soon": {
+        "title": "Coming Soon",
+        "description": "We are preparing unique banya programs with traditional Russian rituals and modern wellness procedures",
+        "subtext": "Stay tuned — we will update this section soon!"
+      },
+      "popular": "Popular"
+    },
+    "gallery": {
+      "badge": "GALLERY",
+      "title": "Gallery",
+      "subtitle": "Atmosphere of authentic Russian banya",
+      "steam_room": "Steam Room",
+      "steam_room_desc": "Classic Russian steam room with birch brooms",
+      "rest_area": "Rest Area",
+      "rest_area_desc": "Comfortable rest area after steaming",
+      "cold_pool": "Cold Pool",
+      "cold_pool_desc": "Cold water pool for contrast procedures",
+      "hot_stones": "Hot Stones",
+      "hot_stones_desc": "Red-hot stones for steam creation",
+      "tea_ceremony": "Tea Ceremony",
+      "tea_ceremony_desc": "Traditional tea drinking after banya",
+      "lounge": "Lounge Zone",
+      "lounge_desc": "Spacious relaxation area"
+    },
+    "faq": {
+      "badge": "Questions & Answers",
+      "title": "Frequently Asked <span className=\"highlight\">Questions</span>",
+      "subtitle": "Answers to the most popular questions about our banya",
+      "questions": {
+        "panoramic": {
+          "question": "What's special about the panoramic banya?",
+          "answer": "Our banya is unique with several features: 150 square meters with panoramic jungle windows, built from Siberian cedar and Altai linden - premium natural materials. It's the only panoramic Russian banya in Phuket where you can enjoy traditional banya rituals with tropical nature views."
+        },
+        "procedures": {
+          "question": "What procedures are included in the banya ritual?",
+          "answer": "Depending on your chosen program you'll receive: classic banya ritual with birch brooms, aromatherapy with essential oils, herbal infusions and teas."
+        },
+        "materials": {
+          "question": "What materials is the banya built from?",
+          "answer": "The banya is built exclusively from natural eco-friendly materials: Siberian cedar, Altai linden, Karelian birch. All finishes are natural, without chemical additives. Such materials create a special microclimate and provide natural aromatherapy."
+        }
+      }
+    },
+    "booking": {
+      "badge": "Booking",
+      "title": "Book the <span className=\"highlight\">Banya</span>",
+      "description": "Contact us through convenient channels for booking",
+      "cta": {
+        "title": "Ready to immerse in the world of <span className=\"highlight\">Russian Banya</span>?",
+        "description": "Contact us for detailed information about prices, availability and features of our banya programs",
+        "button": "Go to Contacts"
+      },
+      "contact": {
+        "whatsapp": {
+          "title": "WhatsApp",
+          "value": "Book via WhatsApp"
+        },
+        "location": {
+          "title": "Location",
+          "value": "Kathu, Phuket"
+        },
+        "hours": {
+          "title": "Hours",
+          "value": "17:00 - 20:00"
+        }
+      },
+      "book_whatsapp_button": "Book via WhatsApp",
+      "call_now_button": "Call Now"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "KAIF - Sauna & Spa is Phuket's premier wellness complex",
+    "overview": {
+      "title": "Complex Overview",
+      "description": "Detailed information about all our facilities"
+    },
+    "features": {
+      "title": "Key Features",
+      "largest_sauna": "Thailand's largest sauna (50m²)",
+      "hammams": "Thai and Turkish hammams",
+      "restaurant": "Restaurant with 5 cuisines",
+      "dance_studio": "Dance and yoga studio (available for rent)",
+      "gym": "Fitness center with 70+ equipment",
+      "pool": "25m swimming pool",
+      "massage": "Various massage techniques",
+      "fight_club": "Fight club",
+      "kids_room": "Kids room (ages 3-14)"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "description": "High-quality photos of all facilities"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide an exceptional wellness experience in Phuket"
+    }
+  },
+  "promotions": {
+    "title": "Promotions",
+    "description": "Special offers and deals",
+    "day_pass": {
+      "title": "Day in Complex",
+      "price": "390 THB",
+      "description": "Access to gym, pool, ice bath and sauna",
+      "terms": "Terms and conditions apply"
+    },
+    "charity": {
+      "title": "Charity Workout",
+      "price": "200 THB",
+      "description": "Saturday training with professional athletes",
+      "foundation": "All proceeds go to Child Watch Phuket Foundation"
+    },
+    "seasonal": {
+      "title": "Seasonal Offers",
+      "description": "Limited-time offers"
+    },
+    "loyalty": {
+      "title": "Loyalty Program",
+      "description": "Rewards for our regular customers"
+    }
+  },
+  "contacts": {
+    "title": "Contact Us",
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Choose a convenient way to contact us"
+    },
+    "cta": {
+      "primary": "Contact Us",
+      "secondary": "Our Address"
+    },
+    "form": {
+      "title": "Get in Touch",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "title": "Contact Us",
+      "subtitle": "Choose a convenient way to contact us",
+      "address": {
+        "title": "Address",
+        "text": "73, Baan Chalekiri Village, 6 Pra Phuket Keaw Road, Kathu",
+        "country": "Phuket, Thailand",
+        "directions": "Get Directions"
+      },
+      "phone": {
+        "call_now": "Call Now"
+      },
+      "email": {
+        "title": "Email",
+        "response": "Response within 24 hours"
+      },
+      "hours": {
+        "title": "Opening Hours",
+        "daily": "Daily: 7:00 AM - 9:00 PM",
+        "booking": "Booking 24/7"
+      },
+      "social": {
+        "title": "Social Media",
+        "subtitle": "Follow us for the latest updates and promotions"
+      },
+      "whatsapp": {
+        "text": "Message on WhatsApp",
+        "greeting": "Hello! I would like to make a booking at KAIF"
+      },
+      "buttons": {
+        "get_directions": "Get Directions",
+        "contact": "Contact",
+        "book": "Book Now"
+      }
+    },
+    "social": {
+      "title": "Follow us on social media",
+      "subtitle": "Stay up to date with the latest KAIF news and promotions"
+    },
+    "whatsapp": {
+      "message_contact": "Hello! I would like to contact KAIF",
+      "message_book": "Hello! I would like to book a service at KAIF",
+      "message_general": "Hello! I have a question about KAIF"
+    },
+    "map": {
+      "title": "How to find us",
+      "subtitle": "Convenient location in the center of Kathu, Phuket"
+    },
+    "feedback": {
+      "title": "Feedback",
+      "description": "We value your opinion"
+    }
+  },
+  "gallery": {
+    "overline": "Gallery",
+    "title": "KAIF Experiences",
+    "subtitle": "Immerse yourself in the KAIF atmosphere through our photo gallery. Get acquainted with our services and complex facilities.",
+    "filters": {
+      "all": "All",
+      "spa": "SPA",
+      "fitness": "Fitness",
+      "banya": "Banya",
+      "relax": "Relax"
+    },
+    "slides": {
+      "thai_massage": {
+        "title": "Thai Massage",
+        "description": "Traditional Thai massage performed by experienced masters. Energy restoration and body harmony."
+      },
+      "aromatherapy": {
+        "title": "Aromatherapy",
+        "description": "Relaxing treatments with premium natural essential oils."
+      },
+      "gym": {
+        "title": "Gym",
+        "description": "Over 70 modern premium equipment. Professional equipment for all types of workouts."
+      },
+      "facial": {
+        "title": "Cosmetology",
+        "description": "Professional facial treatments using premium cosmetics."
+      },
+      "banya": {
+        "title": "Russian Banya",
+        "description": "Traditional Russian steam room with birch brooms and aromatherapy."
+      },
+      "combat": {
+        "title": "Fight Club",
+        "description": "Professional martial arts training with experienced coaches."
+      },
+      "pool": {
+        "title": "Pool",
+        "description": "Outdoor pool for swimming and relaxation."
+      },
+      "terrace": {
+        "title": "Rooftop Terrace",
+        "description": "Cozy lounge area with stunning sunset views."
+      },
+      "spa_room": {
+        "title": "Spa Suite",
+        "description": "Private spa rooms for premium treatments."
+      },
+      "cold_pool": {
+        "title": "Ice Pool",
+        "description": "Contrast pool for banya rituals and recovery."
+      },
+      "rest_area": {
+        "title": "Rest Area",
+        "description": "Comfortable lounge zone for relaxation between sessions."
+      },
+      "spa_interior": {
+        "title": "Spa Interior",
+        "description": "Elegant spa interior for complete relaxation."
+      },
+      "massage": {
+        "title": "Massage",
+        "description": "Professional massage treatments for body and mind."
+      },
+      "gym_equipment": {
+        "title": "Gym Equipment",
+        "description": "Modern fitness equipment for effective workouts."
+      },
+      "boxing": {
+        "title": "Boxing Ring",
+        "description": "Professional boxing ring for martial arts training."
+      },
+      "hot_stones": {
+        "title": "Hot Stones",
+        "description": "Traditional hot stones for authentic steam creation."
+      },
+      "tea_ceremony": {
+        "title": "Tea Ceremony",
+        "description": "Traditional tea drinking ritual after banya session."
+      },
+      "restaurant": {
+        "title": "Restaurant",
+        "description": "Gourmet dining with Eastern and Russian cuisine."
+      },
+      "smoking_area": {
+        "title": "Smoking Area",
+        "description": "Designated outdoor smoking area with tropical garden views."
+      },
+      "banya_lounge": {
+        "title": "Lounge Zone",
+        "description": "Comfortable lounge area for relaxation between steam sessions."
+      },
+      "steam_ritual": {
+        "title": "Steam Ritual",
+        "description": "Traditional banya steam ritual with birch brooms."
+      },
+      "spa_treatment": {
+        "title": "Spa Treatment",
+        "description": "Premium spa treatments for complete rejuvenation."
+      },
+      "relaxation": {
+        "title": "Relaxation",
+        "description": "Peaceful environment for ultimate relaxation."
+      }
+    }
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "brand": {
+      "description": "Premium wellness complex in Phuket. We create a unique wellness experience to restore harmony of body and soul."
+    },
+    "services": {
+      "title": "Services",
+      "sauna": "Sauna & Hammam",
+      "fitness": "Fitness Center",
+      "fight_club": "Fight Club"
+    },
+    "schedule": {
+      "daily": "Daily",
+      "hours": "07:00 - 21:00"
+    },
+    "copyright": "All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "intro": "These Terms of Service govern the provision of services by the KAIF wellness complex on Phuket Island, Thailand.",
+    "general": {
+      "title": "1. General Provisions",
+      "content": "By using our services, you agree to these terms. KAIF provides SPA, fitness, restaurant and Russian banya services."
+    },
+    "booking": {
+      "title": "2. Booking and Cancellation",
+      "content": "Service booking is done by phone or via WhatsApp. Cancellation is possible no later than 24 hours before the scheduled time."
+    },
+    "rules": {
+      "title": "3. Visiting Rules",
+      "content": "Visitors must observe hygiene and safety rules. The administration reserves the right to refuse service for violations of established rules."
+    },
+    "liability": {
+      "title": "4. Liability",
+      "content": "KAIF is not responsible for visitors' personal belongings. All procedures are performed by qualified specialists in compliance with international safety standards."
+    },
+    "contacts": {
+      "title": "5. Contacts",
+      "content": "For all questions contact us:",
+      "email": "Email: info@kaif-phuket.com",
+      "phone": "Phone: +66 62 480 5877",
+      "address": "Address: Phuket, Thailand"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy defines the procedure for processing and protecting personal data of users of the KAIF wellness complex.",
+    "collection": {
+      "title": "1. Information Collection",
+      "content": "We collect only the information necessary to provide quality services: name, contact information, service preferences."
+    },
+    "usage": {
+      "title": "2. Information Usage",
+      "content": "Your data is used exclusively for procedure booking, informing about new services and improving service quality."
+    },
+    "protection": {
+      "title": "3. Data Protection",
+      "content": "We apply modern information protection methods and do not transfer personal data to third parties without your consent."
+    },
+    "contacts": {
+      "title": "4. Contacts",
+      "content": "For questions about personal data processing contact:",
+      "email": "Email: info@kaif-phuket.com",
+      "phone": "Phone: +66 62 480 5877"
+    }
+  },
+  "promo": {
+    "title": "LAST CHANCE FOR CURRENT PRICES",
+    "subtitle": "Get your gym all-inclusive passes before rates go up on August 1"
+  },
+  "pricing": {
+    "title": "Memberships & Pricing",
+    "subtitle": "Choose the perfect plan for your goals",
+    "select_plan": "Select Plan",
+    "view_all_prices": "View all services & prices",
+    "mostPopular": "Most Popular",
+    "categories": {
+      "clubAccess": "Club Access",
+      "clubAccessPlus": "Club Access+",
+      "groupClasses": "Group Classes",
+      "swimming": "Swimming",
+      "dayPass": "Day Pass"
+    },
+    "durations": {
+      "day": "Day",
+      "week": "1 week",
+      "month": "1 month",
+      "months_3": "3 months",
+      "months_6": "6 months",
+      "months_12": "12 months",
+      "single": "1 class",
+      "classes_4": "4 classes",
+      "classes_8": "8 classes",
+      "classes_12": "12 classes",
+      "classes_24": "24 classes",
+      "classes_48": "48 classes",
+      "fullDay": "Full Day",
+      "morning": "Morning",
+      "groupClass": "Group Class"
+    },
+    "features": {
+      "fullAccess": "Full gym access",
+      "modernEquipment": "Modern equipment",
+      "lockersAndShowers": "Lockers and showers",
+      "savings": "Save",
+      "maxSavings": "Maximum savings",
+      "unlimitedAccess": "Unlimited access",
+      "gymAndBanya": "Gym + Sauna",
+      "towelsIncluded": "Towels included",
+      "fullDayAccess": "Full day access",
+      "dayAccess": "With day access",
+      "anyClass": "Any class to choose",
+      "anyClasses": "Any classes",
+      "professionalTrainer": "Professional trainer",
+      "validMonth": "Valid for 1 month",
+      "validMonths_2": "Valid for 2 months",
+      "validMonths_3": "Valid for 3 months",
+      "validMonths_6": "Valid for 6 months",
+      "individualApproach": "Individual approach",
+      "certifiedInstructor": "Certified instructor",
+      "trainingProgram": "Training program",
+      "fullProgram": "Full program",
+      "perClass": "per class",
+      "morningAccess": "Access until 14:00",
+      "saunaAfter14": "Sauna unavailable after 14:00",
+      "fullAccessMorning": "Full morning access",
+      "gymCardio": "Gym and cardio room",
+      "swimmingPool": "Swimming pool",
+      "steamRoom": "Turkish and Thai hammam",
+      "iceBarrel": "Ice barrel",
+      "russianSauna": "Russian sauna",
+      "collectiveSteaming": "Collective steaming",
+      "groupSteamIncluded": "Group steam sessions per schedule — included",
+      "japanesePool": "Pool",
+      "aromaIceBarrel": "Aroma ice barrel",
+      "unlimitedGroupTraining": "Unlimited group classes",
+      "unlimitedDanceAndFight": "Unlimited dance studio and fight club classes"
+    },
+    "subtitles": {
+      "withoutBanya": "(without sauna)",
+      "allPlusBanya": "(all + sauna)",
+      "groupClasses": "(group classes)",
+      "swimmingSchool": "(swimming school)",
+      "dayPass": "(single visits)",
+      "clubAccessSport": "Club Access+ + group classes"
+    }
+  },
+  "bar": {
+    "hero": {
+      "badge": "Our Bar",
+      "parallax_title": "Bar",
+      "title": "Bar Menu",
+      "subtitle": "From signature cocktails and premium spirits to freshly squeezed juices and fitness drinks"
+    },
+    "categories": {
+      "cocktails": "Cocktails",
+      "cocktails_desc": "Alcoholic & non-alcoholic cocktails",
+      "wine_spirits": "Wine & Spirits",
+      "wine_spirits_desc": "Wine, whiskey, vodka, rum, gin & more",
+      "beer": "Beer",
+      "beer_desc": "Craft draft & bottled beer",
+      "coffee_tea": "Coffee & Tea",
+      "coffee_tea_desc": "Espresso, matcha & premium Chinese tea",
+      "soft_drinks": "Soft Drinks",
+      "soft_drinks_desc": "Soda, water & mineral water",
+      "juices": "Juices & Smoothies",
+      "juices_desc": "Fresh juices & smoothies",
+      "fitness": "Fitness & Protein",
+      "fitness_desc": "Sports drinks & protein shakes"
+    },
+    "items": {
+      "aperol_spritz": "Aperol Spritz",
+      "mojito": "Mojito",
+      "negroni": "Negroni",
+      "frozen_margarita": "Frozen Margarita",
+      "pina_colada": "Pina Colada",
+      "honey_lemon": "Honey and Lemon",
+      "mojito_nonalco": "Mojito Without Alcohol",
+      "passion_fruit": "Passion Fruit",
+      "pink_lemonade": "Pink Lemonade (Premix)",
+      "red_wine": "Red Wine Glass 150 ml",
+      "white_wine": "White Wine Glass 150 ml",
+      "sparkling_glass": "Sparkling Wine Glass 150 ml",
+      "sparkling_bottle": "Sparkling Wine Bottle 750 ml",
+      "cherry_03": "Cherry 0.3",
+      "classic_lager_03": "Classic Lager 0.3",
+      "german_wheat_03": "German Wheat Beer 0.3",
+      "imperial_stout_03": "Russian Imperial Stout 0.3",
+      "cherry_05": "Cherry 0.5",
+      "classic_lager_05": "Classic Lager 0.5",
+      "german_wheat_05": "German Wheat Beer 0.5",
+      "imperial_stout_05": "Russian Imperial Stout 0.5",
+      "tower_cherry": "Tower Cherry 3L",
+      "tower_classic": "Tower Classic Lager 3L",
+      "tower_wheat": "Tower German Wheat 3L",
+      "tower_stout": "Tower Imperial Stout 3L",
+      "espresso": "Espresso",
+      "americano": "Americano (Hot/Iced)",
+      "cappuccino": "Cappuccino (Hot/Iced)",
+      "bumble_coffee": "Bumble Coffee",
+      "espresso_tonic": "Espresso Tonic",
+      "latte": "Latte",
+      "matcha_coco": "Matcha Coco",
+      "ya_bao": "White Kidney Tea from Yunnan (Ya Bao)",
+      "ya_bao_desc": "Harvested from ancient tea trees over 100 years old in Yunnan province. Soft, fresh and ideal for relaxation",
+      "tie_guan_yin": "Light Oolong (Tie Guan Yin)",
+      "tie_guan_yin_desc": "Famous light oolong from Southern Fujian with a delicate floral taste. Refreshes body and mind",
+      "da_hong_pao": "Dark Oolong (Da Hong Pao)",
+      "da_hong_pao_desc": "Mineral-rich oolong from Wuishan with woody and tobacco notes. Sweet, complex aftertaste",
+      "gaba_oolong": "GABA Oolong (Ali Shan)",
+      "gaba_oolong_desc": "Rich in catechins and vitamin C. Refreshing and energizing tea",
+      "milk_oolong": "Milk Oolong (Nai Xiang)",
+      "milk_oolong_desc": "Intriguing tea combinations with rich aromas",
+      "shu_puerh": "Black Pu-erh (Shu Pu-erh)",
+      "shu_puerh_desc": "Rich pu-erh with woody and nutty notes. Slightly viscous, for lovers of strong tea",
+      "herbal_tea": "Herbal Collection",
+      "herbal_tea_desc": "Aromatic herbal blend with mint, thyme and oregano. Refreshing, restorative and ideal after sauna",
+      "buckwheat_tea": "Buckwheat Tea",
+      "buckwheat_tea_desc": "Natural sweet buckwheat tea. Caffeine-free, soothing and good for children",
+      "ivan_tea": "Ivan Tea",
+      "ivan_tea_desc": "Traditional Russian herbal tea with a delicate floral-herbal taste and light honey-fruit aroma. Caffeine-free",
+      "coconut": "Coconut 1 piece",
+      "kvas": "Kvas 0.5L",
+      "mors": "Mors 0.35L",
+      "soda_singha": "Soda Singha 0.33L",
+      "narzan": "Narzan 0.5L",
+      "essentuki": "Essentuki 1L",
+      "apple_juice": "Apple Juice",
+      "apple_carrot": "Apple/Carrot Juice",
+      "carrot_juice": "Carrot Juice",
+      "mango_juice": "Mango Juice",
+      "orange_juice": "Orange Juice",
+      "pineapple_juice": "Pineapple Juice",
+      "banana_shake": "Banana Shake",
+      "lychee_lime": "Lychee-Lime",
+      "mango_passion": "Mango-Passionfruit",
+      "electrolyte": "Electrolyte Boost",
+      "fat_burning": "Fat Burning",
+      "mass_gainer": "Mass Gainer",
+      "pre_workout": "Pre-Workout",
+      "protein_chocolate": "Chocolate",
+      "protein_strawberry": "Strawberry",
+      "protein_vanilla": "Vanilla",
+      "protein_desc": "Protein / Almond Milk / Milk / Coconut Water"
+    }
+  }
+}

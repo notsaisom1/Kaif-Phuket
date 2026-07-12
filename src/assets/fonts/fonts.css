@@ -1,0 +1,54 @@
+/* Подключение фирменного шрифта KAIF */
+@font-face {
+  font-family: "KAIF";
+  src: url("./kaif.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Эмуляция различных толщин с одним файлом шрифта */
+@font-face {
+  font-family: "KAIF";
+  src: url("./kaif.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KAIF";
+  src: url("./kaif.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KAIF";
+  src: url("./kaif.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KAIF";
+  src: url("./kaif.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KAIF";
+  src: url("./kaif.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Можно добавить другие варианты, если они есть (italic, medium и т.д.) */
+
+/* Шрифт KAIF доступен для использования, но не применяется глобально */
+/* Используйте его при необходимости, указав font-family: 'KAIF', sans-serif; */

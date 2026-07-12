@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebP Images - thumbnail</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    h1 { color: #333; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+    .image-item { border: 1px solid #ddd; padding: 10px; border-radius: 4px; }
+    img { max-width: 100%; height: auto; display: block; }
+    .image-info { font-size: 12px; margin-top: 8px; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>WebP Images - thumbnail</h1>
+  <div class="gallery">
+    <!-- Images will be listed here -->
+  </div>
+  <script>
+    // Simple script to list all WebP images
+    async function listImages() {
+      try {
+        const gallery = document.querySelector('.gallery');
+        const files = await fetch('').then(r => r.text());
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(files, 'text/html');
+        const links = Array.from(doc.querySelectorAll('a')).filter(a => a.href.endsWith('.webp'));
+        
+        links.forEach(link => {
+          const div = document.createElement('div');
+          div.className = 'image-item';
+          
+          const img = document.createElement('img');
+          img.src = link.href;
+          img.alt = link.textContent;
+          img.loading = 'lazy';
+          
+          const info = document.createElement('div');
+          info.className = 'image-info';
+          info.textContent = link.textContent;
+          
+          div.appendChild(img);
+          div.appendChild(info);
+          gallery.appendChild(div);
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    
+    listImages();
+  </script>
+</body>
+</html>
+      

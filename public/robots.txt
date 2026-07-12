@@ -1,0 +1,50 @@
+# KAIF Robots.txt - Безопасность
+# Запрещаем индексацию служебных файлов и папок
+
+User-agent: *
+
+# Разрешаем основные страницы
+Allow: /
+Allow: /restaurant
+Allow: /spa
+Allow: /sports
+Allow: /banya
+Allow: /contacts
+
+# Разрешаем статические ресурсы
+Allow: /images/
+Allow: /images-webp/
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+
+# БЕЗОПАСНОСТЬ: Запрещаем служебные файлы и папки
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.env
+Disallow: /.env.*
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+Disallow: /vite.config.js
+Disallow: /netlify.toml
+Disallow: /vercel.json
+Disallow: /.htaccess
+Disallow: /nginx.conf
+
+# Запрещаем документацию
+Disallow: /*.md
+Disallow: /*.txt
+Disallow: /*.log
+
+# Запрещаем временные и backup файлы
+Disallow: /*.bak
+Disallow: /*.backup
+Disallow: /*.old
+Disallow: /*.orig
+Disallow: /*.tmp
+Disallow: /*.temp
+
+# Ссылка на карту сайта (если будет создана)
+# Sitemap: https://yoursite.com/sitemap.xml 

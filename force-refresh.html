@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Принудительное обновление</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .action { background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #D29B84; }
+        .button { 
+            background: #D29B84; 
+            color: white; 
+            padding: 12px 24px; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            margin: 5px;
+            font-size: 16px;
+        }
+        .button:hover { background: #c28a73; }
+        .status { padding: 15px; margin: 10px 0; border-radius: 8px; }
+        .success { background: #d1fae5; border: 1px solid #10b981; color: #065f46; }
+        .warning { background: #fef3c7; border: 1px solid #f59e0b; color: #92400e; }
+        .error { background: #fee2e2; border: 1px solid #ef4444; color: #991b1b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Принудительное обновление FITNESS DRINK</h1>
+        
+        <div class="action">
+            <h3>1. Очистка кэша браузера</h3>
+            <p>Нажмите кнопки ниже для принудительной очистки:</p>
+            <button class="button" onclick="hardRefresh()">🔄 Жесткая перезагрузка</button>
+            <button class="button" onclick="clearStorage()">🗑️ Очистить хранилище</button>
+            <button class="button" onclick="openIncognito()">🕶️ Режим инкогнито</button>
+        </div>
+
+        <div class="action">
+            <h3>2. Прямые ссылки</h3>
+            <p>Попробуйте открыть эти ссылки в новой вкладке:</p>
+            <button class="button" onclick="openRestaurant()">🍽️ Ресторан (порт 5174)</button>
+            <button class="button" onclick="openRestaurant5173()">🍽️ Ресторан (порт 5173)</button>
+            <button class="button" onclick="openTest()">🧪 Тест меню</button>
+        </div>
+
+        <div class="action">
+            <h3>3. Проверка сервера</h3>
+            <button class="button" onclick="checkServer()">🔍 Проверить сервер</button>
+            <div id="server-status" class="status warning">Нажмите кнопку выше для проверки</div>
+        </div>
+
+        <div class="action">
+            <h3>4. Пошаговая инструкция</h3>
+            <ol>
+                <li><strong>Закройте все вкладки</strong> с сайтом</li>
+                <li><strong>Очистите кэш</strong> (Cmd+Shift+R или Ctrl+Shift+R)</li>
+                <li><strong>Откройте в режиме инкогнито</strong></li>
+                <li><strong>Перейдите на:</strong> http://localhost:5174/restaurant</li>
+                <li><strong>Найдите вкладку:</strong> "FITNESS DRINK" после "Ликеры"</li>
+            </ol>
+        </div>
+
+        <div class="action">
+            <h3>5. Что искать на странице ресторана</h3>
+            <div class="status success">
+                <strong>✅ Должна быть вкладка "FITNESS DRINK"</strong><br>
+                Позиция: после "Ликеры", перед "Вода"<br>
+                При нажатии: показываются 5 фитнес-напитков<br>
+                Цены: 90-190 THB
+            </div>
+        </div>
+
+        <div id="cache-info" class="status warning">
+            <strong>ℹ️ Информация о кэше:</strong><br>
+            Загрузка...
+        </div>
+    </div>
+
+    <script>
+        function hardRefresh() {
+            if (confirm('Выполнить жесткую перезагрузку страницы?')) {
+                location.reload(true);
+            }
+        }
+
+        function clearStorage() {
+            try {
+                localStorage.clear();
+                sessionStorage.clear();
+                if ('caches' in window) {
+                    caches.keys().then(names => {
+                        names.forEach(name => {
+                            caches.delete(name);
+                        });
+                    });
+                }
+                alert('✅ Хранилище очищено! Теперь обновите страницу ресторана.');
+            } catch (error) {
+                alert('❌ Ошибка при очистке: ' + error.message);
+            }
+        }
+
+        function openIncognito() {
+            alert('🕶️ Откройте новое приватное окно браузера и перейдите на:\nhttp://localhost:5174/restaurant');
+        }
+
+        function openRestaurant() {
+            window.open('http://localhost:5174/restaurant', '_blank');
+        }
+
+        function openRestaurant5173() {
+            window.open('http://localhost:5173/restaurant', '_blank');
+        }
+
+        function openTest() {
+            window.open('test-simple-menu.html', '_blank');
+        }
+
+        async function checkServer() {
+            const statusDiv = document.getElementById('server-status');
+            statusDiv.textContent = 'Проверяем серверы...';
+            statusDiv.className = 'status warning';
+
+            const ports = [5173, 5174];
+            const results = [];
+
+            for (const port of ports) {
+                try {
+                    const response = await fetch(`http://localhost:${port}/`);
+                    if (response.ok) {
+                        results.push(`✅ Порт ${port}: работает`);
+                    } else {
+                        results.push(`⚠️ Порт ${port}: ответ ${response.status}`);
+                    }
+                } catch (error) {
+                    results.push(`❌ Порт ${port}: недоступен`);
+                }
+            }
+
+            statusDiv.innerHTML = results.join('<br>');
+            statusDiv.className = results.some(r => r.includes('✅')) ? 'status success' : 'status error';
+        }
+
+        function updateCacheInfo() {
+            const div = document.getElementById('cache-info');
+            const userAgent = navigator.userAgent;
+            const browser = userAgent.includes('Chrome') ? 'Chrome' : 
+                           userAgent.includes('Firefox') ? 'Firefox' : 
+                           userAgent.includes('Safari') ? 'Safari' : 'Другой';
+            
+            div.innerHTML = `
+                <strong>ℹ️ Информация о браузере:</strong><br>
+                Браузер: ${browser}<br>
+                User Agent: ${userAgent.substring(0, 100)}...<br>
+                Время: ${new Date().toLocaleString()}<br>
+                <strong>Рекомендация:</strong> Используйте Chrome или Firefox для тестирования
+            `;
+        }
+
+        // Инициализация
+        updateCacheInfo();
+        
+        console.log('🔄 Принудительное обновление FITNESS DRINK');
+        console.log('🎯 Цель: найти вкладку "FITNESS DRINK" на странице ресторана');
+        console.log('📍 URL: http://localhost:5174/restaurant');
+    </script>
+</body>
+</html> 

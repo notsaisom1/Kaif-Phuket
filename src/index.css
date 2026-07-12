@@ -1,0 +1,640 @@
+/* Шрифты загружаются через index.html - Inter Variable + Noto Sans Tagalog */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================================================================
+   WELLNESS SANCTUARY - Global Styles
+   ============================================================================= */
+
+:root {
+  /* Color Variables */
+  --color-primary: #90b3a7;
+  --color-secondary: #d4a574;
+  --color-tertiary: #c8a8e9;
+  --color-background: #000000;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #fdfcfa;
+
+  --color-text-primary: #2c3e2d;
+  --color-text-secondary: #5a6b5d;
+  --color-text-light: #8b9a8e;
+  --color-text-white: #ffffff;
+
+  /* Typography */
+  --font-primary: "Jost", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing & Sizing */
+  --section-padding: 5rem 0;
+  --container-padding: 1rem;
+  --border-radius-organic: 40% 60% 70% 30% / 40% 50% 60% 50%;
+
+  /* Shadows */
+  --shadow-wellness: 0 4px 6px -1px rgba(144, 179, 167, 0.08),
+    0 2px 4px -1px rgba(144, 179, 167, 0.06);
+  --shadow-wellness-lg: 0 10px 15px -3px rgba(144, 179, 167, 0.08),
+    0 4px 6px -2px rgba(144, 179, 167, 0.05);
+  --shadow-glow: 0 0 20px rgba(144, 179, 167, 0.15);
+
+  /* Transitions */
+  --transition-natural: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Base Styles - Оптимизированы для предотвращения мерцания анимаций */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Отключаем scroll-snap для всех элементов */
+  scroll-snap-type: none !important;
+  scroll-snap-align: none !important;
+  scroll-snap-stop: normal !important;
+}
+
+/* Дополнительные правила для секций */
+section,
+div,
+main,
+article {
+  scroll-snap-type: none !important;
+  scroll-snap-align: none !important;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-snap-type: none !important;
+  scroll-snap-align: none !important;
+  scroll-snap-stop: normal !important;
+  -webkit-overflow-scrolling: touch;
+  /* Цвет для iOS/macOS overscroll bounce */
+  background-color: #ffffff;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: #ffffff;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 1rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: none !important;
+  scroll-snap-align: none !important;
+  scroll-snap-stop: normal !important;
+  overscroll-behavior-y: auto;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Sports page */
+body.sports-page,
+body.sports-page #root {
+  background-color: #000000 !important;
+}
+
+body.sports-page main {
+  background-color: #000000 !important;
+}
+
+body.sports-page footer {
+  margin-top: 0 !important;
+}
+
+/* Ensure header stays fixed on sports page */
+body.sports-page .kaif-header,
+body.sports-page header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 99999 !important;
+  transform: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Typography - Headings: Plus Jakarta Sans (bold, uppercase like Hero) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 0.875rem;
+}
+
+h5 {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-natural);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* =============================================================================
+   COMPONENT STYLES
+   ============================================================================= */
+
+@layer components {
+  /* Container */
+  .container-wellness {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Buttons */
+  .btn-wellness {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    box-shadow: var(--shadow-wellness);
+  }
+
+  .btn-wellness:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-wellness-lg);
+  }
+
+  .btn-wellness:active {
+    transform: translateY(0);
+  }
+
+  .btn-primary {
+    @apply btn-wellness bg-primary-300 text-white hover:bg-primary-400;
+    @apply focus:ring-primary-300;
+  }
+
+  .btn-secondary {
+    @apply btn-wellness bg-secondary-300 text-white hover:bg-secondary-400;
+    @apply focus:ring-secondary-300;
+  }
+
+  .btn-outline {
+    @apply btn-wellness border-2 border-primary-300 text-primary-300 bg-transparent;
+    @apply hover:bg-primary-300 hover:text-white focus:ring-primary-300;
+  }
+
+  .btn-ghost {
+    @apply btn-wellness bg-transparent text-text-primary hover:bg-primary-50;
+    @apply focus:ring-primary-300;
+    box-shadow: none;
+  }
+
+  /* Cards */
+  .card-wellness {
+    @apply bg-surface rounded-2xl p-6 transition-all duration-500;
+    box-shadow: var(--shadow-wellness);
+    backdrop-filter: blur(10px);
+  }
+
+  .card-wellness:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-wellness-lg);
+  }
+
+  .card-organic {
+    @apply card-wellness;
+    border-radius: var(--border-radius-organic);
+  }
+
+  /* Section Styling */
+  .section-wellness {
+    @apply py-16 lg:py-24;
+  }
+
+  .section-wellness-alt {
+    @apply section-wellness bg-surface;
+  }
+
+  /* Text Styles */
+  .text-wellness-title {
+    @apply font-heading text-4xl lg:text-5xl font-bold text-text-primary;
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-wellness-subtitle {
+    @apply text-lg lg:text-xl text-text-secondary leading-relaxed;
+  }
+
+  .text-wellness-accent {
+    @apply text-primary-300 font-medium;
+  }
+
+  /* Gradient Backgrounds */
+  .bg-wellness-gradient {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      rgba(144, 179, 167, 0.8) 100%
+    );
+  }
+
+  .bg-wellness-hero {
+    background: linear-gradient(
+      135deg,
+      rgba(144, 179, 167, 0.9) 0%,
+      rgba(212, 165, 116, 0.8) 100%
+    );
+  }
+
+  /* Animation Classes */
+  .animate-wellness-breathe {
+    animation: breathing 4s ease-in-out infinite;
+  }
+
+  .animate-wellness-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-wellness-glow {
+    box-shadow: var(--shadow-glow);
+    animation: pulseGentle 3s ease-in-out infinite;
+  }
+
+  /* Scroll Animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .fade-in-up.animate {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .scale-in {
+    @apply opacity-0 scale-95;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .scale-in.animate {
+    @apply opacity-100 scale-100;
+  }
+
+  /* Wellness Decorative Elements */
+  .wellness-decoration {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: var(--border-radius-organic);
+    background: linear-gradient(
+      135deg,
+      rgba(144, 179, 167, 0.1),
+      rgba(212, 165, 116, 0.1)
+    );
+    filter: blur(40px);
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .wellness-decoration-secondary {
+    background: linear-gradient(
+      135deg,
+      rgba(200, 168, 233, 0.1),
+      rgba(144, 179, 167, 0.1)
+    );
+    animation-delay: -2s;
+    animation-duration: 6s;
+  }
+
+  /* Glass Effect */
+  .glass-wellness {
+    background: rgba(245, 243, 240, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(144, 179, 167, 0.2);
+  }
+
+  /* Loading States */
+  .skeleton-wellness {
+    @apply animate-pulse bg-gradient-to-r from-primary-50 via-primary-100 to-primary-50;
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  /* Interactive States */
+  .interactive-wellness {
+    transition: var(--transition-natural);
+    cursor: pointer;
+  }
+
+  .interactive-wellness:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-wellness-lg);
+  }
+
+  .interactive-wellness:active {
+    transform: translateY(-1px) scale(1.01);
+  }
+}
+
+/* =============================================================================
+   UTILITY STYLES
+   ============================================================================= */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gradient-wellness {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .aspect-organic {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--border-radius-organic);
+  }
+}
+
+/* =============================================================================
+   KEYFRAMES
+   ============================================================================= */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes breathing {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseGentle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* =============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================= */
+
+/* Desktop nav visibility */
+.desktop-nav {
+  display: flex !important;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --section-padding: 3rem 0;
+    --container-padding: 1rem;
+  }
+
+  .section-wellness {
+    @apply py-12;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  header .desktop-nav {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  header .desktop-nav {
+    display: flex !important;
+  }
+}
+
+/* Предотвращаем скролл при открытом мобильном меню */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Простая оптимизация для мобильных устройств */
+@media screen and (max-width: 768px) {
+  /* Отключаем тяжелые анимации на мобильных */
+  .animate-wellness-breathe,
+  .animate-wellness-float {
+    animation: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support (если понадобится в будущем) */
+@media (prefers-color-scheme: dark) {
+  /* Тёмная тема пока не активирована */
+}
+
+/*
+=============================================================================
+KAIF - Header Styles
+=============================================================================
+*/
+
+/* Стили для мобильного меню */
+.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Стили для хедера */
+header.kaif-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+}
+
+/* Prevent third-party widgets (Bitrix24) from blocking page scroll on mobile */
+@media screen and (max-width: 768px) {
+  .b24-widget-button-wrapper,
+  .b24-widget-button-shadow,
+  .bx-livechat-wrapper,
+  [id^="bx24"],
+  [class^="b24-"] {
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    position: fixed !important;
+    z-index: 9998 !important;
+  }
+}
+
+/* =============================================================================
+   iOS Video Play Button Hide - MUST be in global CSS
+   ============================================================================= */
+video {
+  /* Hide all iOS Safari video controls */
+  -webkit-tap-highlight-color: transparent;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -9999px;
+}
+
+video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Extra specificity for hero video */
+video[autoplay],
+video[muted] {
+  -webkit-media-controls-start-playback-button: none;
+}
+
+video[autoplay]::-webkit-media-controls-start-playback-button,
+video[autoplay]::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}

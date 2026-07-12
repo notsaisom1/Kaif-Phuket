@@ -1,0 +1,23 @@
+/* Holiday Theme 2025 - Static Festive Accents (Performance Optimized) */
+
+/* Gold accent for active/selected states */
+.holiday-theme [class*="active"],
+.holiday-theme [class*="Active"],
+.holiday-theme .active {
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
+}
+
+/* Festive scrollbar */
+.holiday-theme::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c41e3a, #1a472a);
+}
+
+.holiday-theme::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+/* Static festive glow on hover only */
+.holiday-theme [class*="BookButton"]:hover,
+.holiday-theme [class*="CTAButton"]:hover {
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}

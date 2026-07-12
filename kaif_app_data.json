@@ -1,0 +1,509 @@
+{
+  "app_info": {
+    "name": "KAIF Sauna & Spa",
+    "description": "Премиальный клубный комплекс с рестораном, SPA и спортивными услугами",
+    "languages": ["ru", "en", "th"],
+    "version": "1.0.0"
+  },
+  
+  "navigation": {
+    "main_sections": [
+      {
+        "id": "home",
+        "path": "/",
+        "name_ru": "Главная",
+        "name_en": "Home",
+        "name_th": "หน้าแรก"
+      },
+      {
+        "id": "restaurant",
+        "path": "/restaurant",
+        "name_ru": "Ресторан",
+        "name_en": "Restaurant",
+        "name_th": "ร้านอาหาร"
+      },
+      {
+        "id": "spa",
+        "path": "/spa",
+        "name_ru": "SPA & Салон",
+        "name_en": "SPA & Beauty",
+        "name_th": "สปาและความงาม"
+      },
+      {
+        "id": "sports",
+        "path": "/sports",
+        "name_ru": "Спорт",
+        "name_en": "Sports",
+        "name_th": "กีฬา"
+      },
+      {
+        "id": "banya",
+        "path": "/banya",
+        "name_ru": "Баня",
+        "name_en": "Banya",
+        "name_th": "บันยา"
+      },
+      {
+        "id": "contacts",
+        "path": "/contacts",
+        "name_ru": "Контакты",
+        "name_en": "Contacts",
+        "name_th": "ติดต่อ"
+      }
+    ]
+  },
+  
+  "spa_services": {
+    "categories": [
+      {
+        "id": "massage",
+        "name_ru": "Массаж",
+        "name_en": "Massage",
+        "description_ru": "Расслабляющие и лечебные массажи",
+        "description_en": "Relaxing and therapeutic massages",
+        "services": [
+          {
+            "id": "thai-massage",
+            "name_ru": "Традиционный тайский массаж",
+            "name_en": "Traditional Thai Massage",
+            "description_ru": "Классический тайский массаж на коврике",
+            "description_en": "Classic Thai massage on mat",
+            "durations": [60, 90, 120],
+            "prices": [600, 750, 1000],
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "oil-massage",
+            "name_ru": "Масляный массаж",
+            "name_en": "Oil Massage",
+            "description_ru": "Расслабляющий массаж с натуральными маслами",
+            "description_en": "Relaxing massage with natural oils",
+            "durations": [60, 90, 120],
+            "prices": [650, 800, 950],
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "foot-massage",
+            "name_ru": "Массаж стоп",
+            "name_en": "Foot Massage",
+            "description_ru": "Традиционный тайский массаж стоп",
+            "description_en": "Traditional Thai foot massage",
+            "durations": [60, 90, 120],
+            "prices": [450, 700, 850],
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "sport-massage",
+            "name_ru": "Спортивный массаж",
+            "name_en": "Sport Massage",
+            "description_ru": "Интенсивный массаж для восстановления",
+            "description_en": "Intensive massage for recovery",
+            "durations": [60, 120],
+            "prices": [800, 1300],
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "endosphere",
+        "name_ru": "Эндосфера-терапия",
+        "name_en": "Endosphere Therapy",
+        "description_ru": "Аппаратная коррекция фигуры",
+        "description_en": "Body contouring treatment",
+        "services": [
+          {
+            "id": "endosphere-full-body",
+            "name_ru": "Эндосфера всего тела (1 процедура)",
+            "name_en": "Full Body Endosphere (1 session)",
+            "description_ru": "Коррекция фигуры всего тела",
+            "description_en": "Full body contouring",
+            "price": 2000,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "endosphere-6-sessions",
+            "name_ru": "Эндосфера (6 процедур)",
+            "name_en": "Endosphere (6 sessions)",
+            "description_ru": "Выгодный пакет из 6 процедур",
+            "description_en": "Package of 6 sessions",
+            "price": 10000,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "endosphere-12-sessions",
+            "name_ru": "Эндосфера (12 процедур)",
+            "name_en": "Endosphere (12 sessions)",
+            "description_ru": "Максимальный пакет из 12 процедур",
+            "description_en": "Maximum package of 12 sessions",
+            "price": 18000,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "laser",
+        "name_ru": "Лазерная эпиляция",
+        "name_en": "Laser Hair Removal",
+        "description_ru": "Современные технологии эпиляции",
+        "description_en": "Modern hair removal technology",
+        "services": [
+          {
+            "id": "laser-armpits",
+            "name_ru": "Лазерная эпиляция подмышек",
+            "name_en": "Underarms Laser",
+            "price": 1000,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "laser-bikini",
+            "name_ru": "Лазерная эпиляция бикини",
+            "name_en": "Bikini Laser",
+            "price": 1500,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "laser-legs-full",
+            "name_ru": "Лазерная эпиляция ног полностью",
+            "name_en": "Full Legs Laser",
+            "price": 2200,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "hair-care",
+        "name_ru": "Уход за волосами",
+        "name_en": "Hair Care",
+        "description_ru": "Стрижки, окрашивание и уход",
+        "description_en": "Haircuts, coloring and care",
+        "services": [
+          {
+            "id": "haircut",
+            "name_ru": "Стрижка",
+            "name_en": "Haircut",
+            "price": 1000,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "root-coloring",
+            "name_ru": "Окрашивание корней",
+            "name_en": "Root Coloring",
+            "price": 2000,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "vietnamese-head-massage",
+            "name_ru": "Вьетнамский массаж головы",
+            "name_en": "Vietnamese Head Massage",
+            "price": 1600,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "manicure",
+        "name_ru": "Маникюр",
+        "name_en": "Manicure",
+        "description_ru": "Профессиональный уход за ногтями",
+        "description_en": "Professional nail care",
+        "services": [
+          {
+            "id": "manicure-gel",
+            "name_ru": "Маникюр с гелевым укреплением",
+            "name_en": "Gel Manicure",
+            "price": 1500,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "french-manicure",
+            "name_ru": "Французский маникюр",
+            "name_en": "French Manicure",
+            "price": 300,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "pedicure",
+        "name_ru": "Педикюр",
+        "name_en": "Pedicure",
+        "description_ru": "Уход за стопами и ногтями",
+        "description_en": "Foot and nail care",
+        "services": [
+          {
+            "id": "pedicure-full",
+            "name_ru": "Полный педикюр с покрытием",
+            "name_en": "Full Pedicure with Polish",
+            "price": 1500,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      }
+    ]
+  },
+  
+  "restaurant_menu": {
+    "categories": [
+      {
+        "id": "breakfast",
+        "name_ru": "Завтраки",
+        "name_en": "Breakfast",
+        "time": "8:00 - 12:00",
+        "items": [
+          {
+            "id": "kaif-breakfast",
+            "name_ru": "Завтрак KAIF",
+            "name_en": "KAIF Breakfast",
+            "description_ru": "Фирменный завтрак нашего ресторана",
+            "description_en": "Our signature breakfast",
+            "price": 320,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "shakshuka-salmon",
+            "name_ru": "Шакшука со шпинатом и лососем",
+            "name_en": "Shakshuka with Spinach and Salmon",
+            "price": 330,
+            "currency": "THB",
+            "popular": false
+          },
+          {
+            "id": "syrniki",
+            "name_ru": "Сырники с соусом из маракуйи",
+            "name_en": "Syrniki with Passion Fruit Sauce",
+            "price": 250,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "soup",
+        "name_ru": "Супы",
+        "name_en": "Soups",
+        "items": [
+          {
+            "id": "borsch",
+            "name_ru": "Борщ классический",
+            "name_en": "Classic Borsch",
+            "description_ru": "Традиционный славянский суп",
+            "description_en": "Traditional Slavic soup",
+            "price": 270,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "okroshka",
+            "name_ru": "Окрошка на айране",
+            "name_en": "Okroshka with Ayran",
+            "price": 270,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "salad",
+        "name_ru": "Салаты и закуски",
+        "name_en": "Salads & Appetizers",
+        "items": [
+          {
+            "id": "caesar-shrimp",
+            "name_ru": "Цезарь с креветками гриль",
+            "name_en": "Caesar with Grilled Shrimp",
+            "price": 390,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "hummus-avocado",
+            "name_ru": "Хумус с авокадо и томатами",
+            "name_en": "Hummus with Avocado and Tomatoes",
+            "price": 250,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "grill",
+        "name_ru": "Блюда на мангале",
+        "name_en": "Grill",
+        "items": [
+          {
+            "id": "beef-kebab",
+            "name_ru": "Кебаб из говядины",
+            "name_en": "Beef Kebab",
+            "description_ru": "Сочный кебаб из отборной говядины",
+            "description_en": "Juicy kebab from selected beef",
+            "price": 490,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "grilled-salmon",
+            "name_ru": "Лосось на мангале",
+            "name_en": "Grilled Salmon",
+            "price": 420,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "grilled-shrimp",
+            "name_ru": "Креветки на мангале",
+            "name_en": "Grilled Shrimp",
+            "price": 490,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "burger",
+        "name_ru": "Бургеры",
+        "name_en": "Burgers",
+        "items": [
+          {
+            "id": "kaif-burger",
+            "name_ru": "Бургер KAIF с бараниной и беконом",
+            "name_en": "KAIF Burger with Lamb and Bacon",
+            "price": 490,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "cheeseburger",
+            "name_ru": "Классический чизбургер",
+            "name_en": "Classic Cheeseburger",
+            "price": 290,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "dessert",
+        "name_ru": "Десерты",
+        "name_en": "Desserts",
+        "items": [
+          {
+            "id": "napoleon",
+            "name_ru": "Наполеон",
+            "name_en": "Napoleon Cake",
+            "price": 190,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "lava-cake",
+            "name_ru": "Лава-кейк с вишневым вареньем",
+            "name_en": "Lava Cake with Cherry Jam",
+            "price": 250,
+            "currency": "THB",
+            "popular": true
+          },
+          {
+            "id": "cheesecake-oreo",
+            "name_ru": "Чизкейк с печеньем Oreo",
+            "name_en": "Oreo Cheesecake",
+            "price": 250,
+            "currency": "THB",
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "drinks",
+        "name_ru": "Напитки",
+        "name_en": "Beverages",
+        "subcategories": [
+          {
+            "id": "coffee",
+            "name_ru": "Кофе",
+            "name_en": "Coffee",
+            "items": [
+              {
+                "id": "cappuccino",
+                "name_ru": "Капучино",
+                "name_en": "Cappuccino",
+                "price": 150,
+                "currency": "THB"
+              },
+              {
+                "id": "latte",
+                "name_ru": "Латте",
+                "name_en": "Latte",
+                "price": 160,
+                "currency": "THB"
+              }
+            ]
+          },
+          {
+            "id": "smoothie",
+            "name_ru": "Смузи",
+            "name_en": "Smoothies",
+            "items": [
+              {
+                "id": "mango-passion",
+                "name_ru": "Манго-маракуйя",
+                "name_en": "Mango-Passion Fruit",
+                "price": 170,
+                "currency": "THB"
+              }
+            ]
+          },
+          {
+            "id": "cocktails",
+            "name_ru": "Коктейли",
+            "name_en": "Cocktails",
+            "items": [
+              {
+                "id": "mojito",
+                "name_ru": "Мохито",
+                "name_en": "Mojito",
+                "price": 70,
+                "currency": "THB"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  
+  "contacts": {
+    "address": {
+      "ru": "Пхукет, Таиланд",
+      "en": "Phuket, Thailand",
+      "th": "ภูเก็ต ประเทศไทย"
+    },
+    "phone": "+66 XX XXX XXXX",
+    "email": "info@kaif-club.com",
+    "working_hours": {
+      "restaurant": "8:00 - 23:00",
+      "spa": "7:00 - 22:00",
+      "gym": "7:00 - 22:00"
+    },
+    "social_media": {
+      "instagram": "@kaif_jungle_club",
+      "facebook": "KaifJungleClub"
+    }
+  }
+}

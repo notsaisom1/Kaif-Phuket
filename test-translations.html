@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAIF Translation Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .language-switcher {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .language-switcher button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: 2px solid #90B3A7;
+            background: white;
+            color: #90B3A7;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .language-switcher button.active {
+            background: #90B3A7;
+            color: white;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #90B3A7;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 KAIF Translation System Test</h1>
+        
+        <div class="language-switcher">
+            <button onclick="testLanguage('ru')" id="btn-ru">Русский</button>
+            <button onclick="testLanguage('en')" id="btn-en">English</button>
+            <button onclick="testLanguage('th')" id="btn-th">ไทย</button>
+        </div>
+
+        <div id="status" class="status"></div>
+
+        <div class="test-section">
+            <h3>Navigation Test</h3>
+            <p><strong>Home:</strong> <span id="nav-home">-</span></p>
+            <p><strong>Restaurant:</strong> <span id="nav-restaurant">-</span></p>
+            <p><strong>SPA:</strong> <span id="nav-spa">-</span></p>
+            <p><strong>Sports:</strong> <span id="nav-sports">-</span></p>
+            <p><strong>Contacts:</strong> <span id="nav-contacts">-</span></p>
+        </div>
+
+        <div class="test-section">
+            <h3>Footer Test</h3>
+            <p><strong>Services Title:</strong> <span id="footer-services">-</span></p>
+            <p><strong>Copyright:</strong> <span id="footer-copyright">-</span></p>
+            <p><strong>Daily:</strong> <span id="footer-daily">-</span></p>
+        </div>
+
+        <div class="test-section">
+            <h3>Gallery Test</h3>
+            <p><strong>Title:</strong> <span id="gallery-title">-</span></p>
+            <p><strong>All Filter:</strong> <span id="gallery-all">-</span></p>
+            <p><strong>SPA Filter:</strong> <span id="gallery-spa">-</span></p>
+        </div>
+
+        <div class="test-section">
+            <h3>Instructions</h3>
+            <ol>
+                <li>Запустите проект: <code>npm run dev</code></li>
+                <li>Откройте браузер и перейдите на сайт</li>
+                <li>Попробуйте переключить язык в хедере</li>
+                <li>Проверьте, что все тексты меняются</li>
+                <li>Обратите внимание на навигацию, футер и другие секции</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h3>Expected Results</h3>
+            <ul>
+                <li>✅ Навигация в хедере должна переводиться</li>
+                <li>✅ Футер должен переводиться полностью</li>
+                <li>✅ Галерея должна переводиться</li>
+                <li>✅ Язык должен сохраняться при перезагрузке</li>
+                <li>✅ Мобильное меню должно переводиться</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Симуляция переводов для демонстрации
+        const translations = {
+            ru: {
+                'navigation.home': 'Главная',
+                'navigation.restaurant': 'Ресторан',
+                'navigation.spa': 'СПА',
+                'navigation.sports': 'Спорт',
+                'navigation.contacts': 'Контакты',
+                'footer.services.title': 'Услуги',
+                'footer.copyright': 'Все права защищены.',
+                'footer.schedule.daily': 'Ежедневно',
+                'gallery.title': 'Впечатления KAIF',
+                'gallery.filters.all': 'Все',
+                'gallery.filters.spa': 'СПА'
+            },
+            en: {
+                'navigation.home': 'Home',
+                'navigation.restaurant': 'Restaurant',
+                'navigation.spa': 'SPA',
+                'navigation.sports': 'Sports',
+                'navigation.contacts': 'Contacts',
+                'footer.services.title': 'Services',
+                'footer.copyright': 'All rights reserved.',
+                'footer.schedule.daily': 'Daily',
+                'gallery.title': 'KAIF Experiences',
+                'gallery.filters.all': 'All',
+                'gallery.filters.spa': 'SPA'
+            },
+            th: {
+                'navigation.home': 'หน้าแรก',
+                'navigation.restaurant': 'ร้านอาหาร',
+                'navigation.spa': 'สปา',
+                'navigation.sports': 'กีฬา',
+                'navigation.contacts': 'ติดต่อ',
+                'footer.services.title': 'บริการ',
+                'footer.copyright': 'สงวนลิขสิทธิ์',
+                'footer.schedule.daily': 'ทุกวัน',
+                'gallery.title': 'ประสบการณ์ KAIF',
+                'gallery.filters.all': 'ทั้งหมด',
+                'gallery.filters.spa': 'สปา'
+            }
+        };
+
+        function testLanguage(lang) {
+            // Обновляем активную кнопку
+            document.querySelectorAll('.language-switcher button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`btn-${lang}`).classList.add('active');
+
+            // Обновляем тексты
+            const langData = translations[lang];
+            
+            document.getElementById('nav-home').textContent = langData['navigation.home'];
+            document.getElementById('nav-restaurant').textContent = langData['navigation.restaurant'];
+            document.getElementById('nav-spa').textContent = langData['navigation.spa'];
+            document.getElementById('nav-sports').textContent = langData['navigation.sports'];
+            document.getElementById('nav-contacts').textContent = langData['navigation.contacts'];
+            
+            document.getElementById('footer-services').textContent = langData['footer.services.title'];
+            document.getElementById('footer-copyright').textContent = langData['footer.copyright'];
+            document.getElementById('footer-daily').textContent = langData['footer.schedule.daily'];
+            
+            document.getElementById('gallery-title').textContent = langData['gallery.title'];
+            document.getElementById('gallery-all').textContent = langData['gallery.filters.all'];
+            document.getElementById('gallery-spa').textContent = langData['gallery.filters.spa'];
+
+            // Показываем статус
+            const status = document.getElementById('status');
+            status.className = 'status success';
+            status.textContent = `✅ Тестирование языка: ${lang.toUpperCase()} - переводы загружены успешно!`;
+        }
+
+        // Инициализация с русским языком
+        testLanguage('ru');
+    </script>
+</body>
+</html> 

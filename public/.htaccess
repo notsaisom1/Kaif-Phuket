@@ -1,0 +1,110 @@
+# KAIF Security Configuration
+# Защита от доступа к служебным файлам и папкам
+
+# Блокируем доступ к .git папке
+<DirectoryMatch "^(.*/)?\.git+/">
+    Require all denied
+</DirectoryMatch>
+
+# Блокируем доступ к node_modules
+<DirectoryMatch "^(.*/)?node_modules/">
+    Require all denied
+</DirectoryMatch>
+
+# Блокируем доступ к исходным файлам
+<FilesMatch "\.(jsx?|ts|tsx|vue|py|rb|php|asp|jsp|pl|cgi)$">
+    Require all denied
+</FilesMatch>
+
+# Блокируем доступ к конфигурационным файлам
+<FilesMatch "^(\.env|\.gitignore|\.htaccess|package\.json|package-lock\.json|yarn\.lock|composer\.json|composer\.lock|Gemfile|requirements\.txt|\.babelrc|\.eslintrc|gulpfile|webpack\.config|vite\.config|rollup\.config|tsconfig)">
+    Require all denied
+</FilesMatch>
+
+# Блокируем доступ к документации и служебным файлам
+<FilesMatch "\.(md|txt|log|bak|backup|old|orig|tmp|temp|sql|sh|bat|cmd)$">
+    Require all denied
+</FilesMatch>
+
+# Блокируем доступ к скрытым файлам
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Security Headers
+<IfModule mod_headers.c>
+    # Защита от XSS
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Предотвращение MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Защита от clickjacking
+    Header always set X-Frame-Options "DENY"
+    
+    # Строгая политика безопасности контента
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https:; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+    
+    # Политика референтов
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Предотвращение выполнения в других доменах
+    Header always set Cross-Origin-Embedder-Policy "require-corp"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    
+    # HSTS (только для HTTPS)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+</IfModule>
+
+# Отключаем индексацию директорий
+Options -Indexes
+
+# Отключаем подпись сервера
+ServerTokens Prod
+ServerSignature Off
+
+# Блокируем попытки выполнения PHP в загружаемых файлах
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
+# SPA redirect - все запросы к index.html (кроме файлов и API)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Блокируем доступ к служебным файлам через URL
+    RewriteRule ^\.git - [F,L]
+    RewriteRule ^node_modules - [F,L]
+    RewriteRule ^src/ - [F,L]
+    RewriteRule \.(md|txt|log|json|js|jsx|ts|tsx|vue)$ - [F,L]
+    
+    # Handle Angular and React routing
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
+
+# Кэширование статических ресурсов
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Сжатие
+<IfModule mod_deflate.c>
+    SetOutputFilter DEFLATE
+    SetEnvIfNoCase Request_URI \
+        \.(?:gif|jpe?g|png|ico|webp)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \
+        \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+</IfModule>

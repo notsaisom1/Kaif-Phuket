@@ -1,0 +1,49 @@
+[build]
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  CI = "true"
+  NPM_FLAGS = "--legacy-peer-deps --prefer-offline --no-audit"
+  ROLLUP_DISABLE_NATIVE = "true"
+  # Оптимизация для производительности
+  GENERATE_SOURCEMAP = "false"
+  INLINE_RUNTIME_CHUNK = "false"
+  IMAGE_INLINE_SIZE_LIMIT = "2000"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  VITE_BUILD_SOURCEMAP = "false"
+
+# Устанавливаем правила перенаправления для SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Минимальные заголовки для отладки
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+
+# Кэширование изображений - короткий срок для свежести
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/images-webp/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Service Worker - без кэширования
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+# Оптимизация производительности - ОТКЛЮЧЕНО для отладки
+[build.processing]
+  skip_processing = true 

@@ -1,0 +1,14 @@
+/* Mobile Scroll Fix для Sports Page - упрощенная версия */
+
+/* Отключаем выделение при тапе */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Декоративные элементы не должны перехватывать события */
+div[class*="Background"],
+div[class*="Glow"],
+div[class*="Decoration"],
+div[class*="Shape"] {
+  pointer-events: none !important;
+}

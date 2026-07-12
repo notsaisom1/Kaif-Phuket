@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAIF Language Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .language-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .language-buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 2px solid #90B3A7;
+            background: white;
+            color: #90B3A7;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .language-buttons button.active {
+            background: #90B3A7;
+            color: white;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h1>🧪 KAIF Language Switching Test</h1>
+    
+    <div class="language-buttons">
+        <button onclick="testLanguage('ru')" id="btn-ru">Русский</button>
+        <button onclick="testLanguage('en')" id="btn-en">English</button>
+        <button onclick="testLanguage('th')" id="btn-th">ไทย</button>
+    </div>
+
+    <div id="status" class="status info">
+        Откройте консоль браузера (F12) и нажмите на кнопки языков для тестирования.
+    </div>
+
+    <div class="test-section">
+        <h2>🔍 Инструкции по тестированию</h2>
+        <ol>
+            <li>Откройте <strong>http://localhost:5174</strong> в браузере</li>
+            <li>Откройте консоль разработчика (F12)</li>
+            <li>Попробуйте переключить язык в хедере сайта</li>
+            <li>Проверьте, что меняется:</li>
+            <ul>
+                <li>✅ Навигационное меню (Главная, Ресторан, СПА, Спорт, Баня, Контакты)</li>
+                <li>✅ Заголовки секций на главной странице</li>
+                <li>✅ Кнопки и текст в футере</li>
+                <li>✅ Галерея и фильтры</li>
+                <li>✅ Все тексты в секциях Hero, Philosophy, About, Services</li>
+            </ul>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>🎯 Что должно работать</h2>
+        <div class="status success">
+            <strong>✅ Исправлено:</strong>
+            <ul>
+                <li>Навигация в хедере</li>
+                <li>Футер (навигация, услуги, контакты, расписание)</li>
+                <li>Галерея (заголовки и фильтры)</li>
+                <li>Hero секция (заголовки, услуги, статистика)</li>
+                <li>Philosophy секция (принципы философии)</li>
+                <li>About секция (описания, статистика, особенности)</li>
+                <li>Services секция (зоны и услуги)</li>
+                <li>Все useMemo зависимости обновлены</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🚀 Следующие шаги</h2>
+        <div class="status info">
+            <strong>Для полного завершения нужно перевести:</strong>
+            <ul>
+                <li>Страницы: Restaurant, SPA, Sports, Banya, Contacts</li>
+                <li>Компоненты в папках: spa/, sports/, banya/</li>
+                <li>Модальные окна и формы</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function testLanguage(lang) {
+            // Убираем активный класс со всех кнопок
+            document.querySelectorAll('.language-buttons button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Добавляем активный класс к выбранной кнопке
+            document.getElementById(`btn-${lang}`).classList.add('active');
+            
+            const status = document.getElementById('status');
+            status.className = 'status info';
+            status.innerHTML = `
+                <strong>🔄 Тестирование языка: ${lang.toUpperCase()}</strong><br>
+                1. Перейдите на <a href="http://localhost:5174" target="_blank">localhost:5174</a><br>
+                2. Переключите язык в хедере на ${lang.toUpperCase()}<br>
+                3. Проверьте, что весь контент переключился на выбранный язык<br>
+                4. Обратите внимание на навигацию, заголовки, кнопки и описания
+            `;
+        }
+
+        // Устанавливаем русский как активный по умолчанию
+        document.getElementById('btn-ru').classList.add('active');
+    </script>
+</body>
+</html> 

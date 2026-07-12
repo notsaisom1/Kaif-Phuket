@@ -1,0 +1,68 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# БЕЗОПАСНОСТЬ: Environment variables (КРИТИЧНО!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+!.env.example
+
+# БЕЗОПАСНОСТЬ: Служебные файлы
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.*
+config/secrets.*
+
+# БЕЗОПАСНОСТЬ: Документация (содержит информацию о проекте)
+*.md
+!README.md
+!SECURITY.md
+!docs/CMS-SETUP.md
+!docs/STAFF-CMS-GUIDE.md
+!studio/README.md
+docs/*.txt
+docs/*.log
+# Разрешаем robots.txt в public
+!public/robots.txt
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+*.temp
+
+# Original/unoptimized images
+**/originals/
+**/original/
+
+# Local Netlify folder
+.netlify

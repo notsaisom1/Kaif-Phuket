@@ -1,0 +1,37 @@
+/* Простые и безопасные мобильные оптимизации */
+
+/* Оптимизации для мобильных устройств */
+@media screen and (max-width: 768px) {
+  /* Отключаем тяжелые анимации на мобильных */
+  .animate-wellness-breathe,
+  .animate-wellness-float {
+    animation: none !important;
+  }
+
+  /* Ускоряем анимации на мобильных */
+  [data-framer-motion] {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.3s !important;
+  }
+
+  /* Отключаем hover эффекты на мобильных только для контента */
+  main *:hover,
+  section *:hover {
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  /* Улучшаем скролл на iOS */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Для пользователей с ограниченными возможностями */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

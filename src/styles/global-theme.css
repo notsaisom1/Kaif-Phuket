@@ -1,0 +1,285 @@
+/* ===================================================
+   KAIF Global Theme CSS - Optimized Version
+   =================================================== */
+
+/* Custom Font Declaration */
+@font-face {
+  font-family: "KAIF";
+  src: url("../assets/fonts/kaif.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Импортированные стили из hide-scrollbar.css */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Импортированные стили из no-highlight.css */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Theme Variables */
+:root {
+  /* KAIF Color Palette */
+  --color-primary: #90b3a7;
+  --color-secondary: #d4a574;
+  --color-tertiary: #b8c4a8;
+
+  /* Backgrounds */
+  --color-background: #000000;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #fdfcfa;
+
+  /* Text Colors */
+  --color-text-primary: #2c3e2d;
+  --color-text-secondary: #5a6b5d;
+  --color-text-light: #8b9a8e;
+  --color-text-white: #ffffff;
+  --color-text-dark: #1a2b1d;
+
+  /* Zone Colors */
+  --color-spa: #90b3a7;
+  --color-restaurant: #d4a574;
+  --color-fitness: #e8734a;
+  --color-combat: #2d5b69;
+  --color-pool: #4a90b8;
+  --color-banya: #8b4513;
+  --color-sauna: #8b7355;
+
+  /* Status Colors */
+  --color-success: #5cb3cc;
+  --color-warning: #ffd166;
+  --color-error: #ef476f;
+  --color-info: #4a90b8;
+
+  /* Typography */
+  --font-primary: "Jost", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing */
+  --section-padding: 5rem 0;
+  --container-padding: 1rem;
+
+  /* Border radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-circle: 50%;
+
+  /* Z-index */
+  --z-index-base: 1;
+  --z-index-above: 10;
+  --z-index-dropdown: 100;
+  --z-index-sticky: 1000;
+  --z-index-fixed: 1100;
+  --z-index-modal-backdrop: 1200;
+  --z-index-modal: 1300;
+  --z-index-popover: 1400;
+  --z-index-tooltip: 1500;
+}
+
+/* Remove orange highlight on mobile */
+a,
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Base body styles */
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  touch-action: pan-y pinch-zoom;
+  overscroll-behavior: auto;
+  -webkit-overscroll-behavior: auto;
+}
+
+/* Typography base styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text-dark);
+  letter-spacing: 0.01em;
+}
+
+p,
+span,
+a,
+button,
+input,
+textarea,
+li,
+label {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Link styles */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Button base styles */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-primary);
+}
+
+/* Basic utility classes */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section base styles - только для секций без классов (не styled-components) */
+section:not([class]) {
+  padding: var(--section-padding);
+}
+
+/* ИСПРАВЛЕНИЕ ИНТЕРФЕРЕНЦИИ СКРОЛЛА */
+/* Критически важные CSS правила для плавного скролла */
+
+/* Оптимизация скролла для всего документа */
+html {
+  /* НЕ используем scroll-behavior: smooth — ломает скролл на iOS Safari */
+  scroll-behavior: auto;
+  /* Оптимизация для мобильных устройств */
+  -webkit-overflow-scrolling: touch;
+  /* Разрешаем нормальный overscroll */
+  overscroll-behavior-y: auto;
+  -webkit-overscroll-behavior-y: auto;
+}
+
+body {
+  /* Обеспечиваем нормальный скролл */
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Оптимизация для touch устройств */
+  touch-action: pan-y pinch-zoom;
+  /* Предотвращаем блокировку скролла */
+  overscroll-behavior: auto;
+  -webkit-overscroll-behavior: auto;
+}
+
+/* Глобальные правила для всех слайдеров и анимированных элементов */
+[data-slider],
+.slider-container,
+*[class*="slider"],
+*[class*="Slider"] {
+  /* КРИТИЧЕСКИ ВАЖНО: не блокируем вертикальный скролл */
+  touch-action: pan-y !important;
+  /* Оптимизация производительности */
+  will-change: auto !important;
+  /* Минимальные композитные слои */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Оптимизация для touch событий */
+button,
+a,
+[role="button"] {
+  /* Разрешаем touch события для интерактивных элементов */
+  touch-action: manipulation;
+}
+
+/* Предотвращение блокировки скролла анимациями */
+*[class*="motion"],
+*[class*="Motion"],
+.framer-motion-div {
+  /* Не создаем лишние композитные слои */
+  will-change: auto !important;
+}
+
+/* Оптимизация для мобильных устройств */
+@media (max-width: 768px) {
+  /* Улучшенная производительность скролла на мобильных */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    /* Улучшенная поддержка viewport на мобильных */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  body {
+    /* Предотвращаем горизонтальный скролл */
+    overflow-x: hidden;
+    /* Оптимизация для iOS Safari */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+  }
+}
+
+/* Специальная оптимизация для hero секций */
+section[class*="Hero"],
+section[class*="hero"] {
+  /* Не создаем стекинг контекст без необходимости */
+  isolation: auto;
+  /* НЕ используем contain: layout — ломает скролл на iOS в сочетании с overflow:hidden */
+  contain: none;
+  /* Не блокируем скролл */
+  touch-action: pan-y;
+  scroll-snap-align: none !important;
+  scroll-snap-type: none !important;
+}
+
+/* Исправление для модальных окон */
+[role="dialog"],
+.modal,
+*[class*="modal"],
+*[class*="Modal"] {
+  /* Разрешаем скролл внутри модальных окон */
+  overscroll-behavior: contain;
+  -webkit-overscroll-behavior: contain;
+}

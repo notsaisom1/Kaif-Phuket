@@ -1,0 +1,22 @@
+{
+  "name": "KAIF Sauna & Spa",
+  "short_name": "KAIF",
+  "description": "Престижный курорт и оздоровительный комплекс с рестораном, спа, баней и спортивным залом",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#D29B84",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+} 

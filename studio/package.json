@@ -1,0 +1,25 @@
+{
+  "name": "kaif-phuket-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "KAIF Phuket content admin (Sanity Studio)",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "seed": "node scripts/seed.mjs"
+  },
+  "dependencies": {
+    "@sanity/client": "^6.28.0",
+    "@sanity/vision": "^3.78.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^3.78.1",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^5.0.1",
+    "eslint": "^9.20.0"
+  }
+}

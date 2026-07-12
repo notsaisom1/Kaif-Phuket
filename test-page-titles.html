@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест заголовков страниц KAIF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 2px solid #90B3A7;
+            background: white;
+            color: #90B3A7;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .test-buttons button.active {
+            background: #90B3A7;
+            color: white;
+        }
+        .current-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2C614F;
+            padding: 15px;
+            background: #f0f7f4;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .expected-titles {
+            margin-top: 20px;
+        }
+        .expected-titles h3 {
+            color: #2C614F;
+            margin-bottom: 10px;
+        }
+        .expected-titles ul {
+            list-style: none;
+            padding: 0;
+        }
+        .expected-titles li {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: #f9f9f9;
+            border-left: 4px solid #90B3A7;
+            border-radius: 3px;
+        }
+        .instructions {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .instructions h2 {
+            color: #2C614F;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Тест заголовков страниц KAIF</h1>
+    
+    <div class="instructions">
+        <h2>📋 Инструкции по тестированию:</h2>
+        <ol>
+            <li>Откройте сайт KAIF в новой вкладке: <a href="http://localhost:5173" target="_blank">http://localhost:5173</a></li>
+            <li>Переключайте языки на сайте (RU/EN/TH)</li>
+            <li>Наведите курсор на вкладку браузера чтобы увидеть заголовок</li>
+            <li>Переходите между страницами (Главная, Ресторан, СПА, Спорт, Баня, Контакты)</li>
+            <li>Проверьте, что заголовки меняются в соответствии с выбранным языком</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>🔍 Текущий заголовок страницы:</h2>
+        <div class="current-title" id="currentTitle">Загружается...</div>
+        
+        <div class="test-buttons">
+            <button onclick="refreshTitle()">🔄 Обновить заголовок</button>
+            <button onclick="openKaifSite()">🌐 Открыть сайт KAIF</button>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <div class="expected-titles">
+            <h3>🌍 Ожидаемые заголовки по языкам:</h3>
+            
+            <h4>🇷🇺 Русский язык:</h4>
+            <ul>
+                <li><strong>Главная:</strong> KAIF | Премиальный велнес-центр на Пхукете</li>
+                <li><strong>Ресторан:</strong> Ресторан KAIF | Авторская кухня и изысканные блюда</li>
+                <li><strong>СПА:</strong> СПА KAIF | Роскошные спа-процедуры и релаксация</li>
+                <li><strong>Спорт:</strong> Спорт KAIF | Современный фитнес и боевые искусства</li>
+                <li><strong>Баня:</strong> Баня KAIF | Традиционная русская баня</li>
+                <li><strong>Контакты:</strong> Контакты KAIF | Свяжитесь с нами</li>
+            </ul>
+            
+            <h4>🇬🇧 Английский язык:</h4>
+            <ul>
+                <li><strong>Home:</strong> KAIF | Premium Wellness Complex in Phuket</li>
+                <li><strong>Restaurant:</strong> KAIF Restaurant | Gourmet Cuisine and Exquisite Dishes</li>
+                <li><strong>SPA:</strong> KAIF SPA | Luxury Spa Treatments and Relaxation</li>
+                <li><strong>Sports:</strong> KAIF Sports | Modern Fitness and Martial Arts</li>
+                <li><strong>Banya:</strong> KAIF Banya | Traditional Russian Sauna Experience</li>
+                <li><strong>Contacts:</strong> KAIF Contacts | Get in Touch with Us</li>
+            </ul>
+            
+            <h4>🇹🇭 Тайский язык:</h4>
+            <ul>
+                <li><strong>หน้าแรก:</strong> KAIF | ศูนย์สุขภาพและความงามระดับพรีเมียมในภูเก็ต</li>
+                <li><strong>ร้านอาหาร:</strong> ร้านอาหาร KAIF | อาหารเลิศรสและอาหารประณีต</li>
+                <li><strong>สปา:</strong> สปา KAIF | การบำบัดสปาหรูหราและการผ่อนคลาย</li>
+                <li><strong>กีฬา:</strong> กีฬา KAIF | ฟิตเนสทันสมัยและศิลปะการต่อสู้</li>
+                <li><strong>บันยา:</strong> บันยา KAIF | ประสบการณ์ซาวน่ารัสเซียแบบดั้งเดิม</li>
+                <li><strong>ติดต่อ:</strong> ติดต่อ KAIF | ติดต่อเรา</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>✅ Что должно работать:</h3>
+        <ul>
+            <li>Заголовок страницы меняется при переключении языка</li>
+            <li>Заголовок меняется при переходе между страницами</li>
+            <li>Заголовок отображается правильно во вкладке браузера</li>
+            <li>Заголовок соответствует выбранному языку</li>
+        </ul>
+        
+        <h3>❌ Проблемы, которые были исправлены:</h3>
+        <ul>
+            <li>Заголовок всегда показывался на русском языке</li>
+            <li>Заголовок не обновлялся при смене языка</li>
+            <li>На некоторых страницах заголовок был захардкожен</li>
+        </ul>
+    </div>
+
+    <script>
+        function refreshTitle() {
+            const titleElement = document.getElementById('currentTitle');
+            titleElement.textContent = document.title;
+            
+            // Также попробуем получить заголовок из активной вкладки KAIF
+            if (window.opener && !window.opener.closed) {
+                try {
+                    titleElement.textContent = window.opener.document.title;
+                } catch (e) {
+                    titleElement.textContent = 'Не удается получить заголовок (CORS)';
+                }
+            } else {
+                titleElement.textContent = document.title + ' (откройте сайт KAIF)';
+            }
+        }
+        
+        function openKaifSite() {
+            window.open('http://localhost:5173', 'kaif-site');
+        }
+        
+        // Обновляем заголовок при загрузке
+        refreshTitle();
+        
+        // Обновляем заголовок каждые 2 секунды
+        setInterval(refreshTitle, 2000);
+    </script>
+</body>
+</html> 

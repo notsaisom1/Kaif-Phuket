@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой тест меню</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .categories { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; justify-content: center; }
+        .category { 
+            padding: 10px 20px; 
+            background: white; 
+            border: 2px solid #D1D5DB; 
+            border-radius: 25px; 
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #4B5563;
+        }
+        .category.active { 
+            background: #D29B84; 
+            color: white; 
+            border-color: #D29B84;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .category:hover { 
+            transform: translateY(-3px);
+        }
+        .menu-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            margin: 20px 0; 
+        }
+        .menu-item { 
+            background: white; 
+            border-radius: 20px; 
+            padding: 20px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .menu-item:hover { transform: translateY(-5px); }
+        .item-name { font-size: 18px; font-weight: bold; margin-bottom: 8px; color: #1f2937; }
+        .item-description { color: #6b7280; margin-bottom: 12px; font-size: 14px; }
+        .item-price { color: #D29B84; font-weight: bold; font-size: 16px; }
+        .popular { background: linear-gradient(to right, #ef4444, #ec4899); color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; margin-left: 10px; }
+        .debug { background: #fef3c7; border: 1px solid #f59e0b; padding: 15px; border-radius: 8px; margin: 20px 0; }
+        .success { background: #d1fae5; border: 1px solid #10b981; }
+        .error { background: #fee2e2; border: 1px solid #ef4444; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍹 Простой тест FITNESS DRINK меню</h1>
+        
+        <div class="debug">
+            <strong>Тест:</strong> Проверяем отображение категорий и фитнес-напитков
+        </div>
+
+        <div class="categories" id="categories">
+            <!-- Категории будут добавлены через JavaScript -->
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+            <!-- Меню будет добавлено через JavaScript -->
+        </div>
+
+        <div class="debug" id="status">
+            Загрузка...
+        </div>
+    </div>
+
+    <script>
+        // Имитируем данные как в React приложении
+        const categories = [
+            'all', 'breakfast', 'lunch', 'dinner', 'soup', 'salad', 'grill', 'side', 'sauce', 
+            'bread', 'burger', 'shawarma', 'dessert', 'tea', 'coffee', 'coffee_signature',
+            'smoothie', 'mocktail', 'juice', 'cocktail', 'wine', 'beer', 'strong', 'liqueur', 
+            'fitness', 'water', 'milk', 'soft_drink'
+        ];
+
+        const categoryNames = {
+            'all': 'Все',
+            'breakfast': 'Завтрак',
+            'lunch': 'Обед', 
+            'dinner': 'Ужин',
+            'soup': 'Супы',
+            'salad': 'Салаты',
+            'grill': 'Гриль',
+            'side': 'Гарниры',
+            'sauce': 'Соусы',
+            'bread': 'Хлеб',
+            'burger': 'Бургеры',
+            'shawarma': 'Шаурма',
+            'dessert': 'Десерты',
+            'tea': 'Чай',
+            'coffee': 'Кофе',
+            'coffee_signature': 'Авторский кофе',
+            'smoothie': 'Смузи',
+            'mocktail': 'Мокктейлы',
+            'juice': 'Соки',
+            'cocktail': 'Коктейли',
+            'wine': 'Вино',
+            'beer': 'Пиво',
+            'strong': 'Крепкий алкоголь',
+            'liqueur': 'Ликеры',
+            'fitness': 'FITNESS DRINK',
+            'water': 'Вода',
+            'milk': 'Молочные продукты',
+            'soft_drink': 'Безалкогольные напитки'
+        };
+
+        // Имитируем фитнес-напитки
+        const fitnessItems = [
+            {
+                id: 133,
+                name: 'C4 Original Shot',
+                description: 'Предтренировочный комплекс для максимальной энергии и фокуса',
+                price: '110 THB',
+                popular: true,
+                category: 'fitness'
+            },
+            {
+                id: 134,
+                name: 'Serious Mass Shake',
+                description: 'Высококалорийный протеиновый коктейль для набора мышечной массы',
+                price: '190 THB',
+                popular: true,
+                category: 'fitness'
+            },
+            {
+                id: 135,
+                name: 'Xtend EAA Recovery',
+                description: 'Незаменимые аминокислоты для быстрого восстановления после тренировки',
+                price: '90 THB',
+                popular: false,
+                category: 'fitness'
+            },
+            {
+                id: 136,
+                name: 'Electrolyte Boost',
+                description: 'Восполняет минералы после интенсивной тренировки и потоотделения',
+                price: '110 THB',
+                popular: false,
+                category: 'fitness'
+            },
+            {
+                id: 137,
+                name: 'L-Carnitine Shot',
+                description: 'Концентрированный жиросжигатель для ускорения метаболизма',
+                price: '110 THB',
+                popular: false,
+                category: 'fitness'
+            }
+        ];
+
+        let activeCategory = 'all';
+
+        function renderCategories() {
+            const container = document.getElementById('categories');
+            container.innerHTML = '';
+            
+            categories.forEach(category => {
+                const button = document.createElement('div');
+                button.className = `category ${activeCategory === category ? 'active' : ''}`;
+                button.textContent = categoryNames[category] || category;
+                button.onclick = () => {
+                    activeCategory = category;
+                    renderCategories();
+                    renderMenu();
+                };
+                container.appendChild(button);
+            });
+        }
+
+        function renderMenu() {
+            const container = document.getElementById('menu-grid');
+            container.innerHTML = '';
+
+            let itemsToShow = [];
+            
+            if (activeCategory === 'all') {
+                itemsToShow = fitnessItems; // Показываем только фитнес для теста
+            } else if (activeCategory === 'fitness') {
+                itemsToShow = fitnessItems;
+            }
+
+            if (itemsToShow.length === 0) {
+                container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: #6b7280; padding: 40px;">Нет элементов в этой категории</div>';
+                return;
+            }
+
+            itemsToShow.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'menu-item';
+                div.innerHTML = `
+                    <div class="item-name">
+                        ${item.name}
+                        ${item.popular ? '<span class="popular">⭐ Popular</span>' : ''}
+                    </div>
+                    <div class="item-description">${item.description}</div>
+                    <div class="item-price">${item.price}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function updateStatus() {
+            const status = document.getElementById('status');
+            const fitnessIndex = categories.indexOf('fitness');
+            const hasCategory = categories.includes('fitness');
+            
+            if (hasCategory) {
+                status.className = 'debug success';
+                status.innerHTML = `
+                    <strong>✅ УСПЕШНО:</strong><br>
+                    • Категория "fitness" найдена на позиции ${fitnessIndex + 1}<br>
+                    • Отображается как: "${categoryNames.fitness}"<br>
+                    • Фитнес-напитков в данных: ${fitnessItems.length}<br>
+                    • Активная категория: ${activeCategory}<br>
+                    <strong>Попробуйте нажать на "FITNESS DRINK" выше!</strong>
+                `;
+            } else {
+                status.className = 'debug error';
+                status.innerHTML = '<strong>❌ ОШИБКА:</strong> Категория "fitness" не найдена!';
+            }
+        }
+
+        // Инициализация
+        renderCategories();
+        renderMenu();
+        updateStatus();
+
+        console.log('🔍 Простой тест FITNESS DRINK');
+        console.log('📊 Категорий всего:', categories.length);
+        console.log('💪 Позиция fitness:', categories.indexOf('fitness') + 1);
+        console.log('🍹 Фитнес-напитков:', fitnessItems.length);
+    </script>
+</body>
+</html> 
