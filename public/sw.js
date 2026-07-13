@@ -1,5 +1,5 @@
 // PERFORMANCE: Enhanced Service Worker for KAIF - cache JS, CSS, and images
-const CACHE_VERSION = 'v32';
+const CACHE_VERSION = 'v33';
 const STATIC_CACHE_NAME = `kaif-static-${CACHE_VERSION}`;
 const IMAGE_CACHE_NAME = `kaif-images-${CACHE_VERSION}`;
 const RUNTIME_CACHE_NAME = `kaif-runtime-${CACHE_VERSION}`;
