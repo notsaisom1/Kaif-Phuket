@@ -283,9 +283,14 @@ const ContactsPage = () => {
     buildWhatsAppLink,
   } = useCms();
 
-  const addressLines = (address || '').split(',').map((s) => s.trim()).filter(Boolean);
-  const addressMain = addressLines[0] || address;
-  const addressSub = addressLines.slice(1).join(', ');
+  const addressLines = (address || '').split(',').map((s) => s.trim()).filter(Boolean)
+  // Keep first line meaningful (avoid showing only a house number like "73")
+  let addressMain = address
+  let addressSub = ''
+  if (addressLines.length >= 2) {
+    addressMain = addressLines.slice(0, 2).join(', ')
+    addressSub = addressLines.slice(2).join(', ')
+  }
   const hoursValue =
     hoursOpen && hoursClose ? `${hoursOpen} — ${hoursClose}` : hoursLabel;
 
