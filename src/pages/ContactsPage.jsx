@@ -4,6 +4,7 @@ import PageHead from '../components/layout/PageHead';
 import styled from 'styled-components';
 import PageScrollReset from '../components/common/PageScrollReset';
 import ContactHero from '../components/contacts/ContactHero';
+import { useCms } from '../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style (matching Banya/Spa pages) ===
 
@@ -270,35 +271,52 @@ const ArrowIcon = () => (
 
 const ContactsPage = () => {
   const { t } = useTranslation();
+  const {
+    phoneDisplay,
+    address,
+    hoursLabel,
+    hoursOpen,
+    hoursClose,
+    mapsUrl,
+    whatsapp,
+    social,
+    buildWhatsAppLink,
+  } = useCms();
+
+  const addressLines = (address || '').split(',').map((s) => s.trim()).filter(Boolean);
+  const addressMain = addressLines[0] || address;
+  const addressSub = addressLines.slice(1).join(', ');
+  const hoursValue =
+    hoursOpen && hoursClose ? `${hoursOpen} — ${hoursClose}` : hoursLabel;
 
   const contactInfo = [
     {
       title: t('contacts.phone.title', 'Phone'),
-      value: '+66 62 480 5877',
+      value: phoneDisplay,
       subtext: t('contacts.phone.subtext', 'WhatsApp available'),
       action: t('contacts.phone.action', 'Contact'),
-      href: 'https://wa.me/66624805877'
+      href: buildWhatsAppLink('Hello! I would like to contact KAIF')
     },
     {
       title: t('contacts.address.title', 'Address'),
-      value: '73, Baan Chalekiri Village',
-      subtext: '6 Pra Phuket Keaw Road, Kathu',
+      value: addressMain,
+      subtext: addressSub,
       action: t('contacts.address.action', 'Get Directions'),
-      href: 'https://maps.app.goo.gl/h7PzpHpBeurg7eK18'
+      href: mapsUrl || 'https://maps.app.goo.gl/h7PzpHpBeurg7eK18'
     },
     {
       title: t('contacts.hours.title', 'Opening Hours'),
-      value: t('contacts.hours.value', '07:00 — 21:00'),
+      value: hoursValue,
       subtext: t('contacts.hours.subtext', 'Daily'),
       action: t('contacts.hours.action', 'Book Now'),
-      href: 'https://wa.me/66624805877'
+      href: buildWhatsAppLink('Hello! I would like to book at KAIF')
     }
   ];
 
   const socialLinks = [
-    {
+    social.instagram && {
       name: 'Instagram',
-      href: 'https://www.instagram.com/kaif.phuket/',
+      href: social.instagram,
       icon: (
         <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
           <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -307,18 +325,18 @@ const ContactsPage = () => {
         </svg>
       )
     },
-    {
+    social.telegram && {
       name: 'Telegram',
-      href: 'https://t.me/kaifphuketchat',
+      href: social.telegram,
       icon: (
         <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
           <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       )
     },
-    {
+    whatsapp && {
       name: 'WhatsApp',
-      href: 'https://wa.me/66624805877',
+      href: `https://wa.me/${whatsapp}`,
       icon: (
         <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
           <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" strokeLinecap="round" strokeLinejoin="round" />
@@ -326,18 +344,18 @@ const ContactsPage = () => {
         </svg>
       )
     },
-    {
+    social.facebook && {
       name: 'Facebook',
-      href: 'https://web.facebook.com/kaifphuketfb',
+      href: social.facebook,
       icon: (
         <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
           <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       )
     },
-    {
+    social.youtube && {
       name: 'YouTube',
-      href: 'https://www.youtube.com/@KaifPhuket',
+      href: social.youtube,
       icon: (
         <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
           <rect x="2" y="4" width="20" height="16" rx="4" />
@@ -345,7 +363,7 @@ const ContactsPage = () => {
         </svg>
       )
     }
-  ];
+  ].filter(Boolean);
 
   return (
     <>
