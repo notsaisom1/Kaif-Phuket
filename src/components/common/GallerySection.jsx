@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style ===
 
@@ -345,11 +346,14 @@ const CloseButton = styled.button`
 
 const GallerySection = () => {
   const { t } = useTranslation();
+  const { getGallery } = useCms();
   const [activeFilter, setActiveFilter] = useState('all');
   const [modalOpen, setModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
 
-  const galleryData = useMemo(() => [
+  const cmsHome = getGallery('home');
+
+  const galleryDataFallback = useMemo(() => [
     // === ALL (первые 10 — видны в "All") ===
     {
       id: 1,
@@ -491,6 +495,17 @@ const GallerySection = () => {
       category: 'relax'
     }
   ], [t]);
+
+  const galleryData = useMemo(() => {
+    if (!cmsHome?.length) return galleryDataFallback;
+    return cmsHome.map((item) => ({
+      id: item.id,
+      image: item.image || item.src,
+      title: item.title,
+      category: item.category || 'relax',
+      position: item.position,
+    }));
+  }, [cmsHome, galleryDataFallback]);
 
   const filters = useMemo(() => [
     { id: 'all', label: t('gallery.filters.all', 'All') },

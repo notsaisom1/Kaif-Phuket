@@ -33,3 +33,20 @@ export function urlForImage(source, { width } = {}) {
   const base = `https://cdn.sanity.io/images/${projectId}/${dataset}/${id}-${dimensions}.${format}`
   return width ? `${base}?w=${width}&auto=format` : `${base}?auto=format`
 }
+
+/** Build a Sanity CDN file URL (PDF etc.) */
+export function urlForFile(source) {
+  if (!source) return null
+  if (typeof source === 'string') return source
+  if (source.asset?.url) return source.asset.url
+
+  const ref = source.asset?._ref
+  if (!ref || !projectId) return null
+
+  // file-<id>-<ext>
+  const match = ref.match(/^file-(.+)-(\w+)$/)
+  if (!match) return null
+
+  const [, id, ext] = match
+  return `https://cdn.sanity.io/files/${projectId}/${dataset}/${id}.${ext}`
+}

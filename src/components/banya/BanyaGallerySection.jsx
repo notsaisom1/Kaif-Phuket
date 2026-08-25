@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style ===
 
@@ -269,10 +270,18 @@ const CloseButton = styled.button`
 
 const BanyaGallerySection = () => {
   const { t } = useTranslation();
+  const { getGallery } = useCms();
   const [modalOpen, setModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
 
-  const galleryImages = [
+  const cmsImages = getGallery('banya');
+  const galleryImages = cmsImages.length
+    ? cmsImages.map((img, i) => ({
+        id: img.id || i + 1,
+        src: img.src || img.image,
+        title: img.title,
+      }))
+    : [
     {
       id: 1,
       src: '/images/banya/gallery/banya-steam-room.jpg',

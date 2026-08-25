@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style (matching BanyaGallerySection) ===
 
@@ -244,14 +245,22 @@ const CloseButton = styled.button`
 
 const SpaGallerySection = () => {
   const { t } = useTranslation();
+  const { getGallery } = useCms();
   const [modalOpen, setModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
 
-  const galleryImages = Array.from({ length: 9 }, (_, i) => ({
-    id: i + 1,
-    src: `/images/spa/gallery/spa-${i + 1}.jpg`,
-    alt: `SPA ${i + 1}`
-  }));
+  const cmsImages = getGallery('spa');
+  const galleryImages = cmsImages.length
+    ? cmsImages.map((img, i) => ({
+        id: img.id || i + 1,
+        src: img.src || img.image,
+        alt: img.alt || img.title || `SPA ${i + 1}`,
+      }))
+    : Array.from({ length: 9 }, (_, i) => ({
+        id: i + 1,
+        src: `/images/spa/gallery/spa-${i + 1}.jpg`,
+        alt: `SPA ${i + 1}`
+      }));
 
   const openModal = useCallback((index) => {
     setModalIndex(index);

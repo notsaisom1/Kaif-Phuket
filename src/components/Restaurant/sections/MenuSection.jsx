@@ -7,7 +7,7 @@ import { useCms } from '../../../context/CmsContext';
 
 const MenuSection = ({ menuSectionRef }) => {
   const { t } = useTranslation();
-  const { restaurant } = useCms();
+  const { restaurant, menuPdfUrl } = useCms();
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('default');
@@ -57,7 +57,7 @@ const MenuSection = ({ menuSectionRef }) => {
   }, [menuItems, activeCategory, searchTerm, sortBy]);
 
   const handleDownloadPDF = () => {
-    window.open('/documents/menu.pdf', '_blank');
+    window.open(menuPdfUrl || '/documents/menu.pdf', '_blank');
   };
 
   return (

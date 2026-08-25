@@ -15,6 +15,8 @@ import {
   mapBanyaRitual,
   mapFaqItem,
   mapPageCopy,
+  mapGalleryImage,
+  mapSiteFile,
 } from './catalogMaps'
 
 const SITE_SETTINGS_QUERY = `*[_type == "siteSettings"][0]{
@@ -172,6 +174,35 @@ const PAGE_COPY_QUERY = `*[_type == "pageCopy"]{
   subtitle,
   location,
   cta
+}`
+
+const GALLERY_IMAGES_QUERY = `*[_type == "galleryImage" && active != false] | order(sortOrder asc){
+  key,
+  gallery,
+  category,
+  title,
+  image{
+    asset->{
+      _id,
+      url
+    }
+  },
+  imageUrl,
+  position,
+  sortOrder
+}`
+
+const SITE_FILES_QUERY = `*[_type == "siteFile"]{
+  key,
+  title,
+  file{
+    asset->{
+      _id,
+      url,
+      originalFilename
+    }
+  },
+  fileUrl
 }`
 
 function mapEvent(doc) {
@@ -441,6 +472,46 @@ export async function fetchPageCopy(lang = 'en') {
     }
   } catch (err) {
     console.warn('[cms] page copy fetch failed', err)
+    return { byKey: {}, _source: 'fallback' }
+  }
+}
+
+export async function fetchGalleryImages(lang = 'en') {
+  if (!isSanityConfigured || !sanityClient) {
+    return { items: [], _source: 'fallback' }
+  }
+  try {
+    const docs = await sanityClient.fetch(GALLERY_IMAGES_QUERY)
+    if (!docs?.length) {
+      return { items: [], _source: 'fallback' }
+    }
+    return {
+      items: docs.map((d) => mapGalleryImage(d, lang)).filter(Boolean),
+      _source: 'sanity',
+    }
+  } catch (err) {
+    console.warn('[cms] gallery images fetch failed', err)
+    return { items: [], _source: 'fallback' }
+  }
+}
+
+export async function fetchSiteFiles() {
+  if (!isSanityConfigured || !sanityClient) {
+    return { byKey: {}, _source: 'fallback' }
+  }
+  try {
+    const docs = await sanityClient.fetch(SITE_FILES_QUERY)
+    const byKey = {}
+    for (const doc of docs || []) {
+      const mapped = mapSiteFile(doc)
+      if (mapped?.key) byKey[mapped.key] = mapped
+    }
+    return {
+      byKey,
+      _source: Object.keys(byKey).length ? 'sanity' : 'fallback',
+    }
+  } catch (err) {
+    console.warn('[cms] site files fetch failed', err)
     return { byKey: {}, _source: 'fallback' }
   }
 }

@@ -13,6 +13,8 @@ import { membershipPlan } from './membershipPlan'
 import { banyaRitual } from './banyaRitual'
 import { faqItem } from './faqItem'
 import { pageCopy } from './pageCopy'
+import { galleryImage } from './galleryImage'
+import { siteFile } from './siteFile'
 
 export const schemaTypes = [
   localeString,
@@ -31,4 +33,6 @@ export const schemaTypes = [
   banyaRitual,
   faqItem,
   pageCopy,
+  galleryImage,
+  siteFile,
 ]

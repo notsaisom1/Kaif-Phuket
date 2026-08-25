@@ -12,6 +12,8 @@ import {
   fetchBanyaRituals,
   fetchFaqItems,
   fetchPageCopy,
+  fetchGalleryImages,
+  fetchSiteFiles,
 } from '../services/cms'
 import {
   FALLBACK_SITE_SETTINGS,
@@ -34,6 +36,7 @@ import {
   localizeBanyaRituals,
   localizeFaqItems,
   localizePageCopyMap,
+  localizeGalleryImages,
 } from '../services/catalogMaps'
 
 const CmsContext = createContext(null)
@@ -53,6 +56,8 @@ export function CmsProvider({ children }) {
   const [banyaRaw, setBanyaRaw] = useState([])
   const [faqRaw, setFaqRaw] = useState([])
   const [pageCopyRaw, setPageCopyRaw] = useState({})
+  const [galleryRaw, setGalleryRaw] = useState([])
+  const [siteFiles, setSiteFiles] = useState({})
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -72,6 +77,8 @@ export function CmsProvider({ children }) {
         nextBanya,
         nextFaq,
         nextPageCopy,
+        nextGallery,
+        nextFiles,
       ] = await Promise.all([
         fetchSiteSettings(),
         fetchEvents(),
@@ -84,6 +91,8 @@ export function CmsProvider({ children }) {
         fetchBanyaRituals(lang),
         fetchFaqItems(lang),
         fetchPageCopy(lang),
+        fetchGalleryImages(lang),
+        fetchSiteFiles(),
       ])
       if (cancelled) return
       setSettings(nextSettings)
@@ -106,6 +115,8 @@ export function CmsProvider({ children }) {
       setBanyaRaw(nextBanya.rituals || [])
       setFaqRaw(nextFaq.items || [])
       setPageCopyRaw(nextPageCopy.byKey || {})
+      setGalleryRaw(nextGallery.items || [])
+      setSiteFiles(nextFiles.byKey || {})
       setLoading(false)
     }
 
@@ -224,6 +235,17 @@ export function CmsProvider({ children }) {
         ? localizePageCopyMap(pageCopyRaw, lang)
         : {}
 
+    const galleryItems =
+      galleryRaw.length > 0 ? localizeGalleryImages(galleryRaw, lang) : []
+    const galleries = {
+      home: galleryItems.filter((g) => g.gallery === 'home'),
+      banya: galleryItems.filter((g) => g.gallery === 'banya'),
+      spa: galleryItems.filter((g) => g.gallery === 'spa'),
+    }
+
+    const menuPdfUrl =
+      siteFiles.restaurantMenu?.url || '/documents/menu.pdf'
+
     return {
       loading,
       settings,
@@ -238,8 +260,12 @@ export function CmsProvider({ children }) {
       banyaRituals,
       faqsByPage,
       pageCopy,
+      galleries,
+      siteFiles,
+      menuPdfUrl,
       getPageCopy: (key) => pageCopy[key] || null,
       getFaqs: (page) => faqsByPage[page] || [],
+      getGallery: (name) => galleries[name] || [],
       lang,
       phoneDisplay,
       phoneTel,
@@ -279,6 +305,8 @@ export function CmsProvider({ children }) {
     banyaRaw,
     faqRaw,
     pageCopyRaw,
+    galleryRaw,
+    siteFiles,
     loading,
     lang,
     t,

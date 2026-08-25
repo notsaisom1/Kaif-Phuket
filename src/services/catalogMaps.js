@@ -1,5 +1,5 @@
 import { pickLocale } from '../data/cmsFallbacks'
-import { urlForImage } from './sanity'
+import { urlForImage, urlForFile } from './sanity'
 
 /** Map Sanity spa service docs → shape used by getSpaData consumers */
 export function mapSpaService(doc, lang = 'en') {
@@ -379,4 +379,38 @@ export function localizePageCopyMap(map, lang) {
     }
   }
   return next
+}
+
+export function mapGalleryImage(doc, lang = 'en') {
+  if (!doc?.key) return null
+  const image =
+    urlForImage(doc.image, { width: 1600 }) || doc.imageUrl || ''
+  return {
+    id: doc.key,
+    gallery: doc.gallery,
+    category: doc.category || '',
+    title: pickLocale(doc.title, lang) || pickLocale(doc.title, 'en') || '',
+    image,
+    src: image,
+    alt: pickLocale(doc.title, lang) || pickLocale(doc.title, 'en') || '',
+    position: doc.position || undefined,
+    titleLocale: doc.title,
+  }
+}
+
+export function localizeGalleryImages(items, lang) {
+  return (items || []).map((item) => {
+    if (!item.titleLocale) return item
+    const title = pickLocale(item.titleLocale, lang) || item.title
+    return { ...item, title, alt: title || item.alt }
+  })
+}
+
+export function mapSiteFile(doc) {
+  if (!doc?.key) return null
+  return {
+    key: doc.key,
+    title: doc.title || doc.key,
+    url: urlForFile(doc.file) || doc.fileUrl || '',
+  }
 }

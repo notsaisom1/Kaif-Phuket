@@ -11,7 +11,8 @@
     "seed": "node scripts/seed.mjs",
     "seed:menu": "node scripts/seed-spa-menu.mjs",
     "seed:bar": "node scripts/seed-bar-membership.mjs",
-    "seed:copy": "node scripts/seed-banya-copy.mjs"
+    "seed:copy": "node scripts/seed-banya-copy.mjs",
+    "seed:media": "node scripts/seed-media.mjs"
   },
   "dependencies": {
     "@sanity/client": "^6.28.0",
