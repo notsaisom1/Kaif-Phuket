@@ -15,6 +15,7 @@ export default defineConfig({
     structureTool({
       structure: (S) =>
         S.list()
+          .id('content')
           .title('เนื้อหา')
           .items([
             S.listItem()
@@ -26,22 +27,22 @@ export default defineConfig({
                   .documentId('siteSettings')
                   .title('เบอร์โทร · เวลา · ที่อยู่')
               ),
-            S.divider(),
+            S.divider({ id: 'div-settings' }),
             S.documentTypeListItem('event').title('อีเวนต์'),
             S.documentTypeListItem('promotion').title('โปรโมชันรายวัน'),
             S.documentTypeListItem('siteImage').title('รูปสำคัญ'),
-            S.divider(),
+            S.divider({ id: 'div-promo' }),
             S.documentTypeListItem('spaCategory').title('หมวดสปา'),
             S.documentTypeListItem('spaService').title('บริการสปา / ความงาม'),
-            S.divider(),
+            S.divider({ id: 'div-spa' }),
             S.documentTypeListItem('menuCategory').title('หมวดเมนูอาหาร'),
             S.documentTypeListItem('menuItem').title('เมนูอาหาร'),
             S.documentTypeListItem('barCategory').title('หมวดเครื่องดื่ม'),
             S.documentTypeListItem('barItem').title('เมนูบาร์ / เครื่องดื่ม'),
-            S.divider(),
+            S.divider({ id: 'div-menu' }),
             S.documentTypeListItem('membershipPlan').title('บัตรสมาชิก / กีฬา (ราคา)'),
             S.documentTypeListItem('banyaRitual').title('พิธีบันยา / ราคา'),
-            S.divider(),
+            S.divider({ id: 'div-pricing' }),
             S.documentTypeListItem('pageCopy').title('ข้อความหน้า (Hero / หัวข้อ FAQ)'),
             S.documentTypeListItem('faqItem').title('คำถาม FAQ'),
           ]),
