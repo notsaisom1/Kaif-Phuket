@@ -7,6 +7,9 @@ import { spaService } from './spaService'
 import { spaCategory } from './spaCategory'
 import { menuItem } from './menuItem'
 import { menuCategory } from './menuCategory'
+import { barItem } from './barItem'
+import { barCategory } from './barCategory'
+import { membershipPlan } from './membershipPlan'
 
 export const schemaTypes = [
   localeString,
@@ -19,4 +22,7 @@ export const schemaTypes = [
   spaCategory,
   menuItem,
   menuCategory,
+  barItem,
+  barCategory,
+  membershipPlan,
 ]

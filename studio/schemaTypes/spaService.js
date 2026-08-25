@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export const spaService = defineType({
   name: 'spaService',
-  title: 'Spa / Beauty service',
+  title: 'บริการสปา / ความงาม',
   type: 'document',
   fields: [
     defineField({

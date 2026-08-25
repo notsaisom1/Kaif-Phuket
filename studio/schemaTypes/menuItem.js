@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export const menuItem = defineType({
   name: 'menuItem',
-  title: 'Restaurant dish',
+  title: 'เมนูอาหาร',
   type: 'document',
   fields: [
     defineField({

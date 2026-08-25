@@ -9,6 +9,9 @@ import {
   mapSpaCategory,
   mapMenuItem,
   mapMenuCategory,
+  mapBarItem,
+  mapBarCategory,
+  mapMembershipPlan,
 } from './catalogMaps'
 
 const SITE_SETTINGS_QUERY = `*[_type == "siteSettings"][0]{
@@ -105,6 +108,36 @@ const MENU_CATEGORIES_QUERY = `*[_type == "menuCategory" && active != false] | o
   number,
   image,
   imageUrl,
+  sortOrder
+}`
+
+const BAR_ITEMS_QUERY = `*[_type == "barItem" && active != false] | order(sortOrder asc){
+  key,
+  name,
+  description,
+  price,
+  category,
+  sortOrder
+}`
+
+const BAR_CATEGORIES_QUERY = `*[_type == "barCategory" && active != false] | order(sortOrder asc){
+  key,
+  name,
+  description,
+  number,
+  sortOrder
+}`
+
+const MEMBERSHIP_PLANS_QUERY = `*[_type == "membershipPlan" && active != false] | order(sortOrder asc){
+  key,
+  groupKey,
+  groupLabel,
+  name,
+  overline,
+  price,
+  perMonth,
+  features,
+  popular,
   sortOrder
 }`
 
@@ -273,5 +306,49 @@ export async function fetchMenuCatalog(lang = 'en') {
   } catch (err) {
     console.warn('[cms] menu catalog fetch failed', err)
     return { items: [], categories: [], _source: 'fallback' }
+  }
+}
+
+export async function fetchBarCatalog(lang = 'en') {
+  if (!isSanityConfigured || !sanityClient) {
+    return { items: [], categories: [], _source: 'fallback' }
+  }
+  try {
+    const [items, categories] = await Promise.all([
+      sanityClient.fetch(BAR_ITEMS_QUERY),
+      sanityClient.fetch(BAR_CATEGORIES_QUERY),
+    ])
+    if (!items?.length) {
+      return { items: [], categories: [], _source: 'fallback' }
+    }
+    return {
+      items: items.map((d) => mapBarItem(d, lang)).filter(Boolean),
+      categories: (categories || [])
+        .map((d) => mapBarCategory(d, lang))
+        .filter(Boolean),
+      _source: 'sanity',
+    }
+  } catch (err) {
+    console.warn('[cms] bar catalog fetch failed', err)
+    return { items: [], categories: [], _source: 'fallback' }
+  }
+}
+
+export async function fetchMembershipPlans(lang = 'en') {
+  if (!isSanityConfigured || !sanityClient) {
+    return { plans: [], _source: 'fallback' }
+  }
+  try {
+    const docs = await sanityClient.fetch(MEMBERSHIP_PLANS_QUERY)
+    if (!docs?.length) {
+      return { plans: [], _source: 'fallback' }
+    }
+    return {
+      plans: docs.map((d) => mapMembershipPlan(d, lang)).filter(Boolean),
+      _source: 'sanity',
+    }
+  } catch (err) {
+    console.warn('[cms] membership plans fetch failed', err)
+    return { plans: [], _source: 'fallback' }
   }
 }

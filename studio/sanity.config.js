@@ -8,34 +8,38 @@ const dataset = process.env.SANITY_STUDIO_DATASET || 'production'
 
 export default defineConfig({
   name: 'kaif-phuket',
-  title: 'KAIF Phuket Admin',
+  title: 'KAIF Phuket แอดมิน',
   projectId,
   dataset,
   plugins: [
     structureTool({
       structure: (S) =>
         S.list()
-          .title('Content')
+          .title('เนื้อหา')
           .items([
             S.listItem()
-              .title('Site Settings')
+              .title('ตั้งค่าเว็บ (เบอร์ / เวลา / ที่อยู่)')
               .id('siteSettings')
               .child(
                 S.document()
                   .schemaType('siteSettings')
                   .documentId('siteSettings')
-                  .title('Phone, Hours, Address')
+                  .title('เบอร์โทร · เวลา · ที่อยู่')
               ),
             S.divider(),
-            S.documentTypeListItem('event').title('Events'),
-            S.documentTypeListItem('promotion').title('Promotions'),
-            S.documentTypeListItem('siteImage').title('Key Images'),
+            S.documentTypeListItem('event').title('อีเวนต์'),
+            S.documentTypeListItem('promotion').title('โปรโมชันรายวัน'),
+            S.documentTypeListItem('siteImage').title('รูปสำคัญ'),
             S.divider(),
-            S.documentTypeListItem('spaCategory').title('Spa Categories'),
-            S.documentTypeListItem('spaService').title('Spa / Beauty Services'),
+            S.documentTypeListItem('spaCategory').title('หมวดสปา'),
+            S.documentTypeListItem('spaService').title('บริการสปา / ความงาม'),
             S.divider(),
-            S.documentTypeListItem('menuCategory').title('Restaurant Categories'),
-            S.documentTypeListItem('menuItem').title('Restaurant Menu'),
+            S.documentTypeListItem('menuCategory').title('หมวดเมนูอาหาร'),
+            S.documentTypeListItem('menuItem').title('เมนูอาหาร'),
+            S.documentTypeListItem('barCategory').title('หมวดเครื่องดื่ม'),
+            S.documentTypeListItem('barItem').title('เมนูบาร์ / เครื่องดื่ม'),
+            S.divider(),
+            S.documentTypeListItem('membershipPlan').title('บัตรสมาชิก / กีฬา (ราคา)'),
           ]),
     }),
     visionTool(),

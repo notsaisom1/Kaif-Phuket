@@ -823,7 +823,7 @@ const TabbedGrid = ({ groups, activeKey, onTabChange, selectLabel, onSelect }) =
 
 const ServicesPage = () => {
   const { t } = useTranslation();
-  const { spa } = useCms();
+  const { spa, membershipGroups: cmsMembershipGroups } = useCms();
   const [openIds, setOpenIds] = useState(() => new Set(['memberships']));
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -833,9 +833,17 @@ const ServicesPage = () => {
 
   const byCat = useCallback((...cats) => allServices.filter(s => cats.includes(s.category)), [allServices]);
 
+  const membershipIconByKey = {
+    dayPass: <FaClock />,
+    clubAccess: <FaDumbbell />,
+    premium: <FaSpa />,
+    clubAccessSport: <FaFire />,
+    swimming: <FaSwimmer />,
+  };
+
   // === Build groups for each section ===
 
-  const membershipsGroups = useMemo(() => ([
+  const membershipsGroupsFallback = useMemo(() => ([
     {
       key: 'dayPass',
       label: t('pricing.categories.dayPass', 'Day Pass'),
@@ -936,6 +944,14 @@ const ServicesPage = () => {
       ]
     }
   ]), [t]);
+
+  const membershipsGroups = useMemo(() => {
+    if (!cmsMembershipGroups?.length) return membershipsGroupsFallback;
+    return cmsMembershipGroups.map((g) => ({
+      ...g,
+      icon: membershipIconByKey[g.key] || <FaDumbbell />,
+    }));
+  }, [cmsMembershipGroups, membershipsGroupsFallback]);
 
   // BANYA — grouped by style
   const banyaGroups = useMemo(() => {

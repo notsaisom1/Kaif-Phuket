@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useCallback, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-import { getBarData } from '../data/barData';
+import { useCms } from '../../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style ===
 
@@ -182,7 +182,8 @@ const DishDivider = styled.div`
 
 const BarMenuSection = () => {
   const { t } = useTranslation();
-  const { barCategories, getBarMenuByCategory } = getBarData(t);
+  const { bar } = useCms();
+  const { barCategories, getBarMenuByCategory } = bar;
   const menuByCategory = getBarMenuByCategory();
 
   const [activeCategory, setActiveCategory] = useState(barCategories[0]?.key || 'cocktails');

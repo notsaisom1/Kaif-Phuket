@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export const siteSettings = defineType({
   name: 'siteSettings',
-  title: 'Site Settings',
+  title: 'ตั้งค่าเว็บ',
   type: 'document',
   fields: [
     defineField({

@@ -7,6 +7,8 @@ import {
   fetchSiteImages,
   fetchSpaCatalog,
   fetchMenuCatalog,
+  fetchBarCatalog,
+  fetchMembershipPlans,
 } from '../services/cms'
 import {
   FALLBACK_SITE_SETTINGS,
@@ -19,9 +21,13 @@ import {
 import { localizeEvent } from '../data/events'
 import { getSpaData } from '../components/spa/data/spaData'
 import { getRestaurantData } from '../components/Restaurant/data/restaurantData'
+import { getBarData } from '../components/Restaurant/data/barData'
 import {
   localizeSpaCatalog,
   localizeMenuCatalog,
+  localizeBarCatalog,
+  localizeMembershipPlans,
+  groupMembershipPlans,
 } from '../services/catalogMaps'
 
 const CmsContext = createContext(null)
@@ -36,6 +42,8 @@ export function CmsProvider({ children }) {
   const [siteImages, setSiteImages] = useState({})
   const [spaRaw, setSpaRaw] = useState({ services: [], categories: [] })
   const [menuRaw, setMenuRaw] = useState({ items: [], categories: [] })
+  const [barRaw, setBarRaw] = useState({ items: [], categories: [] })
+  const [membershipRaw, setMembershipRaw] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -50,6 +58,8 @@ export function CmsProvider({ children }) {
         nextImages,
         nextSpa,
         nextMenu,
+        nextBar,
+        nextMembership,
       ] = await Promise.all([
         fetchSiteSettings(),
         fetchEvents(),
@@ -57,6 +67,8 @@ export function CmsProvider({ children }) {
         fetchSiteImages(),
         fetchSpaCatalog(lang),
         fetchMenuCatalog(lang),
+        fetchBarCatalog(lang),
+        fetchMembershipPlans(lang),
       ])
       if (cancelled) return
       setSettings(nextSettings)
@@ -71,6 +83,11 @@ export function CmsProvider({ children }) {
         items: nextMenu.items || [],
         categories: nextMenu.categories || [],
       })
+      setBarRaw({
+        items: nextBar.items || [],
+        categories: nextBar.categories || [],
+      })
+      setMembershipRaw(nextMembership.plans || [])
       setLoading(false)
     }
 
@@ -149,6 +166,31 @@ export function CmsProvider({ children }) {
         }
       : { ...fallbackMenu, _source: 'fallback' }
 
+    const fallbackBar = getBarData(t)
+    const barFromCms =
+      barRaw.items.length > 0
+        ? localizeBarCatalog(barRaw.items, barRaw.categories, lang)
+        : null
+
+    const bar = barFromCms
+      ? {
+          barItems: barFromCms.barItems,
+          barCategories:
+            barFromCms.barCategories.length > 0
+              ? barFromCms.barCategories
+              : fallbackBar.barCategories,
+          getBarMenuByCategory: barFromCms.getBarMenuByCategory,
+          _source: 'sanity',
+        }
+      : { ...fallbackBar, _source: 'fallback' }
+
+    const membershipPlans =
+      membershipRaw.length > 0
+        ? localizeMembershipPlans(membershipRaw, lang)
+        : []
+    const membershipGroups =
+      membershipPlans.length > 0 ? groupMembershipPlans(membershipPlans) : []
+
     return {
       loading,
       settings,
@@ -157,6 +199,9 @@ export function CmsProvider({ children }) {
       siteImages,
       spa,
       restaurant,
+      bar,
+      membershipPlans,
+      membershipGroups,
       lang,
       phoneDisplay,
       phoneTel,
@@ -184,7 +229,19 @@ export function CmsProvider({ children }) {
       },
       getSiteImage: (key) => siteImages[key] || null,
     }
-  }, [settings, events, promotionsRaw, siteImages, spaRaw, menuRaw, loading, lang, t])
+  }, [
+    settings,
+    events,
+    promotionsRaw,
+    siteImages,
+    spaRaw,
+    menuRaw,
+    barRaw,
+    membershipRaw,
+    loading,
+    lang,
+    t,
+  ])
 
   return <CmsContext.Provider value={value}>{children}</CmsContext.Provider>
 }
@@ -197,7 +254,6 @@ export function useCms() {
   return ctx
 }
 
-/** Safe hook when provider might be missing in tests */
 export function useCmsOptional() {
   return useContext(CmsContext)
 }

@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export const siteImage = defineType({
   name: 'siteImage',
-  title: 'Key Image',
+  title: 'รูปสำคัญ',
   type: 'document',
   fields: [
     defineField({
