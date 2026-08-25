@@ -2,16 +2,17 @@ import React, { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingBagIcon, DocumentArrowDownIcon, MagnifyingGlassIcon, AdjustmentsHorizontalIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import { getRestaurantData } from '../data/restaurantData';
 import OptimizedImage from '../../common/OptimizedImage';
+import { useCms } from '../../../context/CmsContext';
 
 const MenuSection = ({ menuSectionRef }) => {
   const { t } = useTranslation();
+  const { restaurant } = useCms();
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('default');
   const [showFilters, setShowFilters] = useState(false);
-  const { menuItems, tagStyles } = getRestaurantData(t);
+  const { menuItems, tagStyles } = restaurant;
 
   // Filtered and sorted menu items
   const filteredAndSortedItems = useMemo(() => {

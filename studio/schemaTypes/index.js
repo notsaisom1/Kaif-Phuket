@@ -3,6 +3,10 @@ import { siteSettings } from './siteSettings'
 import { event } from './event'
 import { promotion } from './promotion'
 import { siteImage } from './siteImage'
+import { spaService } from './spaService'
+import { spaCategory } from './spaCategory'
+import { menuItem } from './menuItem'
+import { menuCategory } from './menuCategory'
 
 export const schemaTypes = [
   localeString,
@@ -11,4 +15,8 @@ export const schemaTypes = [
   event,
   promotion,
   siteImage,
+  spaService,
+  spaCategory,
+  menuItem,
+  menuCategory,
 ]

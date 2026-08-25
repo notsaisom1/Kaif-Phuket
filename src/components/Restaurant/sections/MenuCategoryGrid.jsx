@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useCallback, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-import { getRestaurantData } from '../data/restaurantData';
+import { useCms } from '../../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style ===
 
@@ -182,7 +182,8 @@ const DishDivider = styled.div`
 
 const MenuCategoryGrid = () => {
   const { t } = useTranslation();
-  const { categoryCards, getMenuByCategory } = getRestaurantData(t);
+  const { restaurant } = useCms();
+  const { categoryCards, getMenuByCategory } = restaurant;
   const menuByCategory = getMenuByCategory();
 
   const [activeCategory, setActiveCategory] = useState(categoryCards[0]?.key || 'breakfast');

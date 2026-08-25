@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { getSpaData } from './data/spaData';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style ===
 
@@ -268,11 +268,11 @@ const ChevronUp = () => (
 
 const SpaServicesSection = () => {
   const { t } = useTranslation();
+  const { spa } = useCms();
   const [activeCategory, setActiveCategory] = useState('massage');
   const [showAllServices, setShowAllServices] = useState(false);
 
-  const spaData = getSpaData(t);
-  const { allServices, serviceCategories } = spaData;
+  const { allServices, serviceCategories } = spa;
 
   const mainCategories = ['massage', 'manicure', 'pedicure', 'eyelashes', 'brows', 'hair-care', 'laser', 'endosphere'];
   const visibleCategories = serviceCategories.filter(cat => mainCategories.includes(cat.id));

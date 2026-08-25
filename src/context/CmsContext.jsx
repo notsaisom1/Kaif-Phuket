@@ -5,6 +5,8 @@ import {
   fetchEvents,
   fetchPromotions,
   fetchSiteImages,
+  fetchSpaCatalog,
+  fetchMenuCatalog,
 } from '../services/cms'
 import {
   FALLBACK_SITE_SETTINGS,
@@ -15,17 +17,25 @@ import {
   buildWhatsAppLink,
 } from '../data/cmsFallbacks'
 import { localizeEvent } from '../data/events'
+import { getSpaData } from '../components/spa/data/spaData'
+import { getRestaurantData } from '../components/Restaurant/data/restaurantData'
+import {
+  localizeSpaCatalog,
+  localizeMenuCatalog,
+} from '../services/catalogMaps'
 
 const CmsContext = createContext(null)
 
 export function CmsProvider({ children }) {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const lang = (i18n.language || 'en').split('-')[0]
 
   const [settings, setSettings] = useState(FALLBACK_SITE_SETTINGS)
   const [events, setEvents] = useState([])
   const [promotionsRaw, setPromotionsRaw] = useState(FALLBACK_PROMOTIONS)
   const [siteImages, setSiteImages] = useState({})
+  const [spaRaw, setSpaRaw] = useState({ services: [], categories: [] })
+  const [menuRaw, setMenuRaw] = useState({ items: [], categories: [] })
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -33,17 +43,34 @@ export function CmsProvider({ children }) {
 
     async function load() {
       setLoading(true)
-      const [nextSettings, nextEvents, nextPromos, nextImages] = await Promise.all([
+      const [
+        nextSettings,
+        nextEvents,
+        nextPromos,
+        nextImages,
+        nextSpa,
+        nextMenu,
+      ] = await Promise.all([
         fetchSiteSettings(),
         fetchEvents(),
         fetchPromotions(lang),
         fetchSiteImages(),
+        fetchSpaCatalog(lang),
+        fetchMenuCatalog(lang),
       ])
       if (cancelled) return
       setSettings(nextSettings)
       setEvents(nextEvents)
       setPromotionsRaw(nextPromos)
       setSiteImages(nextImages)
+      setSpaRaw({
+        services: nextSpa.services || [],
+        categories: nextSpa.categories || [],
+      })
+      setMenuRaw({
+        items: nextMenu.items || [],
+        categories: nextMenu.categories || [],
+      })
       setLoading(false)
     }
 
@@ -51,7 +78,6 @@ export function CmsProvider({ children }) {
     return () => {
       cancelled = true
     }
-    // Re-fetch promotions localized strings when language changes
   }, [lang])
 
   const value = useMemo(() => {
@@ -71,12 +97,66 @@ export function CmsProvider({ children }) {
       return p
     })
 
+    const fallbackSpa = getSpaData(t)
+    const spaFromCms =
+      spaRaw.services.length > 0
+        ? localizeSpaCatalog(spaRaw.services, spaRaw.categories, lang)
+        : null
+
+    const spa = spaFromCms
+      ? {
+          allServices: spaFromCms.allServices,
+          serviceCategories:
+            spaFromCms.serviceCategories.length > 0
+              ? spaFromCms.serviceCategories
+              : fallbackSpa.serviceCategories,
+          categories:
+            spaFromCms.serviceCategories.length > 0
+              ? spaFromCms.serviceCategories
+              : fallbackSpa.serviceCategories,
+          getPopularServices: () =>
+            spaFromCms.allServices.filter((s) => s.popular),
+          _source: 'sanity',
+        }
+      : {
+          ...fallbackSpa,
+          categories: fallbackSpa.serviceCategories,
+          getPopularServices: () =>
+            fallbackSpa.allServices.filter((s) => s.popular),
+          _source: 'fallback',
+        }
+
+    const fallbackMenu = getRestaurantData(t)
+    const menuFromCms =
+      menuRaw.items.length > 0
+        ? localizeMenuCatalog(menuRaw.items, menuRaw.categories, lang)
+        : null
+
+    const restaurant = menuFromCms
+      ? {
+          ...fallbackMenu,
+          menuItems: menuFromCms.menuItems,
+          categoryCards:
+            menuFromCms.categoryCards.length > 0
+              ? menuFromCms.categoryCards
+              : fallbackMenu.categoryCards,
+          menuCategories:
+            menuFromCms.menuCategories.length > 0
+              ? menuFromCms.menuCategories
+              : fallbackMenu.menuCategories,
+          getMenuByCategory: menuFromCms.getMenuByCategory,
+          _source: 'sanity',
+        }
+      : { ...fallbackMenu, _source: 'fallback' }
+
     return {
       loading,
       settings,
       events,
       promotions,
       siteImages,
+      spa,
+      restaurant,
       lang,
       phoneDisplay,
       phoneTel,
@@ -104,7 +184,7 @@ export function CmsProvider({ children }) {
       },
       getSiteImage: (key) => siteImages[key] || null,
     }
-  }, [settings, events, promotionsRaw, siteImages, loading, lang])
+  }, [settings, events, promotionsRaw, siteImages, spaRaw, menuRaw, loading, lang, t])
 
   return <CmsContext.Provider value={value}>{children}</CmsContext.Provider>
 }

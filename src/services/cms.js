@@ -4,6 +4,12 @@ import {
   FALLBACK_PROMOTIONS,
   pickLocale,
 } from '../data/cmsFallbacks'
+import {
+  mapSpaService,
+  mapSpaCategory,
+  mapMenuItem,
+  mapMenuCategory,
+} from './catalogMaps'
 
 const SITE_SETTINGS_QUERY = `*[_type == "siteSettings"][0]{
   phoneDisplay,
@@ -57,6 +63,51 @@ const SITE_IMAGES_QUERY = `*[_type == "siteImage"]{
   alt
 }`
 
+const SPA_SERVICES_QUERY = `*[_type == "spaService" && active != false] | order(sortOrder asc){
+  key,
+  name,
+  description,
+  category,
+  durations,
+  prices,
+  price,
+  popular,
+  image,
+  imageUrl,
+  sortOrder
+}`
+
+const SPA_CATEGORIES_QUERY = `*[_type == "spaCategory" && active != false] | order(sortOrder asc){
+  key,
+  name,
+  description,
+  color,
+  sortOrder
+}`
+
+const MENU_ITEMS_QUERY = `*[_type == "menuItem" && active != false] | order(sortOrder asc){
+  key,
+  name,
+  description,
+  price,
+  category,
+  tags,
+  popular,
+  image,
+  imageUrl,
+  sortOrder
+}`
+
+const MENU_CATEGORIES_QUERY = `*[_type == "menuCategory" && active != false] | order(sortOrder asc){
+  key,
+  name,
+  description,
+  number,
+  image,
+  imageUrl,
+  sortOrder
+}`
+
 function mapEvent(doc) {
   if (!doc) return null
   return {
@@ -93,7 +144,6 @@ function mapPromotion(doc, lang = 'en') {
     subtitle: pickLocale(doc.subtitle, lang) || pickLocale(doc.subtitle, 'en'),
     description:
       pickLocale(doc.description, lang) || pickLocale(doc.description, 'en'),
-    // Keep locale objects for consumers that want to re-localize
     titleLocale: doc.title,
     subtitleLocale: doc.subtitle,
     descriptionLocale: doc.description,
@@ -173,5 +223,55 @@ export async function fetchSiteImages() {
   } catch (err) {
     console.warn('[cms] siteImages fetch failed', err)
     return {}
+  }
+}
+
+export async function fetchSpaCatalog(lang = 'en') {
+  if (!isSanityConfigured || !sanityClient) {
+    return { services: [], categories: [], _source: 'fallback' }
+  }
+  try {
+    const [services, categories] = await Promise.all([
+      sanityClient.fetch(SPA_SERVICES_QUERY),
+      sanityClient.fetch(SPA_CATEGORIES_QUERY),
+    ])
+    if (!services?.length) {
+      return { services: [], categories: [], _source: 'fallback' }
+    }
+    return {
+      services: services.map((d) => mapSpaService(d, lang)).filter(Boolean),
+      categories: (categories || [])
+        .map((d) => mapSpaCategory(d, lang))
+        .filter(Boolean),
+      _source: 'sanity',
+    }
+  } catch (err) {
+    console.warn('[cms] spa catalog fetch failed', err)
+    return { services: [], categories: [], _source: 'fallback' }
+  }
+}
+
+export async function fetchMenuCatalog(lang = 'en') {
+  if (!isSanityConfigured || !sanityClient) {
+    return { items: [], categories: [], _source: 'fallback' }
+  }
+  try {
+    const [items, categories] = await Promise.all([
+      sanityClient.fetch(MENU_ITEMS_QUERY),
+      sanityClient.fetch(MENU_CATEGORIES_QUERY),
+    ])
+    if (!items?.length) {
+      return { items: [], categories: [], _source: 'fallback' }
+    }
+    return {
+      items: items.map((d) => mapMenuItem(d, lang)).filter(Boolean),
+      categories: (categories || [])
+        .map((d) => mapMenuCategory(d, lang))
+        .filter(Boolean),
+      _source: 'sanity',
+    }
+  } catch (err) {
+    console.warn('[cms] menu catalog fetch failed', err)
+    return { items: [], categories: [], _source: 'fallback' }
   }
 }

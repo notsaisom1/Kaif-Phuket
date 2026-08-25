@@ -12,7 +12,7 @@ import PageScrollReset from '../components/common/PageScrollReset';
 import PageHead from '../components/layout/PageHead';
 import BookingModal from '../components/booking/BookingModal';
 import ParallaxBackground from '../components/common/ParallaxBackground';
-import { getSpaData } from '../components/spa/data/spaData';
+import { useCms } from '../context/CmsContext';
 
 // === STYLED COMPONENTS — Pasture / KAIF minimalist style ===
 
@@ -823,12 +823,13 @@ const TabbedGrid = ({ groups, activeKey, onTabChange, selectLabel, onSelect }) =
 
 const ServicesPage = () => {
   const { t } = useTranslation();
+  const { spa } = useCms();
   const [openIds, setOpenIds] = useState(() => new Set(['memberships']));
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [tabs, setTabs] = useState({});
 
-  const { allServices } = useMemo(() => getSpaData(t), [t]);
+  const allServices = spa.allServices;
 
   const byCat = useCallback((...cats) => allServices.filter(s => cats.includes(s.category)), [allServices]);
 

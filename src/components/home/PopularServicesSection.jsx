@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
-import { getSpaData } from '../spa/data/spaData';
+import { useCms } from '../../context/CmsContext';
 
 const PopularSection = styled.section`
   padding: 5rem 0;
@@ -180,8 +180,8 @@ const ButtonContainer = styled.div`
 
 const PopularServicesSection = () => {
   const { t } = useTranslation();
-  const spaData = getSpaData(t);
-  const { categories, getPopularServices } = spaData;
+  const { spa } = useCms();
+  const { categories, getPopularServices } = spa;
   
   // Получаем популярные услуги (максимум 6)
   const popularServices = getPopularServices().slice(0, 6);

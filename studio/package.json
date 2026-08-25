@@ -8,7 +8,8 @@
     "start": "sanity dev",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "seed": "node scripts/seed.mjs"
+    "seed": "node scripts/seed.mjs",
+    "seed:menu": "node scripts/seed-spa-menu.mjs"
   },
   "dependencies": {
     "@sanity/client": "^6.28.0",
