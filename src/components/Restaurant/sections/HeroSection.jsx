@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import { useCms } from '../../../context/CmsContext';
 
 // === STYLED COMPONENTS — Matching BanyaHeroSection / SpaHeroSection ===
 
@@ -125,6 +126,8 @@ const LocationText = styled.span`
 
 const HeroSection = () => {
   const { t } = useTranslation();
+  const { getPageCopy } = useCms();
+  const copy = getPageCopy('restaurant.hero');
 
   return (
     <HeroContainer>
@@ -133,8 +136,8 @@ const HeroSection = () => {
       <ContentContainer>
         <ContentWrapper>
           <HeroTextBlock>
-            <HeroWord>{t('restaurant.hero.title_line1', 'Restaurant')}</HeroWord>
-            <LocationText>{t('restaurant.hero.location', 'Phuket')}</LocationText>
+            <HeroWord>{copy?.titlePart1 || t('restaurant.hero.title_line1', 'Restaurant')}</HeroWord>
+            <LocationText>{copy?.location || t('restaurant.hero.location', 'Phuket')}</LocationText>
           </HeroTextBlock>
         </ContentWrapper>
       </ContentContainer>

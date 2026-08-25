@@ -9,6 +9,9 @@ import {
   fetchMenuCatalog,
   fetchBarCatalog,
   fetchMembershipPlans,
+  fetchBanyaRituals,
+  fetchFaqItems,
+  fetchPageCopy,
 } from '../services/cms'
 import {
   FALLBACK_SITE_SETTINGS,
@@ -28,6 +31,9 @@ import {
   localizeBarCatalog,
   localizeMembershipPlans,
   groupMembershipPlans,
+  localizeBanyaRituals,
+  localizeFaqItems,
+  localizePageCopyMap,
 } from '../services/catalogMaps'
 
 const CmsContext = createContext(null)
@@ -44,6 +50,9 @@ export function CmsProvider({ children }) {
   const [menuRaw, setMenuRaw] = useState({ items: [], categories: [] })
   const [barRaw, setBarRaw] = useState({ items: [], categories: [] })
   const [membershipRaw, setMembershipRaw] = useState([])
+  const [banyaRaw, setBanyaRaw] = useState([])
+  const [faqRaw, setFaqRaw] = useState([])
+  const [pageCopyRaw, setPageCopyRaw] = useState({})
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -60,6 +69,9 @@ export function CmsProvider({ children }) {
         nextMenu,
         nextBar,
         nextMembership,
+        nextBanya,
+        nextFaq,
+        nextPageCopy,
       ] = await Promise.all([
         fetchSiteSettings(),
         fetchEvents(),
@@ -69,6 +81,9 @@ export function CmsProvider({ children }) {
         fetchMenuCatalog(lang),
         fetchBarCatalog(lang),
         fetchMembershipPlans(lang),
+        fetchBanyaRituals(lang),
+        fetchFaqItems(lang),
+        fetchPageCopy(lang),
       ])
       if (cancelled) return
       setSettings(nextSettings)
@@ -88,6 +103,9 @@ export function CmsProvider({ children }) {
         categories: nextBar.categories || [],
       })
       setMembershipRaw(nextMembership.plans || [])
+      setBanyaRaw(nextBanya.rituals || [])
+      setFaqRaw(nextFaq.items || [])
+      setPageCopyRaw(nextPageCopy.byKey || {})
       setLoading(false)
     }
 
@@ -191,6 +209,21 @@ export function CmsProvider({ children }) {
     const membershipGroups =
       membershipPlans.length > 0 ? groupMembershipPlans(membershipPlans) : []
 
+    const banyaRituals =
+      banyaRaw.length > 0 ? localizeBanyaRituals(banyaRaw, lang) : []
+
+    const faqItems = faqRaw.length > 0 ? localizeFaqItems(faqRaw, lang) : []
+    const faqsByPage = {
+      home: faqItems.filter((f) => f.page === 'home'),
+      banya: faqItems.filter((f) => f.page === 'banya'),
+      spa: faqItems.filter((f) => f.page === 'spa'),
+    }
+
+    const pageCopy =
+      Object.keys(pageCopyRaw).length > 0
+        ? localizePageCopyMap(pageCopyRaw, lang)
+        : {}
+
     return {
       loading,
       settings,
@@ -202,6 +235,11 @@ export function CmsProvider({ children }) {
       bar,
       membershipPlans,
       membershipGroups,
+      banyaRituals,
+      faqsByPage,
+      pageCopy,
+      getPageCopy: (key) => pageCopy[key] || null,
+      getFaqs: (page) => faqsByPage[page] || [],
       lang,
       phoneDisplay,
       phoneTel,
@@ -238,6 +276,9 @@ export function CmsProvider({ children }) {
     menuRaw,
     barRaw,
     membershipRaw,
+    banyaRaw,
+    faqRaw,
+    pageCopyRaw,
     loading,
     lang,
     t,

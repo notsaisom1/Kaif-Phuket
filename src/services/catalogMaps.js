@@ -268,3 +268,115 @@ export function groupMembershipPlans(plans) {
     plans: byGroup[key],
   }))
 }
+
+export function mapBanyaRitual(doc, lang = 'en') {
+  if (!doc?.key) return null
+  const amount = typeof doc.price === 'number' ? doc.price : Number(doc.price) || 0
+  return {
+    id: doc.key,
+    groupKey: doc.groupKey,
+    title: pickLocale(doc.title, lang) || pickLocale(doc.title, 'en') || doc.key,
+    subtitle:
+      pickLocale(doc.subtitle, lang) || pickLocale(doc.subtitle, 'en') || '',
+    duration:
+      pickLocale(doc.duration, lang) || pickLocale(doc.duration, 'en') || '',
+    price: `${formatPriceDisplay(amount)} THB`,
+    priceAmount: amount,
+    description:
+      pickLocale(doc.description, lang) ||
+      pickLocale(doc.description, 'en') ||
+      '',
+    titleLocale: doc.title,
+    subtitleLocale: doc.subtitle,
+    durationLocale: doc.duration,
+    descriptionLocale: doc.description,
+  }
+}
+
+export function localizeBanyaRituals(rituals, lang) {
+  return (rituals || []).map((r) => {
+    if (!r.titleLocale) return r
+    return {
+      ...r,
+      title: pickLocale(r.titleLocale, lang) || r.title,
+      subtitle: pickLocale(r.subtitleLocale, lang) || r.subtitle,
+      duration: pickLocale(r.durationLocale, lang) || r.duration,
+      description: pickLocale(r.descriptionLocale, lang) || r.description,
+    }
+  })
+}
+
+export function mapFaqItem(doc, lang = 'en') {
+  if (!doc?.key) return null
+  return {
+    id: doc.key,
+    page: doc.page,
+    question:
+      pickLocale(doc.question, lang) || pickLocale(doc.question, 'en') || '',
+    answer: pickLocale(doc.answer, lang) || pickLocale(doc.answer, 'en') || '',
+    questionLocale: doc.question,
+    answerLocale: doc.answer,
+  }
+}
+
+export function localizeFaqItems(items, lang) {
+  return (items || []).map((item) => {
+    if (!item.questionLocale) return item
+    return {
+      ...item,
+      question: pickLocale(item.questionLocale, lang) || item.question,
+      answer: pickLocale(item.answerLocale, lang) || item.answer,
+    }
+  })
+}
+
+export function mapPageCopy(doc, lang = 'en') {
+  if (!doc?.key) return null
+  const pick = (field) =>
+    pickLocale(doc[field], lang) || pickLocale(doc[field], 'en') || ''
+  return {
+    key: doc.key,
+    overline: pick('overline'),
+    titlePart1: pick('titlePart1'),
+    titlePart2: pick('titlePart2'),
+    title: pick('title'),
+    subtitle: pick('subtitle'),
+    location: pick('location'),
+    cta: pick('cta'),
+    locales: {
+      overline: doc.overline,
+      titlePart1: doc.titlePart1,
+      titlePart2: doc.titlePart2,
+      title: doc.title,
+      subtitle: doc.subtitle,
+      location: doc.location,
+      cta: doc.cta,
+    },
+  }
+}
+
+export function localizePageCopyMap(map, lang) {
+  const next = {}
+  for (const [key, doc] of Object.entries(map || {})) {
+    if (!doc?.locales) {
+      next[key] = doc
+      continue
+    }
+    const pick = (field) =>
+      pickLocale(doc.locales[field], lang) ||
+      pickLocale(doc.locales[field], 'en') ||
+      doc[field] ||
+      ''
+    next[key] = {
+      ...doc,
+      overline: pick('overline'),
+      titlePart1: pick('titlePart1'),
+      titlePart2: pick('titlePart2'),
+      title: pick('title'),
+      subtitle: pick('subtitle'),
+      location: pick('location'),
+      cta: pick('cta'),
+    }
+  }
+  return next
+}

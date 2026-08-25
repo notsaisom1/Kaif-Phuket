@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style (matching BanyaFAQSection) ===
 
@@ -173,13 +174,19 @@ const AnswerText = styled.p`
 
 const SpaFAQSection = () => {
   const { t } = useTranslation();
+  const { getFaqs, getPageCopy } = useCms();
   const [openItem, setOpenItem] = useState(null);
 
   const toggleItem = (index) => {
     setOpenItem(openItem === index ? null : index);
   };
 
-  const faqs = [
+  const copy = getPageCopy('spa.faq');
+  const cmsFaqs = getFaqs('spa');
+
+  const faqs = cmsFaqs.length
+    ? cmsFaqs
+    : [
     {
       question: t('spa.faq.questions.services.question', 'What SPA services do you offer?'),
       answer: t('spa.faq.questions.services.answer', 'We offer a full range of SPA services: massage (Thai, oil, sports), cosmetology, laser hair removal, manicure, pedicure, hair care, sauna and hammam.')
@@ -209,10 +216,10 @@ const SpaFAQSection = () => {
   return (
     <SectionContainer>
       <ContentWrapper>
-        <Overline>{t('spa.faq.badge', 'Questions & Answers')}</Overline>
-        <Title>{t('spa.faq.title', 'Frequently Asked Questions')}</Title>
+        <Overline>{copy?.overline || t('spa.faq.badge', 'Questions & Answers')}</Overline>
+        <Title>{copy?.title || t('spa.faq.title', 'Frequently Asked Questions')}</Title>
         <Subtitle>
-          {t('spa.faq.subtitle', 'Everything you need to know about our SPA services and treatments')}
+          {copy?.subtitle || t('spa.faq.subtitle', 'Everything you need to know about our SPA services and treatments')}
         </Subtitle>
 
         <FAQList>

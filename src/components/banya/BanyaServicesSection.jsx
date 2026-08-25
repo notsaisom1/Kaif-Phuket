@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style ===
 
@@ -195,9 +196,10 @@ const PriceValue = styled.span`
 
 const BanyaServicesSection = () => {
   const { t, i18n, ready } = useTranslation();
+  const { banyaRituals } = useCms();
   const isRussian = i18n.language === 'ru';
 
-  const getRituals = () => {
+  const getRitualsFallback = () => {
     if (!ready) return [];
 
     try {
@@ -312,7 +314,7 @@ const BanyaServicesSection = () => {
     }
   };
 
-  const rituals = getRituals();
+  const rituals = banyaRituals?.length ? banyaRituals : getRitualsFallback();
 
   return (
     <SectionContainer>

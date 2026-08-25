@@ -1,6 +1,7 @@
 import React, { useState, useEffect, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Matching HeroFullscreen style ===
 
@@ -131,6 +132,8 @@ const LocationText = styled.span`
 
 const BanyaHeroSection = () => {
   const { t } = useTranslation();
+  const { getPageCopy } = useCms();
+  const copy = getPageCopy('banya.hero');
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const images = [
@@ -173,9 +176,9 @@ const BanyaHeroSection = () => {
       <ContentContainer>
         <ContentWrapper>
           <HeroTextBlock>
-            <HeroWord>{t('banya.hero.title_part1', 'Russian')}</HeroWord>
-            <HeroWord>{t('banya.hero.title_part2', 'Banya')}</HeroWord>
-            <LocationText>{t('banya.hero.location', 'Phuket')}</LocationText>
+            <HeroWord>{copy?.titlePart1 || t('banya.hero.title_part1', 'Russian')}</HeroWord>
+            <HeroWord>{copy?.titlePart2 || t('banya.hero.title_part2', 'Banya')}</HeroWord>
+            <LocationText>{copy?.location || t('banya.hero.location', 'Phuket')}</LocationText>
           </HeroTextBlock>
         </ContentWrapper>
       </ContentContainer>

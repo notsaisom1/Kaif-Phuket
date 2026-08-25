@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style ===
 
@@ -173,34 +174,40 @@ const AnswerText = styled.p`
 
 const BanyaFAQSection = () => {
   const { t } = useTranslation();
+  const { getFaqs, getPageCopy } = useCms();
   const [openItem, setOpenItem] = useState(null);
 
   const toggleItem = (index) => {
     setOpenItem(openItem === index ? null : index);
   };
 
-  const faqData = [
-    {
-      question: t('banya.faq.questions.panoramic.question', "What's special about the panoramic banya?"),
-      answer: t('banya.faq.questions.panoramic.answer', "Our banya is unique with several features: 150 square meters with panoramic jungle windows, built from Siberian cedar and Altai linden - premium natural materials. It's the only panoramic Russian banya in Phuket where you can enjoy traditional banya rituals with tropical nature views.")
-    },
-    {
-      question: t('banya.faq.questions.procedures.question', 'What procedures are included in the banya ritual?'),
-      answer: t('banya.faq.questions.procedures.answer', "Depending on your chosen program you'll receive: classic banya ritual with birch brooms, aromatherapy with essential oils, herbal infusions and teas, option to order massage in the steam room, and personal accompaniment by a master attendant for VIP programs.")
-    },
-    {
-      question: t('banya.faq.questions.materials.question', 'What materials is the banya built from?'),
-      answer: t('banya.faq.questions.materials.answer', 'The banya is built exclusively from natural eco-friendly materials: Siberian cedar, Altai linden, Karelian birch. All finishes are natural, without chemical additives. Such materials create a special microclimate and provide natural aromatherapy.')
-    }
-  ];
+  const copy = getPageCopy('banya.faq');
+  const cmsFaqs = getFaqs('banya');
+
+  const faqData = cmsFaqs.length
+    ? cmsFaqs
+    : [
+        {
+          question: t('banya.faq.questions.panoramic.question', "What's special about the panoramic banya?"),
+          answer: t('banya.faq.questions.panoramic.answer', "Our banya is unique with several features: 150 square meters with panoramic jungle windows, built from Siberian cedar and Altai linden - premium natural materials. It's the only panoramic Russian banya in Phuket where you can enjoy traditional banya rituals with tropical nature views.")
+        },
+        {
+          question: t('banya.faq.questions.procedures.question', 'What procedures are included in the banya ritual?'),
+          answer: t('banya.faq.questions.procedures.answer', "Depending on your chosen program you'll receive: classic banya ritual with birch brooms, aromatherapy with essential oils, herbal infusions and teas, option to order massage in the steam room, and personal accompaniment by a master attendant for VIP programs.")
+        },
+        {
+          question: t('banya.faq.questions.materials.question', 'What materials is the banya built from?'),
+          answer: t('banya.faq.questions.materials.answer', 'The banya is built exclusively from natural eco-friendly materials: Siberian cedar, Altai linden, Karelian birch. All finishes are natural, without chemical additives. Such materials create a special microclimate and provide natural aromatherapy.')
+        }
+      ];
 
   return (
     <SectionContainer>
       <ContentWrapper>
-        <Overline>{t('banya.faq.badge', 'Questions & Answers')}</Overline>
-        <Title>{t('banya.faq.title_plain', 'Frequently Asked Questions')}</Title>
+        <Overline>{copy?.overline || t('banya.faq.badge', 'Questions & Answers')}</Overline>
+        <Title>{copy?.title || t('banya.faq.title_plain', 'Frequently Asked Questions')}</Title>
         <Subtitle>
-          {t('banya.faq.subtitle', 'Answers to the most popular questions about our banya')}
+          {copy?.subtitle || t('banya.faq.subtitle', 'Answers to the most popular questions about our banya')}
         </Subtitle>
 
         <FAQList>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import { useCms } from '../../../context/CmsContext';
 
 const HeroContainer = styled.section`
   position: relative;
@@ -127,6 +128,8 @@ const heroImages = [
 
 const HeroSection = () => {
   const { t } = useTranslation();
+  const { getPageCopy } = useCms();
+  const copy = getPageCopy('sports.hero');
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -154,8 +157,8 @@ const HeroSection = () => {
       <ContentContainer>
         <ContentWrapper>
           <HeroTextBlock>
-            <HeroWord>{t('sports.hero.title', 'Sports')}</HeroWord>
-            <LocationText>{t('sports.hero.location', 'Phuket')}</LocationText>
+            <HeroWord>{copy?.titlePart1 || t('sports.hero.title', 'Sports')}</HeroWord>
+            <LocationText>{copy?.location || t('sports.hero.location', 'Phuket')}</LocationText>
           </HeroTextBlock>
         </ContentWrapper>
       </ContentContainer>

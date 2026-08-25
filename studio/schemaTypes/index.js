@@ -10,6 +10,9 @@ import { menuCategory } from './menuCategory'
 import { barItem } from './barItem'
 import { barCategory } from './barCategory'
 import { membershipPlan } from './membershipPlan'
+import { banyaRitual } from './banyaRitual'
+import { faqItem } from './faqItem'
+import { pageCopy } from './pageCopy'
 
 export const schemaTypes = [
   localeString,
@@ -25,4 +28,7 @@ export const schemaTypes = [
   barItem,
   barCategory,
   membershipPlan,
+  banyaRitual,
+  faqItem,
+  pageCopy,
 ]

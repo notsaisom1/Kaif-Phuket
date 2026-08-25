@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Minimalist Pasture Style ===
 
@@ -235,13 +236,19 @@ const InfoItem = styled.div`
 
 const FAQSection = () => {
   const { t } = useTranslation();
+  const { getFaqs, getPageCopy } = useCms();
   const [openFAQ, setOpenFAQ] = useState(null);
 
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  const faqs = useMemo(() => [
+  const copy = getPageCopy('home.faq');
+  const cmsFaqs = getFaqs('home');
+
+  const faqs = useMemo(() => {
+    if (cmsFaqs.length) return cmsFaqs;
+    return [
     {
       question: t('faq.questions.what_includes.question'),
       answer: t('faq.questions.what_includes.answer')
@@ -266,14 +273,15 @@ const FAQSection = () => {
       question: t('faq.questions.payment_methods.question'),
       answer: t('faq.questions.payment_methods.answer')
     }
-  ], [t]);
+  ];
+  }, [t, cmsFaqs]);
 
   return (
     <SectionContainer id="faq">
       <ContentWrapper>
-        <Overline>{t('faq.badge', 'FAQ')}</Overline>
-        <Title>{t('faq.title')}</Title>
-        <Subtitle>{t('faq.subtitle')}</Subtitle>
+        <Overline>{copy?.overline || t('faq.badge', 'FAQ')}</Overline>
+        <Title>{copy?.title || t('faq.title')}</Title>
+        <Subtitle>{copy?.subtitle || t('faq.subtitle')}</Subtitle>
 
         <FAQGrid>
           {/* FAQ Accordion */}

@@ -823,7 +823,7 @@ const TabbedGrid = ({ groups, activeKey, onTabChange, selectLabel, onSelect }) =
 
 const ServicesPage = () => {
   const { t } = useTranslation();
-  const { spa, membershipGroups: cmsMembershipGroups } = useCms();
+  const { spa, membershipGroups: cmsMembershipGroups, banyaRituals } = useCms();
   const [openIds, setOpenIds] = useState(() => new Set(['memberships']));
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -955,24 +955,95 @@ const ServicesPage = () => {
 
   // BANYA — grouped by style
   const banyaGroups = useMemo(() => {
+    if (banyaRituals?.length) {
+      const byId = Object.fromEntries(banyaRituals.map((r) => [r.id, r]));
+      const toPlan = (ids) =>
+        ids
+          .map((id) => byId[id])
+          .filter(Boolean)
+          .map((r) => banyaRitualToPlan(r, t));
+      return [
+        {
+          key: 'classic',
+          label: t('services_page.banya_groups.classic', 'Классика'),
+          icon: <FaLeaf />,
+          plans: toPlan(['intro', 'lady', 'classic']).map((p, i) => ({
+            ...p,
+            popular: i === 2,
+          })),
+        },
+        {
+          key: 'intense',
+          label: t('services_page.banya_groups.intense', 'Интенсив'),
+          icon: <FaFire />,
+          plans: toPlan([
+            'artesian',
+            'gravity',
+            'salt_fire',
+            'warrior_path',
+            'stalwar',
+          ]).map((p, i) => ({ ...p, popular: i === 0 })),
+        },
+        {
+          key: 'signature',
+          label: t('services_page.banya_groups.signature', 'Авторские'),
+          icon: <FaCrown />,
+          plans: toPlan([
+            'sports',
+            'four_hands',
+            'honey',
+            'valhalla',
+            'royal',
+          ]).map((p, i) => ({ ...p, popular: i === 4 })),
+        },
+      ];
+    }
+
     const r = (id) => ({
       id,
       title: t(`banya.services.rituals.${id}.title`),
       subtitle: t(`banya.services.rituals.${id}.subtitle`),
       duration: t(`banya.services.rituals.${id}.duration`),
       price: t(`banya.services.rituals.${id}.price`),
-      description: t(`banya.services.rituals.${id}.description`)
+      description: t(`banya.services.rituals.${id}.description`),
     });
-    const toPlan = (ids) => ids.map(id => banyaRitualToPlan(r(id), t));
+    const toPlan = (ids) => ids.map((id) => banyaRitualToPlan(r(id), t));
     return [
-      { key: 'classic',   label: t('services_page.banya_groups.classic', 'Классика'),   icon: <FaLeaf />,
-        plans: toPlan(['intro', 'lady', 'classic']).map((p, i) => ({ ...p, popular: i === 2 })) },
-      { key: 'intense',   label: t('services_page.banya_groups.intense', 'Интенсив'),   icon: <FaFire />,
-        plans: toPlan(['artesian', 'gravity', 'salt_fire', 'warrior_path', 'stalwar']).map((p, i) => ({ ...p, popular: i === 0 })) },
-      { key: 'signature', label: t('services_page.banya_groups.signature', 'Авторские'), icon: <FaCrown />,
-        plans: toPlan(['sports', 'four_hands', 'honey', 'valhalla', 'royal']).map((p, i) => ({ ...p, popular: i === 4 })) }
+      {
+        key: 'classic',
+        label: t('services_page.banya_groups.classic', 'Классика'),
+        icon: <FaLeaf />,
+        plans: toPlan(['intro', 'lady', 'classic']).map((p, i) => ({
+          ...p,
+          popular: i === 2,
+        })),
+      },
+      {
+        key: 'intense',
+        label: t('services_page.banya_groups.intense', 'Интенсив'),
+        icon: <FaFire />,
+        plans: toPlan([
+          'artesian',
+          'gravity',
+          'salt_fire',
+          'warrior_path',
+          'stalwar',
+        ]).map((p, i) => ({ ...p, popular: i === 0 })),
+      },
+      {
+        key: 'signature',
+        label: t('services_page.banya_groups.signature', 'Авторские'),
+        icon: <FaCrown />,
+        plans: toPlan([
+          'sports',
+          'four_hands',
+          'honey',
+          'valhalla',
+          'royal',
+        ]).map((p, i) => ({ ...p, popular: i === 4 })),
+      },
     ];
-  }, [t]);
+  }, [t, banyaRituals]);
 
   const massageGroups = useMemo(() => {
     const svc = byCat('massage');

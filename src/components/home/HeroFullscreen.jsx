@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, memo, useState } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { useCms } from '../../context/CmsContext';
 
 // Cloudinary video URLs - optimized for streaming
 const VIDEO_DESKTOP = 'https://res.cloudinary.com/dgkymvotb/video/upload/f_auto,q_60,br_3000k/a5af7faa-2bd7-4340-9cab-02441b892030_iafcm6.mp4';
@@ -149,6 +150,8 @@ const LocationText = styled.span`
 
 const HeroFullscreen = memo(() => {
   const { t } = useTranslation();
+  const { getPageCopy } = useCms();
+  const copy = getPageCopy('home.hero');
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMobile] = useState(detectMobile);
@@ -227,10 +230,10 @@ const HeroFullscreen = memo(() => {
       <ContentContainer>
         <ContentWrapper>
           <HeroTextBlock>
-            <HeroWord>{t('home.hero.word1')}</HeroWord>
-            <HeroWord>{t('home.hero.word2')}</HeroWord>
-            <HeroWord>{t('home.hero.word3')}</HeroWord>
-            <LocationText>{t('home.hero.location')}</LocationText>
+            <HeroWord>{copy?.titlePart1 || t('home.hero.word1')}</HeroWord>
+            <HeroWord>{copy?.titlePart2 || t('home.hero.word2')}</HeroWord>
+            <HeroWord>{copy?.title || t('home.hero.word3')}</HeroWord>
+            <LocationText>{copy?.location || t('home.hero.location')}</LocationText>
           </HeroTextBlock>
         </ContentWrapper>
       </ContentContainer>

@@ -12,6 +12,9 @@ import {
   mapBarItem,
   mapBarCategory,
   mapMembershipPlan,
+  mapBanyaRitual,
+  mapFaqItem,
+  mapPageCopy,
 } from './catalogMaps'
 
 const SITE_SETTINGS_QUERY = `*[_type == "siteSettings"][0]{
@@ -139,6 +142,36 @@ const MEMBERSHIP_PLANS_QUERY = `*[_type == "membershipPlan" && active != false] 
   features,
   popular,
   sortOrder
+}`
+
+const BANYA_RITUALS_QUERY = `*[_type == "banyaRitual" && active != false] | order(sortOrder asc){
+  key,
+  groupKey,
+  title,
+  subtitle,
+  duration,
+  price,
+  description,
+  sortOrder
+}`
+
+const FAQ_ITEMS_QUERY = `*[_type == "faqItem" && active != false] | order(sortOrder asc){
+  key,
+  page,
+  question,
+  answer,
+  sortOrder
+}`
+
+const PAGE_COPY_QUERY = `*[_type == "pageCopy"]{
+  key,
+  overline,
+  titlePart1,
+  titlePart2,
+  title,
+  subtitle,
+  location,
+  cta
 }`
 
 function mapEvent(doc) {
@@ -350,5 +383,64 @@ export async function fetchMembershipPlans(lang = 'en') {
   } catch (err) {
     console.warn('[cms] membership plans fetch failed', err)
     return { plans: [], _source: 'fallback' }
+  }
+}
+
+export async function fetchBanyaRituals(lang = 'en') {
+  if (!isSanityConfigured || !sanityClient) {
+    return { rituals: [], _source: 'fallback' }
+  }
+  try {
+    const docs = await sanityClient.fetch(BANYA_RITUALS_QUERY)
+    if (!docs?.length) {
+      return { rituals: [], _source: 'fallback' }
+    }
+    return {
+      rituals: docs.map((d) => mapBanyaRitual(d, lang)).filter(Boolean),
+      _source: 'sanity',
+    }
+  } catch (err) {
+    console.warn('[cms] banya rituals fetch failed', err)
+    return { rituals: [], _source: 'fallback' }
+  }
+}
+
+export async function fetchFaqItems(lang = 'en') {
+  if (!isSanityConfigured || !sanityClient) {
+    return { items: [], _source: 'fallback' }
+  }
+  try {
+    const docs = await sanityClient.fetch(FAQ_ITEMS_QUERY)
+    if (!docs?.length) {
+      return { items: [], _source: 'fallback' }
+    }
+    return {
+      items: docs.map((d) => mapFaqItem(d, lang)).filter(Boolean),
+      _source: 'sanity',
+    }
+  } catch (err) {
+    console.warn('[cms] faq items fetch failed', err)
+    return { items: [], _source: 'fallback' }
+  }
+}
+
+export async function fetchPageCopy(lang = 'en') {
+  if (!isSanityConfigured || !sanityClient) {
+    return { byKey: {}, _source: 'fallback' }
+  }
+  try {
+    const docs = await sanityClient.fetch(PAGE_COPY_QUERY)
+    const byKey = {}
+    for (const doc of docs || []) {
+      const mapped = mapPageCopy(doc, lang)
+      if (mapped?.key) byKey[mapped.key] = mapped
+    }
+    return {
+      byKey,
+      _source: Object.keys(byKey).length ? 'sanity' : 'fallback',
+    }
+  } catch (err) {
+    console.warn('[cms] page copy fetch failed', err)
+    return { byKey: {}, _source: 'fallback' }
   }
 }

@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import { useCms } from '../../context/CmsContext';
 
 // === STYLED COMPONENTS — Matching other pages hero style ===
 
@@ -125,6 +126,8 @@ const LocationText = styled.span`
 
 const ContactHero = () => {
   const { t } = useTranslation();
+  const { getPageCopy } = useCms();
+  const copy = getPageCopy('contacts.hero');
 
   return (
     <HeroContainer>
@@ -133,8 +136,8 @@ const ContactHero = () => {
       <ContentContainer>
         <ContentWrapper>
           <HeroTextBlock>
-            <HeroWord>{t('contacts.hero.title', 'Contacts')}</HeroWord>
-            <LocationText>{t('contacts.hero.location', 'Phuket')}</LocationText>
+            <HeroWord>{copy?.titlePart1 || t('contacts.hero.title', 'Contacts')}</HeroWord>
+            <LocationText>{copy?.location || t('contacts.hero.location', 'Phuket')}</LocationText>
           </HeroTextBlock>
         </ContentWrapper>
       </ContentContainer>
